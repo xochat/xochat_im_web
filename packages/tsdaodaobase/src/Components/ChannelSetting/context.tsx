@@ -1,4 +1,4 @@
-import { Channel, ChannelInfo, Subscriber } from "wukongimjssdk";
+import { Channel, ChannelInfo, Subscriber } from "xochat_js_sdk";
 import { GroupRole } from "../../Service/Const";
 import RouteContext, { RouteContextConfig } from "../../Service/Context";
 import ConversationContext from "../Conversation/context";

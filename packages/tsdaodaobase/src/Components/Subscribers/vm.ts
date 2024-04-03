@@ -1,4 +1,4 @@
-import { Subscriber } from "wukongimjssdk";
+import { Subscriber } from "xochat_js_sdk";
 import { GroupRole } from "../../Service/Const";
 import WKApp from "../../App";
 import { ProviderListener } from "../../Service/Provider";

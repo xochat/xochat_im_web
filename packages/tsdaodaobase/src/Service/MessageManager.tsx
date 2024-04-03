@@ -1,4 +1,4 @@
-import { MessageContentType } from "wukongimjssdk"
+import { MessageContentType } from "xochat_js_sdk"
 import { ElementType } from "react"
 
 

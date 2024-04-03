@@ -1,4 +1,4 @@
-import { MessageStatus } from "wukongimjssdk";
+import { MessageStatus } from "xochat_js_sdk";
 import moment from "moment";
 import React from "react";
 import { Component, CSSProperties } from "react";

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import QRCode from 'qrcode.react';
 import "./index.css"
-import { Channel, WKSDK } from "wukongimjssdk";
+import { Channel, WKSDK } from "xochat_js_sdk";
 import WKApp from "../../App";
 import Provider from "../../Service/Provider";
 import { ChannelQRCodeVM } from "./vm";

@@ -1,4 +1,4 @@
-import { Channel } from "wukongimjssdk";
+import { Channel } from "xochat_js_sdk";
 import WKApp from "../../App";
 import { ChannelQrcodeResp } from "../../Service/DataSource/DataSource";
 import { ProviderListener } from "../../Service/Provider";

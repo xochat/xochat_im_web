@@ -1,4 +1,4 @@
-import { UnknownContent } from "wukongimjssdk";
+import { UnknownContent } from "xochat_js_sdk";
 import React from "react";
 import MessageBase from "../Base";
 import { MessageCell } from "../MessageCell";

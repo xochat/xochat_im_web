@@ -1,6 +1,6 @@
 import { Button, Spin } from "@douyinfe/semi-ui";
 import classNames from "classnames";
-import { Channel, ChannelInfo, WKSDK, Subscriber } from "wukongimjssdk";
+import { Channel, ChannelInfo, WKSDK, Subscriber } from "xochat_js_sdk";
 import React from "react";
 import { Component } from "react";
 import WKApp from "../../App";

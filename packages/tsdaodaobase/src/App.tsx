@@ -4,19 +4,19 @@ import MenusManager from "./Service/Menus";
 import { EndpointManager, IModule, ModuleManager } from "./Service/Module";
 import { ProviderListener } from "./Service/Provider";
 import RouteManager, { ContextRouteManager } from "./Service/Route";
-import { Channel, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContentType } from "wukongimjssdk";
+import { Channel, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContentType } from "xochat_js_sdk";
 import { IConversationProvider } from "./Service/DataSource/DataProvider";
 import MessageManager from "./Service/MessageManager";
 import { DefaultEmojiService, EmojiService } from "./Service/EmojiService";
 import SectionManager, { Row, Section } from "./Service/Section";
 import { EndpointCategory } from "./Service/Const";
 import { DataSource } from "./Service/DataSource/DataSource";
-import { ConnectAddrCallback } from "wukongimjssdk";
+import { ConnectAddrCallback } from "xochat_js_sdk";
 
 import 'animate.css';
 import "./App.css"
 import RouteContext from "./Service/Context";
-import { ConnectStatus } from "wukongimjssdk";
+import { ConnectStatus } from "xochat_js_sdk";
 import { WKBaseContext } from "./Components/WKBase";
 import StorageService from "./Service/StorageService";
 
@@ -25,7 +25,7 @@ export enum ThemeMode {
     dark
 }
 export class WKConfig {
-    appName: string = "唐僧叨叨"
+    appName: string = "XOCHAT"
     appVersion: string = "0.0.0" // app版本
     themeColor: string = "#E46342" // 主题颜色
     secondColor: string = "rgba(232, 234, 237)"

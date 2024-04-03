@@ -1,7 +1,7 @@
 import { WKApp } from "@tsdaodao/base";
 import axios, { Canceler } from "axios";
-import { MediaMessageContent } from "wukongimjssdk";
-import {  MessageTask, TaskStatus } from "wukongimjssdk";
+import { MediaMessageContent } from "xochat_js_sdk";
+import {  MessageTask, TaskStatus } from "xochat_js_sdk";
 
 
 

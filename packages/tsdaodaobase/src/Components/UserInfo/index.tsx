@@ -1,5 +1,5 @@
 import { Button, Spin, Toast } from "@douyinfe/semi-ui";
-import { Channel, ChannelTypePerson } from "wukongimjssdk";
+import { Channel, ChannelTypePerson } from "xochat_js_sdk";
 import React, { Component, HTMLProps, ReactNode } from "react";
 import { UserRelation } from "../../Service/Const";
 import WKApp, { FriendApply } from "../../App";

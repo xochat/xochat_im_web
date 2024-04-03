@@ -1,6 +1,6 @@
-import WKSDK from "wukongimjssdk";
-import { ChannelInfoListener } from "wukongimjssdk";
-import { Channel, ChannelInfo, ChannelTypePerson } from "wukongimjssdk";
+import WKSDK from "xochat_js_sdk";
+import { ChannelInfoListener } from "xochat_js_sdk";
+import { Channel, ChannelInfo, ChannelTypePerson } from "xochat_js_sdk";
 import React, { Component } from "react";
 import { ConversationWrap, MessageWrap } from "../../Service/Model";
 import { getTimeStringAutoShort2 } from '../../Utils/time'

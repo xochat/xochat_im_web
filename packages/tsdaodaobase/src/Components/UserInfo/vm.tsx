@@ -1,5 +1,5 @@
-import { ChannelInfoListener, SubscriberChangeListener } from "wukongimjssdk";
-import { Channel, ChannelInfo, ChannelTypePerson, WKSDK, Subscriber } from "wukongimjssdk";
+import { ChannelInfoListener, SubscriberChangeListener } from "xochat_js_sdk";
+import { Channel, ChannelInfo, ChannelTypePerson, WKSDK, Subscriber } from "xochat_js_sdk";
 import { Section } from "../../Service/Section";
 import { ProviderListener } from "../../Service/Provider";
 import WKApp from "../../App";

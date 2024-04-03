@@ -8,7 +8,7 @@ import { LoginModule } from "@tsdaodao/login";
 import { DataSourceModule } from "@tsdaodao/datasource";
 import { ContactsModule } from "@tsdaodao/contacts";
 
-const apiURL = "http://192.168.10.105:8090/v1/";
+const apiURL = "http://13.201.220.225:18090/v1/";
 
 if ((window as any).__TAURI_IPC__) {
   // tauri环境

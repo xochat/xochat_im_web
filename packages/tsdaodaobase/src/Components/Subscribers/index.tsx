@@ -1,4 +1,4 @@
-import { Channel, WKSDK, Subscriber } from "wukongimjssdk";
+import { Channel, WKSDK, Subscriber } from "xochat_js_sdk";
 import React from "react";
 import { Component } from "react";
 import Provider from "../../Service/Provider";

@@ -1,4 +1,4 @@
-import { WKSDK, Message, CMDContent } from "wukongimjssdk";
+import { WKSDK, Message, CMDContent } from "xochat_js_sdk";
 import { FriendApplyState, WKApp, ProviderListener } from "@tsdaodao/base";
 import { FriendApply } from "@tsdaodao/base";
 

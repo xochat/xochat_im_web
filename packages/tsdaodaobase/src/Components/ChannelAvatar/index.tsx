@@ -1,6 +1,6 @@
 import { Button } from "@douyinfe/semi-ui";
 import axios from "axios";
-import { Channel } from "wukongimjssdk";
+import { Channel } from "xochat_js_sdk";
 import React from "react";
 import { Component } from "react";
 import WKApp from "../../App";

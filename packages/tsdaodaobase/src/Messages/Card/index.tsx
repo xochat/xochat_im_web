@@ -1,4 +1,4 @@
-import { Channel, ChannelTypePerson, MessageContent } from "wukongimjssdk"
+import { Channel, ChannelTypePerson, MessageContent } from "xochat_js_sdk"
 import React from "react"
 import WKBase, { WKBaseContext } from "../../Components/WKBase"
 import WKApp from "../../App"

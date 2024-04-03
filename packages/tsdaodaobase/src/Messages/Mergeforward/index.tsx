@@ -1,6 +1,6 @@
 import { Modal } from "@douyinfe/semi-ui"
-import { ChannelInfoListener } from "wukongimjssdk"
-import { Channel, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContent } from "wukongimjssdk"
+import { ChannelInfoListener } from "xochat_js_sdk"
+import { Channel, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContent } from "xochat_js_sdk"
 import React from "react"
 import MergeforwardMessageList from "../../Components/MergeforwardMessageList"
 import { MessageContentTypeConst } from "../../Service/Const"

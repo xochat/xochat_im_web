@@ -3,7 +3,7 @@ import { ContactsList } from "@tsdaodao/contacts";
 import React from "react";
 import "./index.css";
 import AppLayout from "../Layout";
-import { WKSDK } from "wukongimjssdk";
+import { WKSDK } from "xochat_js_sdk";
 function App() {
   registerMenus();
   return <AppLayout />;

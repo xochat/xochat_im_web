@@ -1,5 +1,5 @@
 import { ChannelQrcodeResp, Contacts, IChannelDataSource, ICommonDataSource, WKApp, RequestConfig } from "@tsdaodao/base";
-import { Channel, ChannelInfo, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContentType,ConversationExtra } from "wukongimjssdk";
+import { Channel, ChannelInfo, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContentType,ConversationExtra } from "xochat_js_sdk";
 
 export class ChannelDataSource implements IChannelDataSource {
 

@@ -1,4 +1,4 @@
-import { MessageContent } from "wukongimjssdk";
+import { MessageContent } from "xochat_js_sdk";
 import React from "react";
 import { MessageContentTypeConst } from "../../Service/Const";
 import { MessageCell } from "../MessageCell";

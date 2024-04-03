@@ -1,4 +1,4 @@
-import { Channel, Message, MessageContent } from "wukongimjssdk";
+import { Channel, Message, MessageContent } from "xochat_js_sdk";
 import { MessageInputContext } from "../MessageInput";
 
 

@@ -1,4 +1,4 @@
-import { Channel, ChannelTypeGroup, ChannelTypePerson, ConversationAction, WKSDK, Message, MessageContent, MessageStatus, Subscriber, Conversation, MessageExtra,CMDContent, PullMode } from "wukongimjssdk";
+import { Channel, ChannelTypeGroup, ChannelTypePerson, ConversationAction, WKSDK, Message, MessageContent, MessageStatus, Subscriber, Conversation, MessageExtra,CMDContent, PullMode } from "xochat_js_sdk";
 import WKApp from "../../App";
 import { SyncMessageOptions } from "../../Service/DataSource/DataProvider";
 import { MessageWrap } from "../../Service/Model";
@@ -8,8 +8,8 @@ import { EndpointID, MessageContentTypeConst, OrderFactor } from "../../Service/
 import moment from 'moment'
 import { TimeContent } from "../../Messages/Time";
 import { HistorySplitContent } from "../../Messages/HistorySplit";
-import { MessageListener, MessageStatusListener } from "wukongimjssdk";
-import { SendackPacket, Setting } from "wukongimjssdk";
+import { MessageListener, MessageStatusListener } from "xochat_js_sdk";
+import { SendackPacket, Setting } from "xochat_js_sdk";
 import MergeforwardContent from "../../Messages/Mergeforward";
 import { TypingListener, TypingManager } from "../../Service/TypingManager";
 

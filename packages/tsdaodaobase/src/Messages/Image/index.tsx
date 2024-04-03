@@ -1,4 +1,4 @@
-import { MediaMessageContent } from "wukongimjssdk"
+import { MediaMessageContent } from "xochat_js_sdk"
 import React from "react"
 import WKApp from "../../App"
 import { MessageContentTypeConst } from "../../Service/Const"

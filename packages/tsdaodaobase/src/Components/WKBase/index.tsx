@@ -1,5 +1,5 @@
 import { Modal } from "@douyinfe/semi-ui";
-import { Channel } from "wukongimjssdk";
+import { Channel } from "xochat_js_sdk";
 import React, { Component, HTMLProps, ReactNode } from "react";
 import ConversationSelect from "../ConversationSelect";
 import UserInfo from "../UserInfo";

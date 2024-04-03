@@ -1,4 +1,4 @@
-import { MessageContent } from "wukongimjssdk"
+import { MessageContent } from "xochat_js_sdk"
 import React from "react"
 import { BeatLoader } from "react-spinners"
 import { MessageContentTypeConst } from "../../Service/Const"

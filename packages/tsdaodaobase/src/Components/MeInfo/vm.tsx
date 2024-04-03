@@ -10,9 +10,9 @@ import { Sex, SexSelect } from "../SexSelect";
 import { ListItemAvatar } from "../ListItemAvatar";
 import axios from "axios";
 import { Toast } from "@douyinfe/semi-ui";
-import WKSDK from "wukongimjssdk";
-import { ChannelInfoListener } from "wukongimjssdk";
-import { ChannelInfo, ChannelTypePerson } from "wukongimjssdk";
+import WKSDK from "xochat_js_sdk";
+import { ChannelInfoListener } from "xochat_js_sdk";
+import { ChannelInfo, ChannelTypePerson } from "xochat_js_sdk";
 export class MeInfoVM extends ProviderListener {
 
     channelInfoListener!:ChannelInfoListener

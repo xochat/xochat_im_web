@@ -1,6 +1,6 @@
 import { WKApp, ProviderListener } from "@tsdaodao/base";
-import { ChannelInfo,WKSDK } from "wukongimjssdk";
-import { ChannelInfoListener } from "wukongimjssdk";
+import { ChannelInfo,WKSDK } from "xochat_js_sdk";
+import { ChannelInfoListener } from "xochat_js_sdk";
 export class GroupSaveVM extends ProviderListener {
     groups:ChannelInfo[] = []
     channelInfoListener!:ChannelInfoListener

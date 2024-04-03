@@ -1,10 +1,10 @@
-import { Channel, ChannelInfo, ChannelTypePerson, WKSDK } from "wukongimjssdk"
+import { Channel, ChannelInfo, ChannelTypePerson, WKSDK } from "xochat_js_sdk"
 import { MessageCell } from '../MessageCell'
 import { MessageWrap } from '../../Service/Model'
 import WKApp from '../../App'
 import React from 'react'
 import "./index.css"
-import { ChannelInfoListener } from "wukongimjssdk"
+import { ChannelInfoListener } from "xochat_js_sdk"
 
 
 export class RevokeCell extends MessageCell {

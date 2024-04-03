@@ -1,4 +1,4 @@
-import { Channel, ChannelInfo, ConversationExtra, Message } from "wukongimjssdk";
+import { Channel, ChannelInfo, ConversationExtra, Message } from "xochat_js_sdk";
 import { APIResp } from "../APIClient";
 
 export type ContactsChangeListener = () => void;

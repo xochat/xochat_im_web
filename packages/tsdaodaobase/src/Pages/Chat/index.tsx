@@ -11,8 +11,8 @@ import { ConversationWrap } from "../../Service/Model";
 import WKApp, { ThemeMode } from "../../App";
 import ChannelSetting from "../../Components/ChannelSetting";
 import classNames from "classnames";
-import { Channel, ChannelInfo, WKSDK } from "wukongimjssdk";
-import { ChannelInfoListener } from "wukongimjssdk";
+import { Channel, ChannelInfo, WKSDK } from "xochat_js_sdk";
+import { ChannelInfoListener } from "xochat_js_sdk";
 import { ChatMenus } from "../../App";
 import ConversationContext from "../../Components/Conversation/context";
 

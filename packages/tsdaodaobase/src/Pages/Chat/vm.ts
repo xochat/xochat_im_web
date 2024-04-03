@@ -1,8 +1,8 @@
-import WKSDK from "wukongimjssdk";
-import { ChannelInfoListener } from "wukongimjssdk";
-import { ConnectStatus, ConnectStatusListener } from "wukongimjssdk";
-import { ConversationAction, ConversationListener } from "wukongimjssdk";
-import { Channel, ChannelInfo, Conversation, Message } from "wukongimjssdk";
+import WKSDK from "xochat_js_sdk";
+import { ChannelInfoListener } from "xochat_js_sdk";
+import { ConnectStatus, ConnectStatusListener } from "xochat_js_sdk";
+import { ConversationAction, ConversationListener } from "xochat_js_sdk";
+import { Channel, ChannelInfo, Conversation, Message } from "xochat_js_sdk";
 import WKApp, { MessageDeleteListener } from "../../App";
 import { ConversationWrap } from "../../Service/Model";
 import { ProviderListener } from "../../Service/Provider";

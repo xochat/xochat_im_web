@@ -1,4 +1,4 @@
-import { Channel, ChannelTypePerson,WKSDK } from "wukongimjssdk";
+import { Channel, ChannelTypePerson,WKSDK } from "xochat_js_sdk";
 import React from "react";
 import { Component } from "react";
 import { BubblePosition, MessageWrap } from "../../Service/Model";

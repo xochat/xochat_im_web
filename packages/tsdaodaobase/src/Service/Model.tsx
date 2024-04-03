@@ -1,5 +1,5 @@
-import { Setting } from "wukongimjssdk"
-import { Channel, ChannelInfo, ChannelTypePerson, Conversation, WKSDK, Message, MessageContentType, MessageStatus,MessageText } from "wukongimjssdk"
+import { Setting } from "xochat_js_sdk"
+import { Channel, ChannelInfo, ChannelTypePerson, Conversation, WKSDK, Message, MessageContentType, MessageStatus,MessageText } from "xochat_js_sdk"
 import WKApp from "../App"
 import { MessageContentTypeConst, MessageReasonCode, OrderFactor } from "./Const"
 import { DefaultEmojiService } from "./EmojiService"

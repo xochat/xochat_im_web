@@ -1,4 +1,4 @@
-import { Channel } from "wukongimjssdk";
+import { Channel } from "xochat_js_sdk";
 import React from "react";
 import { Component, CSSProperties } from "react";
 import WKApp from "../../App";

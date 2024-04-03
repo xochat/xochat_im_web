@@ -1,4 +1,4 @@
-import { SystemContent } from "wukongimjssdk"
+import { SystemContent } from "xochat_js_sdk"
 import React from "react"
 import { MessageCell } from "../MessageCell"
 import  './index.css'

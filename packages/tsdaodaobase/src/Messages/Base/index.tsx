@@ -1,6 +1,6 @@
-import WKSDK from "wukongimjssdk";
-import { ChannelInfoListener } from "wukongimjssdk";
-import { Channel, ChannelInfo, ChannelTypePerson, MessageStatus } from "wukongimjssdk";
+import WKSDK from "xochat_js_sdk";
+import { ChannelInfoListener } from "xochat_js_sdk";
+import { Channel, ChannelInfo, ChannelTypePerson, MessageStatus } from "xochat_js_sdk";
 import { Component, CSSProperties, HTMLProps } from "react";
 import './index.css'
 import { BubblePosition, MessageWrap } from "../../Service/Model";

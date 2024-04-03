@@ -1,4 +1,4 @@
-import { WKSDK,Channel, ChannelInfo } from "wukongimjssdk";
+import { WKSDK,Channel, ChannelInfo } from "xochat_js_sdk";
 import { Component } from "react";
 import Checkbox from "../Checkbox";
 import { animateScroll } from 'react-scroll';

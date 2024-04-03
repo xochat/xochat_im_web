@@ -1,6 +1,6 @@
 const TSDD_FONFIG = {
   appId: "com.tsdaodao.im",
-  name: "唐僧叨叨",
+  name: "XOCHAT",
 };
 
 export default TSDD_FONFIG;

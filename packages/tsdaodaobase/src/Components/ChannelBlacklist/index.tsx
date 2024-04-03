@@ -1,6 +1,6 @@
 import { Toast } from "@douyinfe/semi-ui";
-import { SubscriberChangeListener } from "wukongimjssdk";
-import { WKSDK } from "wukongimjssdk";
+import { SubscriberChangeListener } from "xochat_js_sdk";
+import { WKSDK } from "xochat_js_sdk";
 import React from "react";
 import { Component, ReactNode } from "react";
 import WKApp from "../../App";

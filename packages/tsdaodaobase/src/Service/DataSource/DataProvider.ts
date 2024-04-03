@@ -1,4 +1,4 @@
-import { Channel, Conversation, Message, MessageExtra, PullMode } from "wukongimjssdk"
+import { Channel, Conversation, Message, MessageExtra, PullMode } from "xochat_js_sdk"
 
 
 export class SyncMessageOptions {

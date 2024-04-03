@@ -1,4 +1,4 @@
-import { Channel, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContentType } from "wukongimjssdk";
+import { Channel, ChannelTypeGroup, ChannelTypePerson, WKSDK, Message, MessageContentType } from "xochat_js_sdk";
 import React from "react";
 import { Component, ReactNode } from "react";
 import { ImageContent } from "../../Messages/Image";

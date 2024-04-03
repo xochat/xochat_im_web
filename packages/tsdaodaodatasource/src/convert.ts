@@ -1,6 +1,6 @@
 import BigNumber from "bignumber.js";
-import { Setting } from "wukongimjssdk";
-import { WKSDK, ChannelInfo, Channel, Conversation, Message, MessageStatus, ChannelTypePerson, ChannelTypeGroup,ConversationExtra,Reminder, MessageExtra } from "wukongimjssdk";
+import { Setting } from "xochat_js_sdk";
+import { WKSDK, ChannelInfo, Channel, Conversation, Message, MessageStatus, ChannelTypePerson, ChannelTypeGroup,ConversationExtra,Reminder, MessageExtra } from "xochat_js_sdk";
 
 
 export class Convert {

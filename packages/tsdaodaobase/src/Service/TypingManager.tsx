@@ -1,4 +1,4 @@
-import { Channel, Message } from "wukongimjssdk";
+import { Channel, Message } from "xochat_js_sdk";
 import WKApp from "../App";
 import { TypingContent } from "../Messages/Typing";
 

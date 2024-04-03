@@ -13655,19 +13655,6 @@ ws@^8.13.0:
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.14.1.tgz#4b9586b4f70f9e6534c7bb1d3dc0baa8b8cf01e0"
   integrity sha512-4OOseMUq8AzRBI/7SLMUwO+FEDnguetSk7KMb1sHwvF2w2Wv5Hoj0nlifx8vtGsftE/jWHojPy8sMMzYLJ2G/A==
 
-wukongimjssdk@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.npmmirror.com/wukongimjssdk/-/wukongimjssdk-1.2.7.tgz#db9af096efff467d6d1766c5ea50f16fe386662c"
-  integrity sha512-Okx+hTDLhMSDCicA2od9VBvSlfzNLtxMw4drbqaUx31hp09G5LSgthhWz9rfJl8AbmljhwPGo28B9bOZGjAgkw==
-  dependencies:
-    "@types/bignumber.js" "^5.0.0"
-    "@types/crypto-js" "^4.0.2"
-    bignumber.js "^9.0.1"
-    buffer "^6.0.3"
-    crypto-js "^4.1.1"
-    curve25519-js "^0.0.4"
-    md5-typescript "^1.0.5"
-
 xml-name-validator@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
@@ -13682,6 +13669,19 @@ xmlchars@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/xmlchars/-/xmlchars-2.2.0.tgz#060fe1bcb7f9c76fe2a17db86a9bc3ab894210cb"
   integrity sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==
+
+xochat_js_sdk@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/xochat_js_sdk/-/xochat_js_sdk-1.0.0.tgz#b2cca6d74d7790702855a2379d54bdc9040fa713"
+  integrity sha512-8C45+YBdD5+xh1Re2dSFk6GM7RklLNgXKBwm224z+90OFzTkCthZaAygAwY5rNmSukJHPd9cP03rj7FwYx7E/w==
+  dependencies:
+    "@types/bignumber.js" "^5.0.0"
+    "@types/crypto-js" "^4.0.2"
+    bignumber.js "^9.0.1"
+    buffer "^6.0.3"
+    crypto-js "^4.1.1"
+    curve25519-js "^0.0.4"
+    md5-typescript "^1.0.5"
 
 y18n@^5.0.5:
   version "5.0.8"

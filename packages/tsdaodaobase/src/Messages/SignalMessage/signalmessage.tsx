@@ -1,4 +1,4 @@
-import { MessageSignalContent } from "wukongimjssdk"
+import { MessageSignalContent } from "xochat_js_sdk"
 import React from "react"
 import MessageBase from "../Base"
 import { MessageCell } from "../MessageCell"

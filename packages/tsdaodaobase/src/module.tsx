@@ -9,7 +9,7 @@ import {
   ChannelInfo,
   CMDContent,
   MessageText,
-} from "wukongimjssdk";
+} from "xochat_js_sdk";
 import React, { ElementType } from "react";
 import { Howl, Howler } from "howler";
 import WKApp, { FriendApply, FriendApplyState, ThemeMode } from "./App";

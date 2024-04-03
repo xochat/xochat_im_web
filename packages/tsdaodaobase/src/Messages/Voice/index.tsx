@@ -1,4 +1,4 @@
-import { MediaMessageContent, MessageContent } from "wukongimjssdk"
+import { MediaMessageContent, MessageContent } from "xochat_js_sdk"
 import React from "react"
 import "./index.css"
 import WaveCanvas from "../../Components/WaveCanvas"
