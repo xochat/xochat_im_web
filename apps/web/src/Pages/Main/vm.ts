@@ -1,6 +1,6 @@
-import { WKApp } from "@tsdaodao/base";
-import { Menus } from "@tsdaodao/base";
-import { ProviderListener } from "@tsdaodao/base";
+import { XOApp } from "@xochat/base";
+import { Menus } from "@xochat/base";
+import { ProviderListener } from "@xochat/base";
 
 export default class MainVM extends ProviderListener{
 
@@ -45,9 +45,9 @@ export default class MainVM extends ProviderListener{
     }
 
     didMount(): void {
-        if(WKApp.route.currentPath) {
+        if(XOApp.route.currentPath) {
             for (const menus of this.menusList) {
-                if(menus.routePath === WKApp.route.currentPath) {
+                if(menus.routePath === XOApp.route.currentPath) {
                     this.currentMenus = menus
                     break
                 }
@@ -63,7 +63,7 @@ export default class MainVM extends ProviderListener{
                     appVersion: version,
                     updateDesc: data.update_desc
                 }
-                if(version !== WKApp.config.appVersion) {
+                if(version !== XOApp.config.appVersion) {
                     this.hasNewVersion = true
                 }else {
                     this.hasNewVersion = false
@@ -75,14 +75,14 @@ export default class MainVM extends ProviderListener{
 
     //检测最新版本
     requestVersionCheck() {
-       return WKApp.apiClient.get(`common/appversion/web/${WKApp.config.appVersion}`)
+       return XOApp.apiClient.get(`common/appversion/web/${XOApp.config.appVersion}`)
 
     }
 
 
 
     get menusList() {
-        return WKApp.menus.menusList()
+        return XOApp.menus.menusList()
     }
 
     get currentMenus() :Menus | undefined {

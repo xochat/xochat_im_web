@@ -1,7 +1,7 @@
 module.exports = {
   productName: "tangsengdaodao", //项目名
-  appId: "com.tsdaodao.im",
-  copyright: "Copyright © tsdaodao", //版权
+  appId: "com.xochat.im",
+  copyright: "Copyright © xochat", //版权
   directories: {
     output: "dist-ele", // 输出文件夹
   },

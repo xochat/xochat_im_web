@@ -29,7 +29,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tsdaodao.im",
+      "identifier": "com.xochat.im",
       "longDescription": "",
       "macOS": {
         "entitlements": null,

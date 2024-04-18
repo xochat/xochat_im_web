@@ -1,30 +1,30 @@
-import { ChatPage, EndpointCategory, WKApp, Menus } from "@tsdaodao/base";
-import { ContactsList } from "@tsdaodao/contacts";
+import { ChatPage, EndpointCategory, XOApp, Menus } from "@xochat/base";
+import { ContactsList } from "@xochat/contacts";
 import React from "react";
 import "./index.css";
 import AppLayout from "../Layout";
-import { WKSDK } from "xochat_js_sdk";
+import { XOSDK } from "xochat_js_sdk";
 function App() {
   registerMenus();
   return <AppLayout />;
 }
 
 function registerMenus() {
-  WKSDK.shared().conversationManager.addConversationListener(() => {
-    WKApp.menus.refresh();
+  XOSDK.shared().conversationManager.addConversationListener(() => {
+    XOApp.menus.refresh();
   });
 
-  WKApp.endpointManager.setMethod(
+  XOApp.endpointManager.setMethod(
     "menus.friendapply.change",
     () => {
-      WKApp.menus.refresh();
+      XOApp.menus.refresh();
     },
     {
       category: EndpointCategory.friendApplyDataChange,
     }
   );
 
-  WKApp.menus.register(
+  XOApp.menus.register(
     "chat",
     (context) => {
       const m = new Menus(
@@ -40,7 +40,7 @@ function registerMenus() {
         )
       );
       let badge = 0;
-      for (const conversation of WKSDK.shared().conversationManager
+      for (const conversation of XOSDK.shared().conversationManager
         .conversations) {
         if (!conversation.channelInfo?.mute) {
           badge += conversation.unread;
@@ -54,14 +54,14 @@ function registerMenus() {
 
   // 获取好友未申请添加数量
   let unreadCount = 0;
-  if (WKApp.loginInfo.isLogined()) {
-    WKApp.apiClient.get(`/user/reddot/friendApply`).then((res) => {
+  if (XOApp.loginInfo.isLogined()) {
+    XOApp.apiClient.get(`/user/reddot/friendApply`).then((res) => {
       unreadCount = res.count;
-      WKApp.menus.refresh();
+      XOApp.menus.refresh();
     });
   }
 
-  WKApp.menus.register(
+  XOApp.menus.register(
     "contacts",
     (param) => {
       const m = new Menus(
@@ -88,11 +88,11 @@ function registerMenus() {
     2000
   );
 
-  WKApp.route.register("/", () => {
+  XOApp.route.register("/", () => {
     return <ChatPage></ChatPage>;
   });
 
-  WKApp.route.register("/contacts", () => {
+  XOApp.route.register("/contacts", () => {
     return <ContactsList></ContactsList>;
   });
 }

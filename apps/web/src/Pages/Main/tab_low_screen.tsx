@@ -1,4 +1,4 @@
-import { WKApp } from "@tsdaodao/base";
+import { XOApp } from "@xochat/base";
 import React from "react";
 import { Component, ReactNode } from "react";
 import "./tab_low_screen.css"
@@ -22,7 +22,7 @@ export class TabLowScreen extends Component<TabLowScreenProps> {
                                 if (menus.onPress) {
                                     menus.onPress()
                                 } else {
-                                    WKApp.route.push(menus.routePath)
+                                    XOApp.route.push(menus.routePath)
                                 }
                             }}>{vm.currentMenus?.id === menus.id ? menus.selectedIcon : menus.icon}</li>
                         })

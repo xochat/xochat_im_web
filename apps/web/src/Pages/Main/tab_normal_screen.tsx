@@ -1,4 +1,4 @@
-import { WKApp, Menus, ThemeMode,MeInfo } from "@tsdaodao/base";
+import { XOApp, Menus, ThemeMode,MeInfo } from "@xochat/base";
 import classnames from "classnames";
 import React from "react";
 import { Component } from "react";
@@ -13,7 +13,7 @@ export interface TabNormalScreenProps {
 export class TabNormalScreen extends Component<TabNormalScreenProps> {
 
     componentDidMount() {
-        WKApp.menus.setRefresh = () => {
+        XOApp.menus.setRefresh = () => {
             this.setState({})
         }
     }
@@ -24,7 +24,7 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                 <li className="wk-main-sider-avatar" onClick={()=>{
                     vm.showMeInfo = true
                 }}>
-                    <img alt="" src={WKApp.shared.avatarUser(WKApp.loginInfo.uid || "")}></img>
+                    <img alt="" src={XOApp.shared.avatarUser(XOApp.loginInfo.uid || "")}></img>
                 </li>
                 {
                     vm.menusList.map((menus: Menus) => {
@@ -33,8 +33,8 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                             if (menus.onPress) {
                                 menus.onPress()
                             } else {
-                                WKApp.routeLeft.popToRoot()
-                                //  WKApp.route.push(menus.routePath)
+                                XOApp.routeLeft.popToRoot()
+                                //  XOApp.route.push(menus.routePath)
                             }
 
                         }}>
@@ -69,12 +69,12 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
             <ul className={classnames("wk-sider-setting-list", vm.settingSelected ? "open" : undefined)}>
                 <li onClick={() => {
                     vm.settingSelected = false
-                    if (WKApp.config.themeMode === ThemeMode.dark) {
-                        WKApp.config.themeMode = ThemeMode.light
+                    if (XOApp.config.themeMode === ThemeMode.dark) {
+                        XOApp.config.themeMode = ThemeMode.light
                     } else {
-                        WKApp.config.themeMode = ThemeMode.dark
+                        XOApp.config.themeMode = ThemeMode.dark
                     }
-                }}>{`${WKApp.config.themeMode === ThemeMode.dark ? "关闭" : "打开"}黑暗模式`}</li>
+                }}>{`${XOApp.config.themeMode === ThemeMode.dark ? "关闭" : "打开"}黑暗模式`}</li>
                 <li onClick={() => {
                     vm.settingSelected = false
                     if (vm.hasNewVersion) {
@@ -84,18 +84,18 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                     }
 
                 }}>
-                    检查版本&nbsp;v{WKApp.config.appVersion}&nbsp;
+                    检查版本&nbsp;v{XOApp.config.appVersion}&nbsp;
                     {
                         vm.hasNewVersion ? <Badge dot type="danger"></Badge> : undefined
                     }
                 </li>
                 <li onClick={() => {
                     vm.settingSelected = false
-                    WKApp.shared.notificationIsClose = !WKApp.shared.notificationIsClose
-                }}>{WKApp.shared.notificationIsClose ? "打开" : "关闭"}桌面通知</li>
+                    XOApp.shared.notificationIsClose = !XOApp.shared.notificationIsClose
+                }}>{XOApp.shared.notificationIsClose ? "打开" : "关闭"}桌面通知</li>
                 <li onClick={() => {
                     vm.settingSelected = false
-                    WKApp.shared.logout()
+                    XOApp.shared.logout()
                 }}>退出登录</li>
             </ul>
             <Modal title="检测到新版本信息" visible={vm.showNewVersion} footer={null} onCancel={() => {
@@ -131,7 +131,7 @@ class VersionCheckView extends Component<VersionCheckViewProps>{
             <div className="wk-versioncheckview-content">
                 <div className="wk-versioncheckview-updateinfo">
                     <ul>
-                        <li>当前版本: {WKApp.config.appVersion} &nbsp;&nbsp;目标版本: {lastVersion.appVersion}</li>
+                        <li>当前版本: {XOApp.config.appVersion} &nbsp;&nbsp;目标版本: {lastVersion.appVersion}</li>
                         <li>更新内容：</li>
                         <li>
                             <pre>

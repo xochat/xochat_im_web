@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { WKApp, WKBase, Provider } from "@tsdaodao/base"
+import { XOApp, WKBase, Provider } from "@xochat/base"
 import { listen } from '@tauri-apps/api/event'
 // import Provider from "limbase/src/Service/Provider";
 import { MainPage } from "../Pages/Main";
@@ -18,7 +18,7 @@ export default class AppLayout extends Component {
 
             Notification.requestPermission() // 请求通知权限
         }
-        WKApp.endpoints.addOnLogin(this.onLogin)
+        XOApp.endpoints.addOnLogin(this.onLogin)
 
 
         this.tauriCheckUpdate()
@@ -26,7 +26,7 @@ export default class AppLayout extends Component {
     }
 
     componentWillUnmount() {
-        WKApp.endpoints.removeOnLogin(this.onLogin)
+        XOApp.endpoints.removeOnLogin(this.onLogin)
     }
 
     async tauriCheckUpdate() {
@@ -88,10 +88,10 @@ export default class AppLayout extends Component {
 
     render() {
         return <Provider create={() => {
-            return WKApp.shared
-        }} render={(vm: WKApp): any => {
-            if (!WKApp.shared.isLogined() || window.location.pathname === '/login') {
-                const loginComponent = WKApp.route.get("/login")
+            return XOApp.shared
+        }} render={(vm: XOApp): any => {
+            if (!XOApp.shared.isLogined() || window.location.pathname === '/login') {
+                const loginComponent = XOApp.route.get("/login")
                 if (!loginComponent) {
                     return <div>没有登录模块！</div>
                 }
@@ -100,7 +100,7 @@ export default class AppLayout extends Component {
             console.log("goto main---->")
             return <WKBase onContext={(ctx) => {
                 console.log("goto main----111>", ctx)
-                WKApp.shared.baseContext = ctx
+                XOApp.shared.baseContext = ctx
             }}>
                 <MainPage />
             </WKBase>

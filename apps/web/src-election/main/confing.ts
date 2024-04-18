@@ -1,5 +1,5 @@
 const TSDD_FONFIG = {
-  appId: "com.tsdaodao.im",
+  appId: "com.xochat.im",
   name: "XOCHAT",
 };
 

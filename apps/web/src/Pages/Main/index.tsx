@@ -1,4 +1,4 @@
-import { WKApp, WKLayout, Provider } from "@tsdaodao/base";
+import { XOApp, WKLayout, Provider } from "@xochat/base";
 import React, { Component } from "react";
 import "./index.css"
 import MainVM from "./vm";
@@ -25,7 +25,7 @@ export class MainContentLeft extends Component<MainContentLeftProps, MainContent
         return <>
             {
                 vm.historyRoutePaths.map((routePath,i) => {
-                    const cpt = WKApp.route.get(routePath)
+                    const cpt = XOApp.route.get(routePath)
                     return <div key={i} style={{"display":routePath === vm.currentMenus?.routePath?"block":"none","width":"100%","height":"100%"}}>
                         {cpt}
                     </div>
@@ -47,29 +47,29 @@ export class MainPage extends Component {
                 // }
                 return <TabNormalScreen vm={vm} />
             }} contentLeft={<MainContentLeft vm={vm}/>} onRightContext={(context)=>{
-                WKApp.routeRight.setPush = (view)=>{
+                XOApp.routeRight.setPush = (view)=>{
                     context.push(view)
                 }
-                WKApp.routeRight.setReplaceToRoot = (view) => {
+                XOApp.routeRight.setReplaceToRoot = (view) => {
                     context.replaceToRoot(view)
                 }
-                WKApp.routeRight.setPop = ()=> {
+                XOApp.routeRight.setPop = ()=> {
                     context.pop()
                 }
-                WKApp.routeRight.setPopToRoot = () => {
+                XOApp.routeRight.setPopToRoot = () => {
                     context.popToRoot()
                 }
             }} onLeftContext={(context)=>{
-                WKApp.routeLeft.setPush = (view)=>{
+                XOApp.routeLeft.setPush = (view)=>{
                     context.push(view)
                 }
-                WKApp.routeLeft.setReplaceToRoot = (view) => {
+                XOApp.routeLeft.setReplaceToRoot = (view) => {
                     context.replaceToRoot(view)
                 }
-                WKApp.routeLeft.setPop = ()=> {
+                XOApp.routeLeft.setPop = ()=> {
                     context.pop()
                 }
-                WKApp.routeLeft.setPopToRoot = () => {
+                XOApp.routeLeft.setPopToRoot = () => {
                     context.popToRoot()
                 }
             }} contentRight={ <div className="wk-chat-empty">
