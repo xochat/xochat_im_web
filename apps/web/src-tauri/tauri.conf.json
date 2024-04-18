@@ -7,7 +7,7 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "tangsengdaodao",
+    "productName": "xochat",
     "version": "../package.json"
   },
   "tauri": {

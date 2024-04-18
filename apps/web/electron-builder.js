@@ -1,5 +1,5 @@
 module.exports = {
-  productName: "tangsengdaodao", //项目名
+  productName: "xochat", //项目名
   appId: "com.xochat.im",
   copyright: "Copyright © xochat", //版权
   directories: {
