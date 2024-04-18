@@ -238,7 +238,7 @@ export class Conversation extends Component<ConversationProps> implements Conver
         return <div onAnimationEnd={() => {
             message.locateRemind = false;
             this.setState({})
-        }} key={message.clientMsgNo} id={`${message.contentType === MessageContentTypeConst.time ? "time-" : ""}${message.clientMsgNo}`} className={classNames("wk-message-item", last ? "wk-message-item-last" : undefined, message.locateRemind ? 'wk-message-item-reminder' : undefined)} >
+        }} key={message.clientMsgNo} id={`${message.contentType === MessageContentTypeConst.time ? "time-" : ""}${message.clientMsgNo}`} className={classNames("xo-message-item", last ? "xo-message-item-last" : undefined, message.locateRemind ? 'xo-message-item-reminder' : undefined)} >
             {
                 MessageCell ? <MessageCell key={message.clientMsgNo} message={message} context={this} /> : null
             }
@@ -439,10 +439,10 @@ export class Conversation extends Component<ConversationProps> implements Conver
 
     chatToolbarUI() {
         const toolbars = XOApp.endpoints.chatToolbars(this)
-        return <ul className="wk-conversation-chattoolbars">
+        return <ul className="xo-conversation-chattoolbars">
             {
                 toolbars.map((t, i) => {
-                    return <li key={i} className="wk-conversation-chattoolbars-item" >
+                    return <li key={i} className="xo-conversation-chattoolbars-item" >
                         {t}
                     </li>
                 })
@@ -471,7 +471,7 @@ export class Conversation extends Component<ConversationProps> implements Conver
             return this.vm
         }} render={(vm: ConversationVM) => {
             return <>
-                <div className={classNames("wk-conversation", vm.fileDragEnter ? "wk-conversation-dragover" : undefined, vm.currentReplyMessage ? "wk-conversation-hasreply" : undefined)} style={{ "background": chatBg ? `url(${chatBg}) rgb(245, 247, 249)` : undefined }}>
+                <div className={classNames("xo-conversation", vm.fileDragEnter ? "xo-conversation-dragover" : undefined, vm.currentReplyMessage ? "xo-conversation-hasreply" : undefined)} style={{ "background": chatBg ? `url(${chatBg}) rgb(245, 247, 249)` : undefined }}>
 
                     <div onDragOver={(event) => {
                         event.preventDefault()
@@ -479,8 +479,8 @@ export class Conversation extends Component<ConversationProps> implements Conver
                         event.preventDefault()
                         this.dragStart()
 
-                    }} className={classNames("wk-conversation-content")}>
-                        <div className="wk-conversation-messages" id={vm.messageContainerId} onScroll={this.handleScroll.bind(this)}>
+                    }} className={classNames("xo-conversation-content")}>
+                        <div className="xo-conversation-messages" id={vm.messageContainerId} onScroll={this.handleScroll.bind(this)}>
                             {
                                 vm.messages.map((message, i) => {
                                     let last = false
@@ -499,7 +499,7 @@ export class Conversation extends Component<ConversationProps> implements Conver
                             </ConversationPositionView>
 
                             {
-                                vm.fileDragEnter ? <div className="wk-conversation-content-fileupload-mask" onDragOver={(event) => {
+                                vm.fileDragEnter ? <div className="xo-conversation-content-fileupload-mask" onDragOver={(event) => {
                                     event.preventDefault()
                                 }} onDragLeave={(event) => {
                                     event.preventDefault()
@@ -512,7 +512,7 @@ export class Conversation extends Component<ConversationProps> implements Conver
                                         this._dragFileCallback(file)
                                     }
                                 }}>
-                                    <div className="wk-conversation-content-fileupload-mask-content">
+                                    <div className="xo-conversation-content-fileupload-mask-content">
                                         发送给 &nbsp; {channelInfo?.title}
                                     </div>
                                 </div> : undefined
@@ -520,14 +520,14 @@ export class Conversation extends Component<ConversationProps> implements Conver
 
                         </div>
                     </div>
-                    <div className="wk-conversation-topview">
+                    <div className="xo-conversation-topview">
                         {
                             vm.currentReplyMessage ? <ReplyView message={vm.currentReplyMessage} onClose={() => {
                                 vm.currentReplyMessage = undefined
                             }}></ReplyView> : undefined
                         }
                     </div>
-                    <div className={classNames("wk-conversation-multiplepanel", vm.editOn ? "wk-conversation-multiplepanel-show" : undefined)}>
+                    <div className={classNames("xo-conversation-multiplepanel", vm.editOn ? "xo-conversation-multiplepanel-show" : undefined)}>
                         <MultiplePanel onClose={() => {
                             vm.editOn = false
                             vm.unCheckAllMessages()
@@ -565,8 +565,8 @@ export class Conversation extends Component<ConversationProps> implements Conver
                             vm.unCheckAllMessages()
                         }}></MultiplePanel>
                     </div>
-                    <div className="wk-conversation-footer">
-                        <div className="wk-conversation-footer-content">
+                    <div className="xo-conversation-footer">
+                        <div className="xo-conversation-footer-content">
 
                             <MessageInput members={this.vm.subscribers.filter((s) => s.uid !== XOApp.loginInfo.uid)} onContext={(ctx) => {
                                 this._messageInputContext = ctx
@@ -706,13 +706,13 @@ class ConversationPositionView extends Component<ConversationPositionViewProps, 
         const { loading } = this.state
         const { showScrollToBottom, unreadCount, onScrollToBottom, reminders, onReminder } = this.props
         const types = this.getReminderTypes(reminders)
-        return <div className="wk-conversationpositionview">
+        return <div className="xo-conversationpositionview">
             <ul>
                 {
                     types && types.map((type) => {
                         const typeReminders = this.getRemindersWithType(type)
                         return <li key={type}>
-                            <div className={classNames("wk-conversationpositionview-item", "wk-reveale")} onClick={async () => {
+                            <div className={classNames("xo-conversationpositionview-item", "xo-reveale")} onClick={async () => {
                                 if (onReminder) {
                                     if (typeReminders && typeReminders.length > 0) {
                                         loading.set(type, true)
@@ -734,7 +734,7 @@ class ConversationPositionView extends Component<ConversationPositionViewProps, 
                                 }
 
                                 {
-                                    typeReminders.length > 0 ? <div className="wk-conversation-unread-count">{typeReminders.length}</div> : null
+                                    typeReminders.length > 0 ? <div className="xo-conversation-unread-count">{typeReminders.length}</div> : null
                                 }
                             </div>
                         </li>
@@ -742,7 +742,7 @@ class ConversationPositionView extends Component<ConversationPositionViewProps, 
                 }
 
                 <li>
-                    <div className={classNames("wk-conversationpositionview-item", showScrollToBottom ? "wk-reveale" : undefined)} onClick={async () => {
+                    <div className={classNames("xo-conversationpositionview-item", showScrollToBottom ? "xo-reveale" : undefined)} onClick={async () => {
                         if (onScrollToBottom) {
                             loading.set(-1, true)
                             this.setState({
@@ -757,7 +757,7 @@ class ConversationPositionView extends Component<ConversationPositionViewProps, 
                     }}>
                         {loading.get(-1) ? <Spin spinning={true}></Spin> : <img src={require("./assets/message_down.png")}></img>}
                         {
-                            unreadCount > 0 ? <div className="wk-conversation-unread-count">{unreadCount}</div> : null
+                            unreadCount > 0 ? <div className="xo-conversation-unread-count">{unreadCount}</div> : null
                         }
                     </div>
                 </li>
@@ -776,29 +776,29 @@ class ReplyView extends Component<ReplyViewProps> {
     render(): React.ReactNode {
         const { message, onClose } = this.props
         const fromChannelInfo = XOSDK.shared().channelManager.getChannelInfo(new Channel(message.fromUID, ChannelTypePerson))
-        return <div className="wk-replyview">
-            <div className="wk-replyview-close" onClick={() => {
+        return <div className="xo-replyview">
+            <div className="xo-replyview-close" onClick={() => {
                 if (onClose) {
                     onClose()
                 }
             }}>
-                <IconClose className="wk-replyview-close-icon" />
+                <IconClose className="xo-replyview-close-icon" />
             </div>
-            <div className="wk-replyview-content">
-                <div className="wk-replyview-content-first">
-                    <div className="wk-replyview-content-userinfo">
-                        <div className="wk-replyview-content-userinfo-avatar">
+            <div className="xo-replyview-content">
+                <div className="xo-replyview-content-first">
+                    <div className="xo-replyview-content-userinfo">
+                        <div className="xo-replyview-content-userinfo-avatar">
                             <WKAvatar style={{ "width": "24px", "height": "24px", "borderRadius": "50%" }} channel={new Channel(message.fromUID, ChannelTypePerson)}></WKAvatar>
                         </div>
-                        <div className="wk-replyview-content-userinfo-name">
+                        <div className="xo-replyview-content-userinfo-name">
                             {
                                 fromChannelInfo?.title
                             }
                         </div>
                     </div>
                 </div>
-                <div className="wk-replyview-content-second">
-                    <div className="wk-replyview-content-msg">
+                <div className="xo-replyview-content-second">
+                    <div className="xo-replyview-content-msg">
                         {message.content.conversationDigest}
                     </div>
                 </div>
@@ -818,48 +818,48 @@ class MultiplePanel extends Component<MultiplePanelProps> {
 
     render(): React.ReactNode {
         const { onClose, onForward, onMergeForward, onDelete } = this.props
-        return <div className="wk-multiplepanel">
-            <div className="wk-multiplepanel-close" onClick={() => {
+        return <div className="xo-multiplepanel">
+            <div className="xo-multiplepanel-close" onClick={() => {
                 if (onClose) {
                     onClose()
                 }
             }}>
                 <IconClose size="large" />
             </div>
-            <div className="wk-multiplepanel-content">
-                <div className="wk-multiplepanel-content-item" onClick={() => {
+            <div className="xo-multiplepanel-content">
+                <div className="xo-multiplepanel-content-item" onClick={() => {
                     if (onForward) {
                         onForward()
                     }
                 }}>
-                    <div className="wk-multiplepanel-content-item-icon">
-                        <svg className="wk-multiplepanel-content-item-icon-svg" aria-hidden="true" viewBox="0 0 1024 1024"><path d="M362.666667 704h554.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H362.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333zM106.666667 874.666667h810.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m427.093333-661.034667V57.152c0-3.84 1.6-7.530667 4.416-10.24a15.36 15.36 0 0 1 21.184 0L846.72 326.122667a21.205333 21.205333 0 0 1 0 30.698666L559.36 635.754667a15.253333 15.253333 0 0 1-10.602667 4.245333 14.72 14.72 0 0 1-14.976-14.485333v-155.733334H503.893333c-116.053333 0-203.946667 22.762667-257.301333 89.792-4.416 5.546667-9.216 11.264-16.256 20.096a8.106667 8.106667 0 0 1-5.248 3.264c-3.989333 0.512-7.125333-1.536-8.128-6.144-2.730667-14.421333-3.626667-29.866667-3.626667-40.746666 0-175.210667 143.466667-322.410667 320.426667-322.410667z m85.333333 85.333333h-85.333333c-80.277333 0-151.914667 41.984-194.453333 104.981334 47.722667-13.44 102.421333-19.52 164.586666-19.52h115.2v74.410666l120.96-117.397333-120.96-117.504v75.029333z"></path></svg>
+                    <div className="xo-multiplepanel-content-item-icon">
+                        <svg className="xo-multiplepanel-content-item-icon-svg" aria-hidden="true" viewBox="0 0 1024 1024"><path d="M362.666667 704h554.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H362.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333zM106.666667 874.666667h810.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m427.093333-661.034667V57.152c0-3.84 1.6-7.530667 4.416-10.24a15.36 15.36 0 0 1 21.184 0L846.72 326.122667a21.205333 21.205333 0 0 1 0 30.698666L559.36 635.754667a15.253333 15.253333 0 0 1-10.602667 4.245333 14.72 14.72 0 0 1-14.976-14.485333v-155.733334H503.893333c-116.053333 0-203.946667 22.762667-257.301333 89.792-4.416 5.546667-9.216 11.264-16.256 20.096a8.106667 8.106667 0 0 1-5.248 3.264c-3.989333 0.512-7.125333-1.536-8.128-6.144-2.730667-14.421333-3.626667-29.866667-3.626667-40.746666 0-175.210667 143.466667-322.410667 320.426667-322.410667z m85.333333 85.333333h-85.333333c-80.277333 0-151.914667 41.984-194.453333 104.981334 47.722667-13.44 102.421333-19.52 164.586666-19.52h115.2v74.410666l120.96-117.397333-120.96-117.504v75.029333z"></path></svg>
                     </div>
-                    <div className="wk-multiplepanel-content-item-title">
+                    <div className="xo-multiplepanel-content-item-title">
                         逐条转发
                     </div>
                 </div>
-                <div className="wk-multiplepanel-content-item" onClick={() => {
+                <div className="xo-multiplepanel-content-item" onClick={() => {
                     if (onMergeForward) {
                         onMergeForward()
                     }
                 }}>
-                    <div className="wk-multiplepanel-content-item-icon">
-                        <svg className="wk-multiplepanel-content-item-icon-svg" aria-hidden="true" viewBox="0 0 1024 1024"><path d="M362.666667 704h554.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H362.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333zM106.666667 874.666667h810.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m427.093333-661.034667V57.152c0-3.84 1.6-7.530667 4.416-10.24a15.36 15.36 0 0 1 21.184 0L846.72 326.122667a21.205333 21.205333 0 0 1 0 30.698666L559.36 635.754667a15.253333 15.253333 0 0 1-10.602667 4.245333 14.72 14.72 0 0 1-14.976-14.485333v-155.733334H503.893333c-116.053333 0-203.946667 22.762667-257.301333 89.792-4.416 5.546667-9.216 11.264-16.256 20.096a8.106667 8.106667 0 0 1-5.248 3.264c-3.989333 0.512-7.125333-1.536-8.128-6.144-2.730667-14.421333-3.626667-29.866667-3.626667-40.746666 0-175.210667 143.466667-322.410667 320.426667-322.410667z m85.333333 85.333333h-85.333333c-80.277333 0-151.914667 41.984-194.453333 104.981334 47.722667-13.44 102.421333-19.52 164.586666-19.52h115.2v74.410666l120.96-117.397333-120.96-117.504v75.029333z"></path></svg>
+                    <div className="xo-multiplepanel-content-item-icon">
+                        <svg className="xo-multiplepanel-content-item-icon-svg" aria-hidden="true" viewBox="0 0 1024 1024"><path d="M362.666667 704h554.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H362.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333zM106.666667 874.666667h810.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m427.093333-661.034667V57.152c0-3.84 1.6-7.530667 4.416-10.24a15.36 15.36 0 0 1 21.184 0L846.72 326.122667a21.205333 21.205333 0 0 1 0 30.698666L559.36 635.754667a15.253333 15.253333 0 0 1-10.602667 4.245333 14.72 14.72 0 0 1-14.976-14.485333v-155.733334H503.893333c-116.053333 0-203.946667 22.762667-257.301333 89.792-4.416 5.546667-9.216 11.264-16.256 20.096a8.106667 8.106667 0 0 1-5.248 3.264c-3.989333 0.512-7.125333-1.536-8.128-6.144-2.730667-14.421333-3.626667-29.866667-3.626667-40.746666 0-175.210667 143.466667-322.410667 320.426667-322.410667z m85.333333 85.333333h-85.333333c-80.277333 0-151.914667 41.984-194.453333 104.981334 47.722667-13.44 102.421333-19.52 164.586666-19.52h115.2v74.410666l120.96-117.397333-120.96-117.504v75.029333z"></path></svg>
                     </div>
-                    <div className="wk-multiplepanel-content-item-title">
+                    <div className="xo-multiplepanel-content-item-title">
                         合并转发
                     </div>
                 </div>
-                <div className="wk-multiplepanel-content-item" onClick={() => {
+                <div className="xo-multiplepanel-content-item" onClick={() => {
                     if (onDelete) {
                         onDelete()
                     }
                 }}>
-                    <div className="wk-multiplepanel-content-item-icon">
-                        <svg className="wk-multiplepanel-content-item-icon-svg" aria-hidden="true" viewBox="0 0 1024 1024"><path d="M362.666667 704h554.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H362.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333zM106.666667 874.666667h810.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m427.093333-661.034667V57.152c0-3.84 1.6-7.530667 4.416-10.24a15.36 15.36 0 0 1 21.184 0L846.72 326.122667a21.205333 21.205333 0 0 1 0 30.698666L559.36 635.754667a15.253333 15.253333 0 0 1-10.602667 4.245333 14.72 14.72 0 0 1-14.976-14.485333v-155.733334H503.893333c-116.053333 0-203.946667 22.762667-257.301333 89.792-4.416 5.546667-9.216 11.264-16.256 20.096a8.106667 8.106667 0 0 1-5.248 3.264c-3.989333 0.512-7.125333-1.536-8.128-6.144-2.730667-14.421333-3.626667-29.866667-3.626667-40.746666 0-175.210667 143.466667-322.410667 320.426667-322.410667z m85.333333 85.333333h-85.333333c-80.277333 0-151.914667 41.984-194.453333 104.981334 47.722667-13.44 102.421333-19.52 164.586666-19.52h115.2v74.410666l120.96-117.397333-120.96-117.504v75.029333z"></path></svg>
+                    <div className="xo-multiplepanel-content-item-icon">
+                        <svg className="xo-multiplepanel-content-item-icon-svg" aria-hidden="true" viewBox="0 0 1024 1024"><path d="M362.666667 704h554.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H362.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333zM106.666667 874.666667h810.666666a21.333333 21.333333 0 0 1 21.333334 21.333333v42.666667a21.333333 21.333333 0 0 1-21.333334 21.333333H106.666667a21.333333 21.333333 0 0 1-21.333334-21.333333v-42.666667a21.333333 21.333333 0 0 1 21.333334-21.333333z m427.093333-661.034667V57.152c0-3.84 1.6-7.530667 4.416-10.24a15.36 15.36 0 0 1 21.184 0L846.72 326.122667a21.205333 21.205333 0 0 1 0 30.698666L559.36 635.754667a15.253333 15.253333 0 0 1-10.602667 4.245333 14.72 14.72 0 0 1-14.976-14.485333v-155.733334H503.893333c-116.053333 0-203.946667 22.762667-257.301333 89.792-4.416 5.546667-9.216 11.264-16.256 20.096a8.106667 8.106667 0 0 1-5.248 3.264c-3.989333 0.512-7.125333-1.536-8.128-6.144-2.730667-14.421333-3.626667-29.866667-3.626667-40.746666 0-175.210667 143.466667-322.410667 320.426667-322.410667z m85.333333 85.333333h-85.333333c-80.277333 0-151.914667 41.984-194.453333 104.981334 47.722667-13.44 102.421333-19.52 164.586666-19.52h115.2v74.410666l120.96-117.397333-120.96-117.504v75.029333z"></path></svg>
                     </div>
-                    <div className="wk-multiplepanel-content-item-title">
+                    <div className="xo-multiplepanel-content-item-title">
                         删除
                     </div>
                 </div>

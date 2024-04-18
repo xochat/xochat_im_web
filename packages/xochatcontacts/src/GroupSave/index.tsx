@@ -13,10 +13,10 @@ export default class GroupSave extends Component {
         return <Provider create={()=>{
             return new GroupSaveVM()
         }} render={(vm:GroupSaveVM)=>{
-            return <div className="wk-groupsave">
+            return <div className="xo-groupsave">
             <WKViewQueueHeader title="保存的群" onBack={() => {
                 XOApp.routeLeft.pop()
-            }} action={<div  className="wk-viewqueueheader-content-action">
+            }} action={<div  className="xo-viewqueueheader-content-action">
                     <Button size="small" onClick={()=>{
                          var selectItems: IndexTableItem[]
                          var finishButtonContext: FinishButtonContext
@@ -42,17 +42,17 @@ export default class GroupSave extends Component {
                          }}></ContactsSelect>)
                     }} >新建群</Button>
             </div>}></WKViewQueueHeader>
-            <div className="wk-groupsave-content">
+            <div className="xo-groupsave-content">
                 <ul>
                     {
                         vm.groups.map((g)=>{
                             return  <li key={g.channel.channelID} onClick={()=>{
                                 XOApp.endpoints.showConversation(g.channel)
                             }}>
-                                <div className="wk-groupsave-content-avatar">
+                                <div className="xo-groupsave-content-avatar">
                                     <img src={XOApp.shared.avatarChannel(g.channel)}></img>
                                 </div>
-                                <div className="wk-groupsave-content-title">{g.title}</div>
+                                <div className="xo-groupsave-content-title">{g.title}</div>
                             </li>
                         })
                     }

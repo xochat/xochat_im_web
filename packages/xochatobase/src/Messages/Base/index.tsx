@@ -133,7 +133,7 @@ export default class MessageBase extends Component<MessageBaseProps, any> {
 
     getBubbleBoxClassName() {
         const { message, hiddeBubble } = this.props
-        let messageBubble = "wk-message-base-bubble-box"
+        let messageBubble = "xo-message-base-bubble-box"
 
         if (hiddeBubble) {
             messageBubble += " hide"
@@ -192,15 +192,15 @@ export default class MessageBase extends Component<MessageBaseProps, any> {
         const messageStyle = this.getMessageStyle(hasContinue, message)
 
         return (
-            <div className={classNames("wk-message-base", context.editOn() ? "wk-message-base-check-open" : undefined)} onClick={context.editOn() ? (event) => {
+            <div className={classNames("xo-message-base", context.editOn() ? "xo-message-base-check-open" : undefined)} onClick={context.editOn() ? (event) => {
                 context.checkeMessage(message.message, !message.checked)
             } : undefined}>
-                <div className="wk-message-base-checkBox" style={{ "marginBottom": messageStyle.marginBottom }}>
+                <div className="xo-message-base-checkBox" style={{ "marginBottom": messageStyle.marginBottom }}>
                     <Checkbox checked={message.checked} />
                 </div>
-                <div className={message.send ? "wk-message-base-send" : "wk-message-base-recv"} style={messageStyle}>
+                <div className={message.send ? "xo-message-base-send" : "xo-message-base-recv"} style={messageStyle}>
 
-                    <div className={"wk-message-base-box"} style={{ "pointerEvents": context.editOn() ? "none" : undefined }}>
+                    <div className={"xo-message-base-box"} style={{ "pointerEvents": context.editOn() ? "none" : undefined }}>
                         {
                             message.send && message.status === MessageStatus.Fail ? (
                                 <Popconfirm title="是否重新发送" okText="是" cancelText="否" onConfirm={() => {
@@ -220,10 +220,10 @@ export default class MessageBase extends Component<MessageBaseProps, any> {
                         }
 
                         <div className={this.getBubbleBoxClassName()}>
-                            <div className="wk-message-base-bubble" style={bubbleStyle} onContextMenu={(event) => {
+                            <div className="xo-message-base-bubble" style={bubbleStyle} onContextMenu={(event) => {
                                 context.showContextMenus(message.message, event)
                             }}>
-                                <div className="wk-message-base-content">
+                                <div className="xo-message-base-content">
                                     {this.props.children}
 
                                 </div>
@@ -243,8 +243,8 @@ export default class MessageBase extends Component<MessageBaseProps, any> {
 
 
                     {
-                        //TODO:  wk-message-error-reason 谨用这个 这个会引起ui跳动
-                        message.status === MessageStatus.Fail ? <div className="wk-message-error-reason">
+                        //TODO:  xo-message-error-reason 谨用这个 这个会引起ui跳动
+                        message.status === MessageStatus.Fail ? <div className="xo-message-error-reason">
                             {this.getMessageErrorReason()}
                         </div> : undefined
                     }

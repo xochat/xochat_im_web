@@ -135,11 +135,11 @@ export default class IndexTable extends Component<IndexTableProps, IndexTableSta
         const { indexItemMap } = this.state
         const { canSelect,onSelect } = this.props
         const items = indexItemMap.get(indexName)
-        return <div key={indexName} className="wk-indextable-section">
-            <div className="wk-indextable-list">
+        return <div key={indexName} className="xo-indextable-section">
+            <div className="xo-indextable-list">
                 {
                     items?.map((item, i) => {
-                        return <div key={item.id} className="wk-indextable-item" onClick={() => {
+                        return <div key={item.id} className="xo-indextable-item" onClick={() => {
                             if(canSelect && !this.isDisableItem(item.id)) {
                                 this.checkItem(item)
                                 this.setState({}, () => {
@@ -151,18 +151,18 @@ export default class IndexTable extends Component<IndexTableProps, IndexTableSta
                                 }
                             }
                         }}>
-                            <div className="wk-indextable-item-index">
+                            <div className="xo-indextable-item-index">
                                 {i === 0 ? indexName : ""}
                             </div>
                             {
-                                canSelect ? <div className="wk-indextable-checkbox">
+                                canSelect ? <div className="xo-indextable-checkbox">
                                     <Checkbox checked={this.isDisableItem(item.id) || this.isCheckItem(item)} disabled={this.isDisableItem(item.id)}></Checkbox>
                                 </div> : undefined
                             }
-                            <div className="wk-indextable-item-avatar">
+                            <div className="xo-indextable-item-avatar">
                                 <img src={item.avatar}></img>
                             </div>
-                            <div className="wk-indextable-item-name">
+                            <div className="xo-indextable-item-name">
                                 {item.name}
                             </div>
                         </div>
@@ -188,12 +188,12 @@ export default class IndexTable extends Component<IndexTableProps, IndexTableSta
 
     render() {
         const { indexList } = this.state
-        return <div className="wk-indextable">
-            <div className="wk-indextable-search">
-                <div className="wk-indextable-selected-box" id="selectedList">
+        return <div className="xo-indextable">
+            <div className="xo-indextable-search">
+                <div className="xo-indextable-selected-box" id="selectedList">
                     {
                         this.getSelectedUsers().map((item) => {
-                            return <div key={item.id} className="wk-indextable-select-user" onClick={() => {
+                            return <div key={item.id} className="xo-indextable-select-user" onClick={() => {
                                 if(!this.isDisableItem(item.id)) {
                                     this.checkItem(item)
                                 }
@@ -203,11 +203,11 @@ export default class IndexTable extends Component<IndexTableProps, IndexTableSta
                         })
                     }
                 </div>
-                <div className="wk-indextable-search-box">
-                    <div className="wk-indextable-search-icon">
+                <div className="xo-indextable-search-box">
+                    <div className="xo-indextable-search-icon">
                         <IconSearchStroked style={{ color: '#bbbfc4', fontSize: '20px' }} />
                     </div>
-                    <div className="wk-indextable-search-input">
+                    <div className="xo-indextable-search-input">
                         <input onChange={(v) => {
                             this.onSearch(v.target.value)
                         }} placeholder={"搜索"} ref={(rf) => {
@@ -215,7 +215,7 @@ export default class IndexTable extends Component<IndexTableProps, IndexTableSta
                     </div>
                 </div>
             </div>
-            <div className="wk-indextable-contacts">
+            <div className="xo-indextable-contacts">
                 {
                     indexList.map((indexName) => {
                         return this.sectionUI(indexName)

@@ -10,18 +10,18 @@ export default class Sections extends Component<SectionsProps> {
 
     render() {
         const { sections } = this.props
-        return <div className="wk-sections">
+        return <div className="xo-sections">
             {
                 sections.map((section, i) => {
-                    return <div key={i} className="wk-section">
+                    return <div key={i} className="xo-section">
                         {
-                            section.title && section.title !== "" ? <div className="wk-section-title">{section.title}</div> : undefined
+                            section.title && section.title !== "" ? <div className="xo-section-title">{section.title}</div> : undefined
                         }
 
-                        <div className="wk-channelsetting-section-rows">
+                        <div className="xo-channelsetting-section-rows">
                             {
                                 section.rows?.map((row, j) => {
-                                    return <div key={j} className="wk-section-row">
+                                    return <div key={j} className="xo-section-row">
                                         <row.cell  {...row.properties}></row.cell>
                                     </div>
                                 })
@@ -29,7 +29,7 @@ export default class Sections extends Component<SectionsProps> {
 
                         </div>
                         {
-                            section.subtitle && section.subtitle !== "" ? <div className="wk-section-subtitle">
+                            section.subtitle && section.subtitle !== "" ? <div className="xo-section-subtitle">
                                 {section.subtitle }
                             </div> : undefined
                         }

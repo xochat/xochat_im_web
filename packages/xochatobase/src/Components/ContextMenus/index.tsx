@@ -102,7 +102,7 @@ export default class ContextMenus extends Component<ContextMenusProps, ContextMe
         const { showContextMenus, contextOrigin } = this.state
         const { menus } = this.props
         return <>
-            <div className={classNames("wk-contextmenus", showContextMenus && "wk-contextmenus-open")} ref={ref => { this.contextMenusRef = ref }} style={{ transformOrigin: `-3px ${contextOrigin}px` }}>
+            <div className={classNames("xo-contextmenus", showContextMenus && "xo-contextmenus-open")} ref={ref => { this.contextMenusRef = ref }} style={{ transformOrigin: `-3px ${contextOrigin}px` }}>
                 <ul>
                     {
                         menus && menus.map((m, i) => {
@@ -117,7 +117,7 @@ export default class ContextMenus extends Component<ContextMenusProps, ContextMe
                 </ul>
 
             </div>
-            <div className="wk-contextmenus-mask" style={{ "visibility": showContextMenus ? "visible" : "hidden" }} onClick={() => {
+            <div className="xo-contextmenus-mask" style={{ "visibility": showContextMenus ? "visible" : "hidden" }} onClick={() => {
                 this._handleClick()
             }}>
 

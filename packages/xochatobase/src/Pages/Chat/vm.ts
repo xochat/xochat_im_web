@@ -19,7 +19,7 @@ export class ChatVM extends ProviderListener {
     private conversationListener!: ConversationListener
     private channelListener!: ChannelInfoListener
     private messageDeleteListener!: MessageDeleteListener
-    private conversationListID = "wk-conversationlist"
+    private conversationListID = "xo-conversationlist"
 
 
     set showAddPopover(v: boolean) {

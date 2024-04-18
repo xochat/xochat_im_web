@@ -10,7 +10,7 @@ export class  FlameMessageCell extends MessageCell {
     render() {
         const { message, context } = this.props
         return <MessageBase context={context} message={message} onBubble={() => {
-        }}><div className="wk-message-text">{FlameMessageCell.tip(message)}</div></MessageBase>
+        }}><div className="xo-message-text">{FlameMessageCell.tip(message)}</div></MessageBase>
     }
 
     static tip(message: MessageWrap) {

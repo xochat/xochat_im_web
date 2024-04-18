@@ -129,28 +129,28 @@ export default class ContactsList extends Component<any, ContactsState> {
         const { canSelect } = this.props
         const items = indexItemMap.get(indexName)
 
-        return <div key={indexName} className="wk-contacts-section">
-            <div className="wk-contacts-section-list">
+        return <div key={indexName} className="xo-contacts-section">
+            <div className="xo-contacts-section-list">
                 {
                     items?.map((item, i) => {
                         let name = item.name
                         if (item.remark && item.remark !== "") {
                             name = item.remark
                         }
-                        return <div key={item.uid} className={classnames("wk-contacts-section-item", XOApp.shared.openChannel?.channelType === ChannelTypePerson && XOApp.shared.openChannel?.channelID === item.uid ? "wk-contacts-section-item-selected" : undefined)} onClick={() => {
+                        return <div key={item.uid} className={classnames("xo-contacts-section-item", XOApp.shared.openChannel?.channelType === ChannelTypePerson && XOApp.shared.openChannel?.channelID === item.uid ? "xo-contacts-section-item-selected" : undefined)} onClick={() => {
                             const channel = new Channel(item.uid, ChannelTypePerson)
                             XOApp.endpoints.showConversation(channel)
                             this.setState({})
                         }} onContextMenu={(e) => {
                             this._handleContextMenu(item, e)
                         }}>
-                            <div className="wk-contacts-section-item-index">
+                            <div className="xo-contacts-section-item-index">
                                 {i === 0 ? indexName : ""}
                             </div>
-                            <div className="wk-contacts-section-item-avatar">
+                            <div className="xo-contacts-section-item-avatar">
                                 <img src={item.avatar}></img>
                             </div>
-                            <div className="wk-contacts-section-item-name">
+                            <div className="xo-contacts-section-item-name">
                                 {name}
                             </div>
                         </div>
@@ -165,10 +165,10 @@ export default class ContactsList extends Component<any, ContactsState> {
         return <WKBase onContext={(baseCtx) => {
             this.baseContext = baseCtx
         }}>
-            <div className="wk-contacts">
+            <div className="xo-contacts">
                 <WKNavMainHeader title="联系人"></WKNavMainHeader>
-                <div className="wk-contacts-content">
-                    <div className="wk-contacts-content-header">
+                <div className="xo-contacts-content">
+                    <div className="xo-contacts-content-header">
                         <Search placeholder="搜索" onChange={(v) => {
                             this.setState({
                                 keyword: v
@@ -177,14 +177,14 @@ export default class ContactsList extends Component<any, ContactsState> {
                             })
                         }}></Search>
                     </div>
-                    <div className="wk-contacts-content-fnc">
+                    <div className="xo-contacts-content-fnc">
                         {
                             XOApp.endpoints.contactsHeaders().map((view, i) => {
                                 return <div key={i}>{view}</div>
                             })
                         }
                     </div>
-                    <div className="wk-contacts-content-contacts">
+                    <div className="xo-contacts-content-contacts">
                         {
                             indexList.map((indexName) => {
                                 return this.sectionUI(indexName)

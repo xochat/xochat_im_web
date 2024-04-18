@@ -57,9 +57,9 @@ export class FriendAdd extends Component<FriendAddProps,FriendAddState> {
         return <WKBase onContext={(ctx)=>{
             this.baseContext = ctx
         }}>
-            <div className="wk-friendadd">
+            <div className="xo-friendadd">
             <WKViewQueueHeader title="添加好友" onBack={onBack} />
-            <div className="wk-friendadd-content">
+            <div className="xo-friendadd-content">
                 <Spin spinning={spinning}>
                 <Search placeholder={`${XOApp.config.appName}号/手机号`} onChange={(v)=>{
                     this.setState({
@@ -69,7 +69,7 @@ export class FriendAdd extends Component<FriendAddProps,FriendAddState> {
                     this.searchUser()
                 }}></Search>
                 </Spin>
-                <div className="wk-friendadd-content-qrcode">
+                <div className="xo-friendadd-content-qrcode">
                         我的{XOApp.config.appName}号：{XOApp.loginInfo.shortNo} <img onClick={()=>{
                             XOApp.routeLeft.push(<QRCodeMy></QRCodeMy>)
                         }} src={require("./assets/icon_qrcode.png")}></img>

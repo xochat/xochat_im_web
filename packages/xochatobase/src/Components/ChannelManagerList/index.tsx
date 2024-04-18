@@ -24,7 +24,7 @@ export default class ChannelManagerList extends Component<ChannelManagerListProp
         const data = routeContext.routeData()
 
 
-        return <div className="wk-channelmanagerlist">
+        return <div className="xo-channelmanagerlist">
             <SmallTableEdit addTitle="添加管理员" items={data.subscribers.filter((s) => {
                 return s.role === GroupRole.manager || s.role === GroupRole.owner
             }).map((subscriber) => {

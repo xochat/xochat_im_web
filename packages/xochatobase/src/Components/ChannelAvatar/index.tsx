@@ -79,11 +79,11 @@ export class ChannelAvatar extends Component<ChannelAvatarProps>{
     }
     render() {
         const { channel,showUpload } = this.props
-        return <div className="wk-channelavatar">
-            <div className="wk-channelavatar-avatar">
+        return <div className="xo-channelavatar">
+            <div className="xo-channelavatar-avatar">
                 <img style={{"width":"200px","height":"200px"}} src={XOApp.shared.avatarChannel(channel)}></img>
             </div>
-            <div className="wk-channelavatar-upload" style={{display:showUpload?"block":"none"}}>
+            <div className="xo-channelavatar-upload" style={{display:showUpload?"block":"none"}}>
                 <Button onClick={this.chooseFile}>更换头像</Button>
                 <input  onClick={this.onFileClick.bind(this)}  type="file" multiple={false} accept="image/*" style={{ display: 'none' }} ref={(ref) => { this.$fileInput = ref }}  onChange={this.onFileChange.bind(this)}></input>
             </div>

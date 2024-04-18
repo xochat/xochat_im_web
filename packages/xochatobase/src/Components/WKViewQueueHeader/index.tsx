@@ -51,9 +51,9 @@ export default class WKViewQueueHeader extends Component<WKViewQueueHeaderProps,
        const  isDark = XOApp.config.themeMode === ThemeMode.dark
         const { title,onBack,hideBack,showFinishButton,onFinished,action } = this.props
         const { loading,disable } = this.state
-        return <div className="wk-viewqueueheader">
+        return <div className="xo-viewqueueheader">
            {
-               hideBack?undefined: <div className="wk-viewqueueheader-back" onClick={()=>{
+               hideBack?undefined: <div className="xo-viewqueueheader-back" onClick={()=>{
                 if(onBack) {
                     onBack()
                 }
@@ -61,12 +61,12 @@ export default class WKViewQueueHeader extends Component<WKViewQueueHeaderProps,
                 <img src={require(`${isDark?"./assets/nav_back_dark.png":"./assets/nav_back.png"}`)}></img>
             </div>
            }
-            <div className="wk-viewqueueheader-content">
-                    <div className="wk-viewqueueheader-content-title">
+            <div className="xo-viewqueueheader-content">
+                    <div className="xo-viewqueueheader-content-title">
                             {title}
                     </div>
                     {
-                        showFinishButton?<div className="wk-viewqueueheader-content-action">
+                        showFinishButton?<div className="xo-viewqueueheader-content-action">
                         <Button type="primary" theme='solid' loading={loading} disabled={disable} onClick={()=>{
                             if(onFinished) {
                                 onFinished()

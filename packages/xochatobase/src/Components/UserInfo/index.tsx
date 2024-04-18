@@ -37,22 +37,22 @@ export default class UserInfo extends Component<UserInfoProps> {
                     onClose()
                 }
             }} render={(context) => {
-                return <div className="wk-userinfo">
-                    <div className="wk-userinfo-content">
+                return <div className="xo-userinfo">
+                    <div className="xo-userinfo-content">
                         {
-                            !vm.channelInfo ? <div className="wk-userinfo-loading">
+                            !vm.channelInfo ? <div className="xo-userinfo-loading">
                                 <Spin></Spin>
                             </div> : (<>
-                                <div className="wk-userinfo-header">
-                                    <div className="wk-userinfo-user">
-                                        <div className="wk-userinfo-user-avatar">
+                                <div className="xo-userinfo-header">
+                                    <div className="xo-userinfo-user">
+                                        <div className="xo-userinfo-user-avatar">
                                             <Image src={XOApp.shared.avatarUser(uid)}></Image>
                                         </div>
-                                        <div className="wk-userinfo-user-info">
-                                            <div className="wk-userinfo-user-info-name">
+                                        <div className="xo-userinfo-user-info">
+                                            <div className="xo-userinfo-user-info-name">
                                                 {vm.displayName()}
                                             </div>
-                                            <div className="wk-userinfo-user-info-others">
+                                            <div className="xo-userinfo-user-info-others">
                                                 <ul>
                                                     {
                                                         vm.showNickname() ? <li>
@@ -76,7 +76,7 @@ export default class UserInfo extends Component<UserInfoProps> {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="wk-userinfo-sections">
+                                <div className="xo-userinfo-sections">
                                     <Sections sections={vm.sections(context)}></Sections>
                                 </div>
                             </>)
@@ -86,8 +86,8 @@ export default class UserInfo extends Component<UserInfoProps> {
                         <br></br>
                     </div>
                     {
-                        vm.isSelf() ? undefined : <div className="wk-userInfo-footer">
-                            <div className="wk-userinfo-footer-sendbutton">
+                        vm.isSelf() ? undefined : <div className="xo-userInfo-footer">
+                            <div className="xo-userinfo-footer-sendbutton">
                                 {
                                     vm.relation() === UserRelation.friend ? <Button theme='solid' type="primary" onClick={() => {
                                         XOApp.shared.baseContext.hideUserInfo()

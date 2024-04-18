@@ -1,16 +1,14 @@
-
-.wk-inputedit {
-    width: 100%;
-    height: 50px;
-   
+.xo-inputedit {
+  width: 100%;
+  height: 50px;
 }
 
-.wk-inputedit .semi-input-textarea-wrapper {
-    background-color: var(--wk-color-item);
+.xo-inputedit .semi-input-textarea-wrapper {
+  background-color: var(--xo-color-item);
 }
 
-.wk-inputedit-placeholder {
-    font-size: 13px;
-    color: #999;
-    margin: 5px 0px 0px 5px;
+.xo-inputedit-placeholder {
+  font-size: 13px;
+  color: #999;
+  margin: 5px 0px 0px 5px;
 }

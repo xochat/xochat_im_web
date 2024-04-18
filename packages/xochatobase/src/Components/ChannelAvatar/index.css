@@ -1,19 +1,18 @@
-.wk-channelavatar {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-    flex-direction: column;
+.xo-channelavatar {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  flex-direction: column;
 }
 
-.wk-channelavatar-avatar {
-    width: 200px;
-    height: 200px;
-    
+.xo-channelavatar-avatar {
+  width: 200px;
+  height: 200px;
 }
 
-.wk-channelavatar-upload {
-    margin-top: 20px;
+.xo-channelavatar-upload {
+  margin-top: 20px;
 }

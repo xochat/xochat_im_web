@@ -208,7 +208,7 @@ export class VoiceCell extends MessageCell<any,VoiceCellState> {
         // const url = XOApp.shared().commonProvider.getImageURL(content.url)
         return <MessageBase message={message} context={context} >
             {/* <canvas ref={this.canvasRef}  style={{width:"140px",height:"23px"}}/> */}
-            <div className="wk-message-voice">
+            <div className="xo-message-voice">
                 <div className={classNames("voicePlay", this.getPlayStatusClassname())} onClick={(e) => {
                     this.playOrPauseVoice.bind(this)(e);
                 }}>
@@ -224,19 +224,19 @@ export class VoiceCell extends MessageCell<any,VoiceCellState> {
                         </div>
                     </div>) : null
                 }
-                <div className="wk-message-voice-info">
-                    <div className="wk-message-voice-waveform">
+                <div className="xo-message-voice-info">
+                    <div className="xo-message-voice-waveform">
                         <WaveCanvas barColor={isSend?"rgb(255, 255, 255,0.5)":"rgb(0, 0, 0,0.2)"} waveform={this.waveform ?? []} width={200} height={23} />
-                        <div ref={this.lightWavformRef} className="wk-message-voice-lightWavform">
+                        <div ref={this.lightWavformRef} className="xo-message-voice-lightWavform">
                             <WaveCanvas barColor={isSend ? "#fff" : XOApp.config.themeColor} waveform={this.waveform ?? []} width={200} height={23} />
                         </div>
                     </div>
-                    <div className="wk-message-voice-info-status">
-                        <div className="wk-message-voice-info-time" ref={this.timeRef}>
+                    <div className="xo-message-voice-info-status">
+                        <div className="xo-message-voice-info-time" ref={this.timeRef}>
                             {this.timeFormat}
                             {/* <div className={style.status}>*</div> */}
                         </div>
-                        <div className="wk-message-voice-info-tail">
+                        <div className="xo-message-voice-info-tail">
                             <MessageTrail message={message} />
                         </div>
                     </div>

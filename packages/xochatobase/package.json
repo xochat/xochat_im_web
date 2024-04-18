@@ -24,7 +24,7 @@
     "react-scroll": "^1.8.4",
     "react-spinners": "^0.11.0",
     "react-viewer": "^3.2.2",
-    "xochat_js_sdk": "^1.0.0"
+    "xochat_js_sdk": "^1.0.1"
   },
   "devDependencies": {
     "@types/react-avatar-editor": "^13.0.0",

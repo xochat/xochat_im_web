@@ -16,10 +16,10 @@ export class HistorySplitContent extends MessageContent {
 export class HistorySplitCell extends MessageCell {
 
     render() {
-        return <div className="wk-message-split-box">
-           <div className="wk-message-split-line1"></div>
-           <div className="wk-message-split-content">以上为历史消息</div>
-           <div className="wk-message-split-line2"></div>
+        return <div className="xo-message-split-box">
+           <div className="xo-message-split-line1"></div>
+           <div className="xo-message-split-content">以上为历史消息</div>
+           <div className="xo-message-split-line2"></div>
         </div>
     }
 }

@@ -1,6 +1,6 @@
 
 
-.wk-message-split-box {
+.xo-message-split-box {
     width: 85%;
     margin: 0 auto;
     padding: 20px;
@@ -8,7 +8,7 @@
     display: table;
 }
 
-.wk-message-split-content {
+.xo-message-split-content {
     color: rgba(9,30,66,.74);
     padding: 5px 8px 0;
     white-space: nowrap;
@@ -17,7 +17,7 @@
     font-weight: 600;
 }
 
-.wk-message-split-line1 {
+.xo-message-split-line1 {
     background-image: -webkit-gradient(linear,0 0,0 100%,from(transparent),to(rgba(9,30,66,.12)));
     background-image: -webkit-linear-gradient(360deg,transparent,rgba(9,30,66,.12));
     background-image: -moz-linear-gradient(360deg,transparent,rgba(9,30,66,.12));
@@ -33,7 +33,7 @@
     position: relative;
 }
 
-.wk-message-split-line2 {
+.xo-message-split-line2 {
     background-image: -webkit-gradient(linear,0 0,0 100%,from(#c5d0d5),to(transparent));
     background-image: -webkit-linear-gradient(360deg,rgba(9,30,66,.12),transparent);
     background-image: -moz-linear-gradient(360deg,rgba(9,30,66,.12),transparent);

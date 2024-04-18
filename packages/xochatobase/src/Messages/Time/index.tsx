@@ -28,10 +28,10 @@ export class TimeCell extends MessageCell {
     render() {
         const { message } = this.props
         const content = message.content as TimeContent
-        return <div className="wk-message-time-box">
-           <div className="wk-message-time-line1"></div>
-           <div className="wk-message-time">{this.formatMessageTime(content.timestamp||0)}</div>
-           <div className="wk-message-time-line2"></div>
+        return <div className="xo-message-time-box">
+           <div className="xo-message-time-line1"></div>
+           <div className="xo-message-time">{this.formatMessageTime(content.timestamp||0)}</div>
+           <div className="xo-message-time-line2"></div>
         </div>
     }
 }

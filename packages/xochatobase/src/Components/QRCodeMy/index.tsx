@@ -38,32 +38,32 @@ export default class QRCodeMy extends Component<QRCodeMyProps, QRCodeMyState> {
     render(): ReactNode {
         const { qrcode } = this.state
         const { disableHeader } = this.props
-        return <div className="wk-qrcodemy">
+        return <div className="xo-qrcodemy">
 
             {
                 !disableHeader? <WKViewQueueHeader title="我的二维码" onBack={() => {
                     XOApp.routeLeft.pop()
                 }}></WKViewQueueHeader>:undefined
             }
-            <div className="wk-qrcodemy-content">
-                <div className="wk-qrcodemy-content-qrcodebox">
-                    <div className="wk-qrcodemy-content-qrcodeinfo">
-                        <div className="wk-qrcodemy-content-userinfo">
-                            <div className="wk-qrcodemy-content-userinfo-avatar">
+            <div className="xo-qrcodemy-content">
+                <div className="xo-qrcodemy-content-qrcodebox">
+                    <div className="xo-qrcodemy-content-qrcodeinfo">
+                        <div className="xo-qrcodemy-content-userinfo">
+                            <div className="xo-qrcodemy-content-userinfo-avatar">
                                 <img src={XOApp.shared.avatarUser(XOApp.loginInfo.uid || "")}></img>
                             </div>
-                            <div className="wk-qrcodemy-content-userinfo-name">
+                            <div className="xo-qrcodemy-content-userinfo-name">
                                 {XOApp.loginInfo.name}
                             </div>
                         </div>
-                        <div className="wk-qrcodemy-content-qrcode">
+                        <div className="xo-qrcodemy-content-qrcode">
                             {
                                 qrcode ? <QRCode value={qrcode}
                                     size={250}
                                     fgColor="#000000"></QRCode> : <Spin></Spin>
                             }
                         </div>
-                        <div className="wk-qrcodemy-content-tip">
+                        <div className="xo-qrcodemy-content-tip">
                             扫一扫上面的二维码图案，加我{XOApp.config.appName}
                         </div>
                     </div>

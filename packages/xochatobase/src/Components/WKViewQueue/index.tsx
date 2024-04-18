@@ -157,9 +157,9 @@ export default class WKViewQueue extends Component<WKViewQueueProps, WKViewQueue
     statusClass() {
         const { status } = this.state
         if(status === WKViewQueueStatus.Push) {
-            return "wk-viewqueue-view-in"
+            return "xo-viewqueue-view-in"
         }else  if(status === WKViewQueueStatus.Pop) {
-            return "wk-viewqueue-view-out"
+            return "xo-viewqueue-view-out"
         }else {
             return ""
         }
@@ -167,9 +167,9 @@ export default class WKViewQueue extends Component<WKViewQueueProps, WKViewQueue
 
     render(): ReactNode {
         const { queues } = this.state
-        return <div className="wk-viewqueue">
-            <div className="wk-viewqueue-route">
-                <div className="wk-viewqueue-view">
+        return <div className="xo-viewqueue">
+            <div className="xo-viewqueue-route">
+                <div className="xo-viewqueue-view">
                     {this.props.children}
                 </div>
                 {
@@ -179,7 +179,7 @@ export default class WKViewQueue extends Component<WKViewQueueProps, WKViewQueue
                             if(last) {
                                 this.animationEnd()
                             }
-                        }} id={last ? "wk-viewqueue-view-last" : undefined} className={classNames("wk-viewqueue-view",last?this.statusClass():undefined)} >
+                        }} id={last ? "xo-viewqueue-view-last" : undefined} className={classNames("xo-viewqueue-view",last?this.statusClass():undefined)} >
                             {view}
                         </div>
                     })

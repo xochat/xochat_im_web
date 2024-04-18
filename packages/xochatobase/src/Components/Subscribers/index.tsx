@@ -19,12 +19,12 @@ export class Subscribers extends Component<SubscribersProps> {
     baseContext!:WKBaseContext
 
     subscriberUI(subscriber: Subscriber) {
-        return <div key={subscriber.uid} className="wk-subscribers-item" onClick={()=>{
+        return <div key={subscriber.uid} className="xo-subscribers-item" onClick={()=>{
             const vercode = subscriber.orgData?.vercode
             XOApp.shared.baseContext.showUserInfo(subscriber.uid,subscriber.channel,vercode)
         }}>
             <img src={XOApp.shared.avatarUser(subscriber.uid)}></img>
-            <div className="wk-subscribers-item-name">{subscriber.remark || subscriber.name}</div>
+            <div className="xo-subscribers-item-name">{subscriber.remark || subscriber.name}</div>
         </div>
     }
 
@@ -36,15 +36,15 @@ export class Subscribers extends Component<SubscribersProps> {
             return <WKBase onContext={(baseContext)=>{
                 this.baseContext = baseContext
             }}>
-                <div className="wk-subscribers">
-                <div className="wk-subscribers-content">
+                <div className="xo-subscribers">
+                <div className="xo-subscribers-content">
                     {
                         vm.subscribersTop.map((subscriber) => {
                             return this.subscriberUI(subscriber)
                         })
                     }
                     {
-                        vm.showAdd() ? <div className="wk-subscribers-item" onClick={()=>{
+                        vm.showAdd() ? <div className="xo-subscribers-item" onClick={()=>{
                             if(onAdd) {
                                 onAdd()
                             }
@@ -53,7 +53,7 @@ export class Subscribers extends Component<SubscribersProps> {
                         </div> : undefined
                     }
                     {
-                        vm.showRemove() ? <div className="wk-subscribers-item" onClick={()=>{
+                        vm.showRemove() ? <div className="xo-subscribers-item" onClick={()=>{
                             if(onRemove){
                                 onRemove()
                             }
@@ -63,7 +63,7 @@ export class Subscribers extends Component<SubscribersProps> {
                     }
                 </div>
                 {
-                    vm.hasMoreSubscribers() ? <div className="wk-subscribers-more" onClick={()=>{
+                    vm.hasMoreSubscribers() ? <div className="xo-subscribers-more" onClick={()=>{
                         context.push(<IndexTable items={vm.subscribers.map((s)=>{
                             return new IndexTableItem(s.uid,s.remark || s.name,XOApp.shared.avatarUser(s.uid))
                         })}></IndexTable>,new RouteContextConfig({

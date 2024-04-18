@@ -62,7 +62,7 @@ export default class InputStyle {
     
       suggestions: {
         list: {
-          backgroundColor: "var(--wk-color-item)",
+          backgroundColor: "var(--xo-color-item)",
           // border: '1px solid rgba(0,0,0,0.15)',
           boxShadow: XOApp.config.themeMode === ThemeMode.dark?"15px 15px 15px -15px #000, -15px -15px 15px -15px #000":'15px 15px 15px -15px #eee, -15px -15px 15px -15px #eee',
           fontSize: 14,

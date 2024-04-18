@@ -1,29 +1,29 @@
 
 
  :root {
-    --wk-color-theme: #E46342;
-    --wk-color-secondary: rgba(246, 246, 246);
-    --wk-color-secondary-2:  rgba(246, 246, 246);
-    --wk-color-hover: #eee;
+    --xo-color-theme: #E46342;
+    --xo-color-secondary: rgba(246, 246, 246);
+    --xo-color-secondary-2:  rgba(246, 246, 246);
+    --xo-color-hover: #eee;
     /* 提示类型的字体颜色 */
-    --wk-color-font-tip: rgb(170,170,170);
-    --wk-width-layout-content-left: 300px;
-    --wk-wdith-conversation-list: var(--wk-width-layout-content-left);
-    /* --wk-height-chat-search: 65px; */
-    --wk-height-chat-search: 64px;
-    --wk-height-chat-conversation-header: 64px;
-    --wk-wdith-chat-channelsetting: 340px;
-    --wk-layer-transition: 300ms cubic-bezier(0.33,1,0.68,1);
-    --wk-slide-transition: 450ms cubic-bezier(0.25, 1, 0.5, 1);
+    --xo-color-font-tip: rgb(170,170,170);
+    --xo-width-layout-content-left: 300px;
+    --xo-wdith-conversation-list: var(--xo-width-layout-content-left);
+    /* --xo-height-chat-search: 65px; */
+    --xo-height-chat-search: 64px;
+    --xo-height-chat-conversation-header: 64px;
+    --xo-wdith-chat-channelsetting: 340px;
+    --xo-layer-transition: 300ms cubic-bezier(0.33,1,0.68,1);
+    --xo-slide-transition: 450ms cubic-bezier(0.25, 1, 0.5, 1);
 
-    --wk-line: 1px solid #eee;
-    --wk-line-color:  #eee;
+    --xo-line: 1px solid #eee;
+    --xo-line-color:  #eee;
 
-    --wk-color-item: white;
-    --wk-text-item:  rgba(9,30,66,.87);
+    --xo-color-item: white;
+    --xo-text-item:  rgba(9,30,66,.87);
 
-    --wk-message-item: white;
-    --wk-message-color: #0F0F0F;
+    --xo-message-item: white;
+    --xo-message-color: #0F0F0F;
   }
 
   *, *:before, *:after {
@@ -31,16 +31,16 @@
   }
 
   body[theme-mode=dark] {
-    --wk-color-secondary: #0F0F0F;
-    --wk-color-secondary-2: rgb(33,33,33);
-    --wk-line: 1px solid rgb(255,255,255,0.1);
-    --wk-line-color: rgb(255,255,255,0.1);
-    --wk-color-item: rgb(33,33,33);
-    --wk-text-item: white;
+    --xo-color-secondary: #0F0F0F;
+    --xo-color-secondary-2: rgb(33,33,33);
+    --xo-line: 1px solid rgb(255,255,255,0.1);
+    --xo-line-color: rgb(255,255,255,0.1);
+    --xo-color-item: rgb(33,33,33);
+    --xo-text-item: white;
     color: white !important;
 
-    --wk-message-item: #0F0F0F;
-    --wk-message-color: white;
+    --xo-message-item: #0F0F0F;
+    --xo-message-color: white;
 
     --semi-color-primary: #E46342;
     --semi-color-primary-hover: rgb(228, 99, 66,0.5);
@@ -136,14 +136,14 @@ html {
   
 
 
-  .wk-loading {
+  .xo-loading {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 15px 0px;
   }
 
-  .wk-text-oneline {
+  .xo-text-oneline {
     display: inline-block;
     white-space: nowrap;
     width: 100%;

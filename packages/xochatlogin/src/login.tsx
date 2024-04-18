@@ -25,24 +25,24 @@ class Login extends Component<any, LoginState> {
         return <Provider create={() => {
             return new LoginVM()
         }} render={(vm: LoginVM) => {
-            return <div className="wk-login">
-                <div className="wk-login-content">
-                    <div className="wk-login-content-phonelogin" style={{ "display": vm.loginType === LoginType.phone ? "block" : "none" }}>
-                        <div className="wk-login-content-logo">
+            return <div className="xo-login">
+                <div className="xo-login-content">
+                    <div className="xo-login-content-phonelogin" style={{ "display": vm.loginType === LoginType.phone ? "block" : "none" }}>
+                        <div className="xo-login-content-logo">
                             <img src={"/logo.png"} alt="logo" />
                         </div>
-                        <div className="wk-login-content-slogan">
+                        <div className="xo-login-content-slogan">
                             更愉快的与朋友交流
                         </div>
-                        <div className="wk-login-content-form">
+                        <div className="xo-login-content-form">
                             <input type="text" placeholder="手机号" onChange={(v) => {
                                 vm.username = v.target.value
                             }}></input>
                             <input type="password" placeholder="密码" onChange={(v) => {
                                 vm.password = v.target.value
                             }}></input>
-                            <div className="wk-login-content-form-buttons">
-                                <Button loading={vm.loginLoading} className="wk-login-content-form-ok" type='primary' theme='solid' onClick={async () => {
+                            <div className="xo-login-content-form-buttons">
+                                <Button loading={vm.loginLoading} className="xo-login-content-form-ok" type='primary' theme='solid' onClick={async () => {
                                     if (!vm.username) {
                                         Toast.error("手机号不能为空！")
                                         return
@@ -66,8 +66,8 @@ class Login extends Component<any, LoginState> {
                                     })
                                 }}>登录</Button>
                             </div>
-                            <div className="wk-login-content-form-others">
-                                <div className="wk-login-content-form-scanlogin" onClick={() => {
+                            <div className="xo-login-content-form-others">
+                                <div className="xo-login-content-form-scanlogin" onClick={() => {
                                     vm.loginType = LoginType.qrcode
                                 }}>
                                     扫描登录
@@ -75,19 +75,19 @@ class Login extends Component<any, LoginState> {
                             </div>
                         </div>
                     </div>
-                    <div className={classNames("wk-login-content-scanlogin", vm.loginType === LoginType.qrcode ? "wk-login-content-scanlogin-show" : undefined)}>
+                    <div className={classNames("xo-login-content-scanlogin", vm.loginType === LoginType.qrcode ? "xo-login-content-scanlogin-show" : undefined)}>
                         <Spin size="large" spinning={vm.qrcodeLoading}>
-                            <div className="wk-login-content-scanlogin-qrcode">
+                            <div className="xo-login-content-scanlogin-qrcode">
                                 {
                                     vm.qrcodeLoading || !vm.qrcode ? undefined : <QRCode value={vm.qrcode} size={280} fgColor={XOApp.config.themeColor}></QRCode>
                                 }
                                 {
-                                    <div className={classNames("wk-login-content-scanlogin-qrcode-avatar", vm.showAvatar() ? "wk-login-content-scanlogin-qrcode-avatar-show" : undefined)}>
+                                    <div className={classNames("xo-login-content-scanlogin-qrcode-avatar", vm.showAvatar() ? "xo-login-content-scanlogin-qrcode-avatar-show" : undefined)}>
                                         {vm.showAvatar() ? <img src={XOApp.shared.avatarUser(vm.uid!)}></img> : undefined}
                                     </div>
                                 }
                                 {
-                                    !vm.autoRefresh ? <div className="wk-login-content-scanlogin-qrcode-expire">
+                                    !vm.autoRefresh ? <div className="xo-login-content-scanlogin-qrcode-expire">
                                         <p>二维码已失效，点击刷新</p>
                                         <img onClick={() => {
                                             vm.reStartAdvance()
@@ -96,10 +96,10 @@ class Login extends Component<any, LoginState> {
                                 }
                             </div>
                         </Spin>
-                        <div className="wk-login-content-scanlogin-qrcode-title">
+                        <div className="xo-login-content-scanlogin-qrcode-title">
                             <h3>使用手机{XOApp.config.appName}扫码登录</h3>
                         </div>
-                        <div className="wk-login-content-scanlogin-qrcode-desc">
+                        <div className="xo-login-content-scanlogin-qrcode-desc">
                             <ul>
                                 <li>
                                     在手机上打开{XOApp.config.appName}
@@ -115,7 +115,7 @@ class Login extends Component<any, LoginState> {
                                 </li>
                             </ul>
                         </div>
-                        <div className="wk-login-footer-buttons">
+                        <div className="xo-login-footer-buttons">
                             <button onClick={() => {
                                 vm.loginType = LoginType.phone
                             }}>使用手机号登录</button>
@@ -123,7 +123,7 @@ class Login extends Component<any, LoginState> {
 
                     </div>
 
-                    {/* <div className="wk-login-footer">
+                    {/* <div className="xo-login-footer">
                         <ul>
                             <li>注册XOCHAT</li>
                             <li>忘记密码</li>

@@ -14,18 +14,18 @@ export class ListItem extends Component<ListItemProps>{
 
     render() {
         const { style, title, subTitle, onClick } = this.props
-        return <div className="wk-list-item wk-list-item-ripple" style={style} title={subTitle} onClick={() => {
+        return <div className="xo-list-item xo-list-item-ripple" style={style} title={subTitle} onClick={() => {
             if (onClick) {
                 onClick()
             }
         }}>
-            <div className="wk-list-item-title">
+            <div className="xo-list-item-title">
                 {title}
             </div>
-            <div className="wk-list-item-subtitle">
+            <div className="xo-list-item-subtitle">
                 {subTitle}
             </div>
-            {/* <div className="wk-list-item-arrow">
+            {/* <div className="xo-list-item-arrow">
                 <img src={require("./assets/arrow_right.png)}></img>
             </div> */}
         </div>
@@ -40,19 +40,19 @@ export class ListItemMuliteLine extends Component<ListItemProps>{
     }
     render() {
         const { style, title, subTitle, onClick } = this.props
-        return <div className="wk-list-item wk-list-item-ripple" style={{ "display": this.hasSubtitle() ? "block" : undefined }} onClick={() => {
+        return <div className="xo-list-item xo-list-item-ripple" style={{ "display": this.hasSubtitle() ? "block" : undefined }} onClick={() => {
             if (onClick) {
                 onClick()
             }
         }}>
-            <div className="wk-list-item-title">
+            <div className="xo-list-item-title">
                 {title}
             </div>
 
             {
-                this.hasSubtitle() ? <div className="wk-list-item-subtitle-muliteline">
+                this.hasSubtitle() ? <div className="xo-list-item-subtitle-muliteline">
                     {subTitle}
-                </div> : <div className="wk-list-item-subtitle wk-list-item-subtitle-oneline">
+                </div> : <div className="xo-list-item-subtitle xo-list-item-subtitle-oneline">
                     未设置
                 </div>
             }
@@ -95,15 +95,15 @@ export class ListItemSwitch extends Component<ListItemSwitchProps, ListItemSwitc
     render() {
         const { style, title, checked, onCheck } = this.props
         const { loading } = this.state
-        return <div className="wk-list-item wk-list-item-ripple" style={style} onClick={() => {
+        return <div className="xo-list-item xo-list-item-ripple" style={style} onClick={() => {
             if (onCheck) {
                 onCheck(!checked,this)
             }
         }}>
-            <div className="wk-list-item-title">
+            <div className="xo-list-item-title">
                 {title}
             </div>
-            <div className="wk-list-item-action">
+            <div className="xo-list-item-action">
                 <Switch checked={checked} loading={loading}></Switch>
             </div>
         </div>
@@ -117,15 +117,15 @@ export class ListItemIcon extends Component<ListItemIconProps> {
 
     render() {
         const { style, title, icon, onClick } = this.props
-        return <div className="wk-list-item wk-list-item-ripple" style={style} onClick={() => {
+        return <div className="xo-list-item xo-list-item-ripple" style={style} onClick={() => {
             if (onClick) {
                 onClick()
             }
         }}>
-            <div className="wk-list-item-title">
+            <div className="xo-list-item-title">
                 {title}
             </div>
-            <div className="wk-list-item-subtitle">
+            <div className="xo-list-item-subtitle">
                 {icon}
             </div>
         </div>
@@ -144,12 +144,12 @@ export interface ListItemButtonProps extends ListItemProps {
 export class ListItemButton extends Component<ListItemButtonProps> {
     render() {
         const { style, title, type, onClick } = this.props
-        return <div className="wk-list-item wk-list-item-ripple" style={{ "justifyContent": "center" }} onClick={() => {
+        return <div className="xo-list-item xo-list-item-ripple" style={{ "justifyContent": "center" }} onClick={() => {
             if (onClick) {
                 onClick()
             }
         }}>
-            <div className="wk-list-item-title" style={{ "color": type === ListItemButtonType.warn ? "red" : undefined }}>
+            <div className="xo-list-item-title" style={{ "color": type === ListItemButtonType.warn ? "red" : undefined }}>
                 {title}
             </div>
         </div>
@@ -163,7 +163,7 @@ export class ListItemTip extends Component<ListItemTipProps> {
 
     render(): React.ReactNode {
         const { tip } = this.props
-        return <div className="wk-list-item-tip">
+        return <div className="xo-list-item-tip">
             {tip}
         </div>
     }

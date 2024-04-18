@@ -1,10 +1,10 @@
-.wk-message-text {
+.xo-message-text {
     word-wrap: break-word;
     word-break: break-all;
     width: 100%;
 }
 
-.wk-message-text  pre {
+.xo-message-text  pre {
     margin-bottom: 0;
     white-space: pre-wrap; /*css-3*/
     white-space: -moz-pre-wrap; /*Mozilla,since1999*/
@@ -14,37 +14,37 @@
     font-family: Helvetica;
 }
 
-.wk-message-text-richtext {
+.xo-message-text-richtext {
     
 }
 
-.wk-message-text-richmention {
+.xo-message-text-richmention {
     cursor: pointer;
     text-decoration: underline;
 }
 
-.wk-message-text-send {
+.xo-message-text-send {
     color: white;
 }
 
-.wk-message-text-recv {
+.xo-message-text-recv {
     color: black;
 }
 
-body[theme-mode=dark] .wk-message-text-recv {
+body[theme-mode=dark] .xo-message-text-recv {
     color: white;
 }
 
-.wk-message-text-richemoji {
+.xo-message-text-richemoji {
 
 }
 
-.wk-message-text-richemoji img {
+.xo-message-text-richemoji img {
     width: 22px;
     height: 22px;
 }
 
-.wk-message-text-reply {
+.xo-message-text-reply {
     display: flex;
     color: rgb(255, 255, 255,0.5);
     font-size: 14px;
@@ -52,21 +52,21 @@ body[theme-mode=dark] .wk-message-text-recv {
     cursor: pointer;
 }
 
-.wk-message-text-reply.wk-message-text-reply-recv {
+.xo-message-text-reply.xo-message-text-reply-recv {
     color: rgb(0, 0, 0,0.5);
 }
 
 
-.wk-message-text-reply-author {
+.xo-message-text-reply-author {
     display: flex;
     align-items: center;
 }
 
-.wk-message-text-reply-authoravatar {
+.xo-message-text-reply-authoravatar {
     margin-right: 4px;
 }
 
-.wk-message-text-reply-content { 
+.xo-message-text-reply-content { 
     width:100%;
 	word-break:break-all;
 	display:-webkit-box;
@@ -75,7 +75,7 @@ body[theme-mode=dark] .wk-message-text-recv {
 	overflow:hidden;
 }
 
-.wk-message-text-content {
+.xo-message-text-content {
     margin: 0;
     word-break: break-word;
     line-height: 1.3125;

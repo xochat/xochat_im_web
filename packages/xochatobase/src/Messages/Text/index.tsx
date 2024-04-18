@@ -18,10 +18,10 @@ export class TextCell extends MessageCell {
     getCommonText(k: number, part: Part) {
         const texts = part.text.split("\n")
         const { message } = this.props
-        return <span key={`${message.clientMsgNo}-text-${k}`} className="wk-message-text-commontext">
+        return <span key={`${message.clientMsgNo}-text-${k}`} className="xo-message-text-commontext">
             {
                 texts.map((text, i) => {
-                    return <span key={`${message.clientMsgNo}-common-${i}`} className="wk-message-text-richtext">{text}{i !== texts.length - 1 ? <br /> : undefined}</span>
+                    return <span key={`${message.clientMsgNo}-common-${i}`} className="xo-message-text-richtext">{text}{i !== texts.length - 1 ? <br /> : undefined}</span>
                 })
             }
         </span>
@@ -33,13 +33,13 @@ export class TextCell extends MessageCell {
             if(part.data?.uid) {
                 context.showUser(part.data?.uid)
             }
-        }} key={`${message.clientMsgNo}-mention-${k}`} className={classNames("wk-message-text-richmention", message.send ? "wk-message-text-send" : "wk-message-text-recv")}>{part.text}</span>
+        }} key={`${message.clientMsgNo}-mention-${k}`} className={classNames("xo-message-text-richmention", message.send ? "xo-message-text-send" : "xo-message-text-recv")}>{part.text}</span>
     }
 
     getEmojiText(k: number, part: Part) {
         const { message } = this.props
         const emojiURL = XOApp.emojiService.getImage(part.text)
-        return <span key={`${message.clientMsgNo}-emoji-${k}`} className="wk-message-text-richemoji">{emojiURL !== ""?<img alt="" src={emojiURL} />:part.text}</span>
+        return <span key={`${message.clientMsgNo}-emoji-${k}`} className="xo-message-text-richemoji">{emojiURL !== ""?<img alt="" src={emojiURL} />:part.text}</span>
     }
 
     getLinkText(k: number, part: Part) {
@@ -80,24 +80,24 @@ export class TextCell extends MessageCell {
         }}>
             <MessageHead message={message} />
             {
-                message?.content.reply ? <div className={classNames("wk-message-text-reply",message.send?undefined:"wk-message-text-reply-recv")} onClick={()=>{
+                message?.content.reply ? <div className={classNames("xo-message-text-reply",message.send?undefined:"xo-message-text-reply-recv")} onClick={()=>{
                     context.locateMessage( message?.content.reply.messageSeq)
                 }}>
-                    <div className="wk-message-text-reply-author">
-                        <div className="wk-message-text-reply-authoravatar">
+                    <div className="xo-message-text-reply-author">
+                        <div className="xo-message-text-reply-authoravatar">
                             <img alt="" src={XOApp.shared.avatarUser(message.content.reply.fromUID)} style={{ width: "12px", height: "12px",borderRadius:"50%" }} />
                         </div>
-                        <div className="wk-message-text-reply-authorname">
+                        <div className="xo-message-text-reply-authorname">
                             {message.content.reply.fromName} 
                         </div>
                     </div>
-                    <div className="wk-message-text-reply-content">
+                    <div className="xo-message-text-reply-content">
                         {message.content.reply.content?.conversationDigest}
                     </div>
                 </div> : undefined
             }
 
-            <p  className="wk-message-text-content">
+            <p  className="xo-message-text-content">
                 {this.getRenderMessageText()}
                 <MessageTrail message={message} />
             </p>

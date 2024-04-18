@@ -104,11 +104,11 @@ export default class ImageToolbar extends Component<ImageToolbarProps, ImageTool
     render(): ReactNode {
         const { icon } = this.props
         const { showDialog, canSend, fileIconInfo, file, fileType, previewUrl } = this.state
-        return <div className="wk-imagetoolbar" >
-            <div className="wk-imagetoolbar-content" onClick={() => {
+        return <div className="xo-imagetoolbar" >
+            <div className="xo-imagetoolbar-content" onClick={() => {
             this.chooseFile()
         }}>
-                <div className="wk-imagetoolbar-content-icon">
+                <div className="xo-imagetoolbar-content-icon">
                     <img src={icon}></img>
                     <input onClick={this.onFileClick} onChange={this.onFileChange.bind(this)} ref={(ref) => { this.$fileInput = ref }} type="file" multiple={false} accept="image/*" style={{ display: 'none' }} />
                 </div>
@@ -157,36 +157,36 @@ class ImageDialog extends Component<ImageDialogProps> {
 
     render() {
         const { onClose, onSend, fileType, previewUrl, file, canSend, fileIconInfo, onLoad } = this.props
-        return <div className="wk-imagedialog">
-            <div className="wk-imagedialog-mask" onClick={onClose}></div>
-            <div className="wk-imagedialog-content">
-                <div className="wk-imagedialog-content-close" onClick={onClose}>
+        return <div className="xo-imagedialog">
+            <div className="xo-imagedialog-mask" onClick={onClose}></div>
+            <div className="xo-imagedialog-content">
+                <div className="xo-imagedialog-content-close" onClick={onClose}>
                     <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2683" ><path d="M568.92178541 508.23169412l299.36805789-299.42461715a39.13899415 39.13899415 0 0 0 0-55.1452591L866.64962537 152.02159989a39.13899415 39.13899415 0 0 0-55.08869988 0L512.19286756 451.84213173 212.76825042 151.90848141a39.13899415 39.13899415 0 0 0-55.0886999 0L155.98277331 153.54869938a38.46028327 38.46028327 0 0 0 0 55.08869987L455.46394971 508.23169412 156.03933259 807.71287052a39.13899415 39.13899415 0 0 0 0 55.08869986l1.64021795 1.6967772a39.13899415 39.13899415 0 0 0 55.08869988 0l299.42461714-299.48117638 299.36805793 299.42461714a39.13899415 39.13899415 0 0 0 55.08869984 0l1.6967772-1.64021796a39.13899415 39.13899415 0 0 0 0-55.08869987L568.86522614 508.17513487z" p-id="2684"></path></svg>
                 </div>
-                <div className="wk-imagedialog-content-title">发送{fileType === 'image' ? '图片' : '文件'}</div>
-                <div className="wk-imagedialog-content-body">
+                <div className="xo-imagedialog-content-title">发送{fileType === 'image' ? '图片' : '文件'}</div>
+                <div className="xo-imagedialog-content-body">
                     {
                         fileType === 'image' ? (
-                            <div className="wk-imagedialog-content-preview">
-                                <img alt="" className="wk-imagedialog-content-previewImg" src={previewUrl} onLoad={onLoad} />
+                            <div className="xo-imagedialog-content-preview">
+                                <img alt="" className="xo-imagedialog-content-previewImg" src={previewUrl} onLoad={onLoad} />
                             </div>
                         ) : (
-                            <div className="wk-imagedialog-content-preview">
-                                <div className="wk-imagedialog-content-preview-file">
-                                    <div className="wk-imagedialog-content-preview-file-icon" style={{ backgroundColor: fileIconInfo?.color }}>
-                                        <img alt="" className="wk-imagedialog-content-preview-file-thumbnail" src={fileIconInfo?.icon} />
+                            <div className="xo-imagedialog-content-preview">
+                                <div className="xo-imagedialog-content-preview-file">
+                                    <div className="xo-imagedialog-content-preview-file-icon" style={{ backgroundColor: fileIconInfo?.color }}>
+                                        <img alt="" className="xo-imagedialog-content-preview-file-thumbnail" src={fileIconInfo?.icon} />
                                     </div>
-                                    <div className="wk-imagedialog-content-preview--filecontent">
-                                        <div className="wk-imagedialog-content-preview--filecontent-name">{file?.name}</div>
-                                        <div className="wk-imagedialog-content-preview--filecontent-size">{this.getFileSizeFormat(file?.size)}</div>
+                                    <div className="xo-imagedialog-content-preview--filecontent">
+                                        <div className="xo-imagedialog-content-preview--filecontent-name">{file?.name}</div>
+                                        <div className="xo-imagedialog-content-preview--filecontent-size">{this.getFileSizeFormat(file?.size)}</div>
                                     </div>
                                 </div>
                             </div>
                         )
                     }
-                    <div className="wk-imagedialog-footer" >
+                    <div className="xo-imagedialog-footer" >
                         <button onClick={onClose}>取消</button>
-                        <button onClick={onSend} className="wk-imagedialog-footer-okbtn" disabled={!canSend} style={{ backgroundColor: canSend ? XOApp.config.themeColor : 'gray' }}>发送</button>
+                        <button onClick={onSend} className="xo-imagedialog-footer-okbtn" disabled={!canSend} style={{ backgroundColor: canSend ? XOApp.config.themeColor : 'gray' }}>发送</button>
                     </div>
                 </div>
 

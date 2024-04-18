@@ -106,10 +106,10 @@ export class VideoCell extends MessageCell<any, VideoCellState> {
         const actSize = this.videoScale(content.width, content.height)
         return <MessageBase hiddeBubble={true} message={message} context={context}>
 
-            <div className="wk-message-video" style={{ width: actSize.width, height: '100%' }}>
-                <div className="wk-message-video-content">
-                    <span className="wk-message-video-content-time">{this.secondFormat(content.second - playProgress)}</span>
-                    <div className="wk-message-video-content-video">
+            <div className="xo-message-video" style={{ width: actSize.width, height: '100%' }}>
+                <div className="xo-message-video-content">
+                    <span className="xo-message-video-content-time">{this.secondFormat(content.second - playProgress)}</span>
+                    <div className="xo-message-video-content-video">
                         <video poster={XOApp.dataSource.commonDataSource.getImageURL(content.cover)} width={actSize.width} height={actSize.height} controls onTimeUpdate={(evet) => {
                             const video = evet.target as HTMLVideoElement
                             this.setState({

@@ -71,7 +71,7 @@ export default class ConversationList extends Component<ConversationListProps, C
         const { select } = this.props
         const typing = TypingManager.shared.getTyping(conversationWrap.channel)
         const selected = select && select.isEqual(conversationWrap.channel)
-        return <div className="wk-typing"><BeatLoader size={4} margin={3} color={selected ? "white" : "var(--wk-color-theme)"} />&nbsp;&nbsp;{conversationWrap.channel.channelType !== ChannelTypePerson ? typing?.fromName : ""}正在输入</div>
+        return <div className="xo-typing"><BeatLoader size={4} margin={3} color={selected ? "white" : "var(--xo-color-theme)"} />&nbsp;&nbsp;{conversationWrap.channel.channelType !== ChannelTypePerson ? typing?.fromName : ""}正在输入</div>
     }
 
     lastContent(conversationWrap: ConversationWrap) {
@@ -155,12 +155,12 @@ export default class ConversationList extends Component<ConversationListProps, C
             if (onClick) {
                 onClick(conversationWrap)
             }
-        }} className={classNames("wk-conversationlist-item", channelInfo?.top ? "wk-conversationlist-item-top" : undefined)} onContextMenu={(e) => {
+        }} className={classNames("xo-conversationlist-item", channelInfo?.top ? "xo-conversationlist-item-top" : undefined)} onContextMenu={(e) => {
             this._handleContextMenu(conversationWrap, e)
         }}>
-            <div className={classNames("wk-conversationlist-item-content", selected ? "wk-conversationlist-item-selected" : undefined)}>
-                <div className="wk-conversationlist-item-left">
-                    <div className="wk-conversationlist-item-avatar-box">
+            <div className={classNames("xo-conversationlist-item-content", selected ? "xo-conversationlist-item-selected" : undefined)}>
+                <div className="xo-conversationlist-item-left">
+                    <div className="xo-conversationlist-item-avatar-box">
                         <WKAvatar src={conversationWrap.avatar}></WKAvatar>
                         {
                             channelInfo && this.needShowOnlineStatus(channelInfo) ? <OnlineStatusBadge tip={this.getOnlineTip(channelInfo)}></OnlineStatusBadge> : undefined
@@ -168,9 +168,9 @@ export default class ConversationList extends Component<ConversationListProps, C
 
                     </div>
                 </div>
-                <div className="wk-conversationlist-item-right">
-                    <div className="wk-conversationlist-item-right-first-line">
-                        <div className="wk-conversationlist-item-name">
+                <div className="xo-conversationlist-item-right">
+                    <div className="xo-conversationlist-item-right-first-line">
+                        <div className="xo-conversationlist-item-name">
                             <h3>
                                 {channelInfo?.orgData.displayName}
 
@@ -185,21 +185,21 @@ export default class ConversationList extends Component<ConversationListProps, C
                                 }
 
                             </div>
-                            <div className="wk-conversationlist-item-time">
+                            <div className="xo-conversationlist-item-time">
                                 <span>{getTimeStringAutoShort2(conversationWrap.timestamp * 1000, true)}</span>
                             </div>
                         </div>
 
                     </div>
-                    <div className="wk-conversationlist-item-right-second-line">
-                        <div className="wk-conversationlist-item-lastmsg">
+                    <div className="xo-conversationlist-item-right-second-line">
+                        <div className="xo-conversationlist-item-lastmsg">
                             {
-                                !typing?<label className="wk-reminder" style={{ display: conversationWrap.remoteExtra.draft  ? undefined : 'none' }}>[草稿]</label>:undefined
+                                !typing?<label className="xo-reminder" style={{ display: conversationWrap.remoteExtra.draft  ? undefined : 'none' }}>[草稿]</label>:undefined
                             }
                             {
                                 conversationWrap.simpleReminders && !typing &&  conversationWrap.simpleReminders.length>0 ?(
                                     conversationWrap.simpleReminders.filter((r)=>r.done === false).map((r)=>{
-                                        return   <label key={r.reminderID} className="wk-reminder">{r.text}</label>
+                                        return   <label key={r.reminderID} className="xo-reminder">{r.text}</label>
                                     })
                                 ):undefined
                             }
@@ -208,7 +208,7 @@ export default class ConversationList extends Component<ConversationListProps, C
                             }
 
                         </div>
-                        <div className="wk-conversationlist-item-reddot">
+                        <div className="xo-conversationlist-item-reddot">
                             {
                                 conversationWrap.unread > 0 ? <Badge style={channelInfo?.mute ? { "border": "none", "backgroundColor": "rgb(200,200,200)" } : { border: "none" }} count={conversationWrap.unread} type='danger'></Badge> : undefined
                             }
@@ -245,7 +245,7 @@ export default class ConversationList extends Component<ConversationListProps, C
     render() {
         const { conversations, select } = this.props
         const { selectConversationWrap } = this.state
-        return <div id="wk-conversationlist" className="wk-conversationlist" onScroll={this._handleScroll.bind(this)}>
+        return <div id="xo-conversationlist" className="xo-conversationlist" onScroll={this._handleScroll.bind(this)}>
             {
                 conversations && conversations.map((conversationWrap) => {
                     return this.conversationItem(conversationWrap)
@@ -294,9 +294,9 @@ export class OnlineStatusBadge extends Component<OnlineStatusBadgeProps> {
 
     render(): React.ReactNode {
         const { tip } = this.props
-        return <div className={classNames("wk-onlinestatusbadge", !tip ? "wk-onlinestatusbadge-empty" : undefined)}>
-            <div className="wk-onlinestatusbadge-content">
-                <div className="wk-onlinestatusbadge-content-tip">{tip}</div>
+        return <div className={classNames("xo-onlinestatusbadge", !tip ? "xo-onlinestatusbadge-empty" : undefined)}>
+            <div className="xo-onlinestatusbadge-content">
+                <div className="xo-onlinestatusbadge-content-tip">{tip}</div>
             </div>
         </div>
     }

@@ -101,9 +101,9 @@ export default class RoutePage extends Component<RoutePageProps, RoutePageState>
         if (routeConfigs.length > 0) {
             routeConfig = routeConfigs[routeConfigs.length - 1]
         }
-        return <div className="wk-route">
-            <div className="wk-route-header">
-                <div className="wk-route-header-close" onClick={() => {
+        return <div className="xo-route">
+            <div className="xo-route-header">
+                <div className="xo-route-header-close" onClick={() => {
                     if (pushViewCount > 0) {
                         this.pop()
                         return
@@ -112,18 +112,18 @@ export default class RoutePage extends Component<RoutePageProps, RoutePageState>
                         onClose()
                     }
                 }}>
-                    <div className={classNames("wk-route-header-close-icon", pushViewCount > 0 ? "wk-state-back" : undefined)}>
+                    <div className={classNames("xo-route-header-close-icon", pushViewCount > 0 ? "xo-state-back" : undefined)}>
                     </div>
                 </div>
-                <div className={classNames("wk-route-header-title-box", pushViewCount > 0 ? "wk-route-header-title-box-open" : undefined)}>
-                    <div className="wk-route-header-title">
+                <div className={classNames("xo-route-header-title-box", pushViewCount > 0 ? "xo-route-header-title-box-open" : undefined)}>
+                    <div className="xo-route-header-title">
                         {title}
                     </div>
-                    <div className="wk-route-header-title-next">
+                    <div className="xo-route-header-title-next">
                         {routeConfig?.title}
                     </div>
                 </div>
-                <div className={classNames("wk-route-header-right-view", pushViewCount > 0 ? "wk-route-header-right-view-open" : undefined)}>
+                <div className={classNames("xo-route-header-right-view", pushViewCount > 0 ? "xo-route-header-right-view-open" : undefined)}>
                     {
                         routeConfig?.showFinishButton ? <Button disabled={finishButtonDisable} loading={finishButtonLoading} theme='solid' type='primary' onClick={() => {
                             if (routeConfig?.onFinish) {
@@ -134,8 +134,8 @@ export default class RoutePage extends Component<RoutePageProps, RoutePageState>
                 </div>
             </div>
 
-            <div className="wk-route-box">
-                <div className="wk-route-content">
+            <div className="xo-route-box">
+                <div className="xo-route-content">
                     <WKViewQueue onContext={(ctx) => {
                         this.viewQueueContext = ctx
                     }}>

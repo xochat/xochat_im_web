@@ -12,8 +12,8 @@ export class TabLowScreen extends Component<TabLowScreenProps> {
 
     render(): ReactNode {
         const { vm } = this.props
-        return <div className="wk-main-tab">
-            <div className="wk-main-tab-content">
+        return <div className="xo-main-tab">
+            <div className="xo-main-tab-content">
                 <ul>
                     {
                         vm.menusList.map((menus) => {

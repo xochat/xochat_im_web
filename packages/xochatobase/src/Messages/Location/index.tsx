@@ -33,13 +33,13 @@ export class LocationCell extends MessageCell {
         const { message, context } = this.props
         const content = message.content as LocationContent
         return <MessageBase hiddeBubble={true} message={message} context={context}>
-            <div className="wk-message-location" onClick={()=>{
+            <div className="xo-message-location" onClick={()=>{
                 window.open(`https://lbs.amap.com/tools/showmap/?1_800_460_${content.lng}_${content.lat}&=${content.title}&=${content.address}&=&=&=`)
             }}>
-                <div className="wk-message-location-content">
-                    <div className="wk-message-location-content-title">{content.title}</div>
-                    <div className="wk-message-location-content-address">{content.address}</div>
-                    <div className="wk-message-location-content-locationimg" style={{backgroundImage:`url(${XOApp.dataSource.commonDataSource.getFileURL(content.img)})`}}>
+                <div className="xo-message-location-content">
+                    <div className="xo-message-location-content-title">{content.title}</div>
+                    <div className="xo-message-location-content-address">{content.address}</div>
+                    <div className="xo-message-location-content-locationimg" style={{backgroundImage:`url(${XOApp.dataSource.commonDataSource.getFileURL(content.img)})`}}>
                     </div>
                 </div>
             </div>

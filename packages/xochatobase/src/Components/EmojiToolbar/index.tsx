@@ -32,8 +32,8 @@ export default class EmojiToolbar extends Component<EmojiToolbarProps, EmojiTool
     render(): ReactNode {
         const { show, animationStart } = this.state
         const { icon, conversationContext } = this.props
-        return <div className="wk-emojitoolbar" >
-            <div className="wk-emojitoolbar-content" onClick={() => {
+        return <div className="xo-emojitoolbar" >
+            <div className="xo-emojitoolbar-content" onClick={() => {
                 this.setState({
                     show: !show,
                     animationStart: true
@@ -49,7 +49,7 @@ export default class EmojiToolbar extends Component<EmojiToolbarProps, EmojiTool
                             animationStart: false,
                         })
                     }
-                }} className={classNames("wk-emojitoolbar-emojipanel", animationStart ? (show ? "wk-emojitoolbar-emojipanel-show" : "wk-emojitoolbar-emojipanel-hide") : undefined)}>
+                }} className={classNames("xo-emojitoolbar-emojipanel", animationStart ? (show ? "xo-emojitoolbar-emojipanel-show" : "xo-emojitoolbar-emojipanel-hide") : undefined)}>
                     <EmojiPanel onSticker={(sticker) => {
                         this.setState({
                             show: false
@@ -69,7 +69,7 @@ export default class EmojiToolbar extends Component<EmojiToolbarProps, EmojiTool
                 </div>
             </div>
             {
-                show ? <div className="wk-emojitoolbar-mask" onClick={()=>{
+                show ? <div className="xo-emojitoolbar-mask" onClick={()=>{
                     this.setState({
                         show: false,
                     })
@@ -134,8 +134,8 @@ export class EmojiPanel extends Component<EmojiPanelProps, EmojiPanelState> {
     render(): React.ReactNode {
         const { emojis, category, stickers } = this.state
         const { onEmoji, onSticker } = this.props
-        return <div className="wk-emojipanel">
-            <div className={classNames("wk-emojipanel-content", category !== "emoji" ? "wk-emojipanel-content-sticker" : undefined)}>
+        return <div className="xo-emojipanel">
+            <div className={classNames("xo-emojipanel-content", category !== "emoji" ? "xo-emojipanel-content-sticker" : undefined)}>
                 <ul>
                     {
                         category === "emoji" ? emojis.map((emoji, i) => {
@@ -165,8 +165,8 @@ export class EmojiPanel extends Component<EmojiPanelProps, EmojiPanelState> {
                     }
                 </ul>
             </div>
-            <div className="wk-emojipanel-tab">
-                <div className={classNames("wk-emojipanel-tab-item", category === "emoji" ? "wk-emojipanel-tab-item-selected" : undefined)} onClick={(e) => {
+            <div className="xo-emojipanel-tab">
+                <div className={classNames("xo-emojipanel-tab-item", category === "emoji" ? "xo-emojipanel-tab-item-selected" : undefined)} onClick={(e) => {
                     e.stopPropagation()
                     this.setState({ category: "emoji" })
                 }}>
@@ -175,7 +175,7 @@ export class EmojiPanel extends Component<EmojiPanelProps, EmojiPanelState> {
                 {
                     stickerCategories.map((stickerCategory) => {
                         return (
-                            <div key={stickerCategory.category} className={classNames("wk-emojipanel-tab-item", stickerCategory.category === category ? "wk-emojipanel-tab-item-selected" : undefined)} onClick={(e) => {
+                            <div key={stickerCategory.category} className={classNames("xo-emojipanel-tab-item", stickerCategory.category === category ? "xo-emojipanel-tab-item-selected" : undefined)} onClick={(e) => {
                                 e.stopPropagation()
                                 const category: string = stickerCategory.category || ""
                                 this.setState({ category: category })

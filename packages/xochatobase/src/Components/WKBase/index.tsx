@@ -123,9 +123,9 @@ export default class WKBase extends Component<WKBaseProps, WKBaseState> implemen
 
     render(): ReactNode {
         const { showUserInfo, userUID,fromChannel,vercode, showConversationSelect,conversationSelectTitle, conversationSelectFinished, onAlertOk,alertContent,alertTitle } = this.state
-        return <div className="wk-base">
+        return <div className="xo-base">
             {this.props.children}
-            <Modal width={400} footer={null} closeIcon={<div></div>} className="wk-base-modal-userinfo wk-base-modal" visible={showUserInfo} mask={false} onCancel={() => {
+            <Modal width={400} footer={null} closeIcon={<div></div>} className="xo-base-modal-userinfo xo-base-modal" visible={showUserInfo} mask={false} onCancel={() => {
                 this.setState({
                     showUserInfo: false,
                     userUID: undefined
@@ -143,7 +143,7 @@ export default class WKBase extends Component<WKBaseProps, WKBaseState> implemen
 
             </Modal>
 
-            <Modal className="wk-base-modal" width={400} footer={null} visible={showConversationSelect} mask={false} onCancel={() => {
+            <Modal className="xo-base-modal" width={400} footer={null} visible={showConversationSelect} mask={false} onCancel={() => {
                 this.setState({
                     showConversationSelect: false,
                 })

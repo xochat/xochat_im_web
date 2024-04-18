@@ -13,11 +13,11 @@ export default class Search extends Component<SearchProps> {
 
     render() {
         const { placeholder,onChange,onEnterPress } = this.props
-        return <div className="wk-search-box">
-            <div className="wk-search-icon">
+        return <div className="xo-search-box">
+            <div className="xo-search-icon">
                 <IconSearchStroked style={{ color: '#bbbfc4', fontSize: '20px' }} />
             </div>
-            <div className="wk-search-input">
+            <div className="xo-search-input">
                 {/* <input onChange={(v)=>{
                     if(onChange) {
                         onChange(v.target.value)

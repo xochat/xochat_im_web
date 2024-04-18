@@ -1,6 +1,6 @@
 
 
-.wk-login {
+.xo-login {
     display: table;
     height: 100%;
     width: 100%;
@@ -10,13 +10,13 @@
     background-color: rgb(255, 255, 255);
 }
 
-.wk-login-content {
+.xo-login-content {
     display: table-cell;
     vertical-align: middle;
     position: relative;
 }
 
-.wk-login-content-logo {
+.xo-login-content-logo {
     align-items: center;
     display: flex;
     height: 120px;
@@ -25,12 +25,12 @@
     width: 120px;
 }
 
-.wk-login-content-logo img {
+.xo-login-content-logo img {
     width: 75px;
     height: 75px;
 }
 
-.wk-login-content-slogan {
+.xo-login-content-slogan {
     color: rgba(0, 0, 0, 1);
     font-size: 36px;
     font-weight: 450;
@@ -40,11 +40,11 @@
     text-align: center;
 }
 
-.wk-login-content-form {
+.xo-login-content-form {
     margin-top: 32px;
 }
 
-.wk-login-content-form input {
+.xo-login-content-form input {
     border: 1px solid rgba(0, 0, 0, .20);
     border-radius: 4px;
     color: rgba(0, 0, 0, 1);
@@ -59,14 +59,14 @@
     width: 286px;
 }
 
-.wk-login-content-form-buttons {
+.xo-login-content-form-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 
-.wk-login-content-form-ok {
+.xo-login-content-form-ok {
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@
     margin-top: 24px;
 }
 
-.wk-login-content-form-others {
+.xo-login-content-form-others {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -85,7 +85,7 @@
     width: 320px;
 }
 
-.wk-login-content-form-scanlogin {
+.xo-login-content-form-scanlogin {
     color: #929292;
     font-size: 15px;
     font-weight: normal;
@@ -93,7 +93,7 @@
     cursor: pointer;
 }
 
-.wk-login-footer {
+.xo-login-footer {
     color: #262626;
     font-size: 16px;
     font-weight: 400;
@@ -105,32 +105,32 @@
     width: 100%;
 }
 
-.wk-login-footer ul {
+.xo-login-footer ul {
     display: flex;
     justify-content: center;
     margin-bottom: 0px;
 }
 
-.wk-login-footer ul li {
+.xo-login-footer ul li {
     margin-left: 40px;
 }
 
-.wk-login-content-phonelogin {
+.xo-login-content-phonelogin {
     margin: 0 auto;
 }
 
-.wk-login-content-scanlogin {
+.xo-login-content-scanlogin {
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.wk-login-content-scanlogin-show {
+.xo-login-content-scanlogin-show {
     display: flex;
 }
 
-.wk-login-content-scanlogin-qrcode {
+.xo-login-content-scanlogin-qrcode {
     width: 280px;
     height: 280px;
     position: relative;
@@ -141,12 +141,12 @@
    
 }
 
-.wk-login-content-scanlogin-show .wk-login-content-scanlogin-qrcode{
+.xo-login-content-scanlogin-show .xo-login-content-scanlogin-qrcode{
     opacity: 1;
     transform: scale(1);
 }
 
-.wk-login-content-scanlogin-qrcode-avatar {
+.xo-login-content-scanlogin-qrcode-avatar {
    
    position: absolute;
    top: 50%;
@@ -160,23 +160,23 @@
 }
 
 
-.wk-login-content-scanlogin-qrcode-avatar-show {
+.xo-login-content-scanlogin-qrcode-avatar-show {
     opacity: 1;
     transform: scale(1);
 }
 
-.wk-login-content-scanlogin-qrcode-avatar img {
+.xo-login-content-scanlogin-qrcode-avatar img {
     width: 60px;
     height: 60px;
    border-radius: 50%;
 }
 
-.wk-login-content-scanlogin-qrcode-title {
+.xo-login-content-scanlogin-qrcode-title {
     margin-top: 30px;
     color: rgba(9,30,66,.87);
 }
 
-.wk-login-content-scanlogin-qrcode-desc li {
+.xo-login-content-scanlogin-qrcode-desc li {
     counter-increment: item;
     text-align: left;
     margin: 0.75rem 0;
@@ -184,7 +184,7 @@
     color: rgba(9,30,66,.87);
 }
 
-.wk-login-content-scanlogin-qrcode-desc li::before {
+.xo-login-content-scanlogin-qrcode-desc li::before {
     content: counter(item);
     display: flex;
     justify-content: center;
@@ -193,15 +193,15 @@
     height: 1.375rem;
     padding: 0;
     margin: 0 0.75rem 0 0;
-    background: var(--wk-color-theme);
+    background: var(--xo-color-theme);
     border-radius: 50%;
     font-size: smaller;
     color: #fff;
 }
 
-.wk-login-footer-buttons button{
+.xo-login-footer-buttons button{
     background-color: transparent;
-    color: var(--wk-color-theme);
+    color: var(--xo-color-theme);
     outline: none !important;
     border: 0;
     height: 3.5rem;
@@ -212,7 +212,7 @@
     cursor: pointer;
 }
 
-.wk-login-content-scanlogin-qrcode-expire {
+.xo-login-content-scanlogin-qrcode-expire {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -225,7 +225,7 @@
     justify-content: center;
 }
 
-.wk-login-content-scanlogin-qrcode-expire img {
+.xo-login-content-scanlogin-qrcode-expire img {
     width: 50px;
     height: 50px;
     cursor: pointer;

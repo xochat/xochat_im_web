@@ -59,12 +59,12 @@ export class ListItemAvatar extends Component<ListItemAvatarProps>{
     }
     render(): ReactNode {
         const { title, avatar } = this.props
-        return <div className="wk-list-item wk-list-item-avatar" onClick={this.chooseFile}>
+        return <div className="xo-list-item xo-list-item-avatar" onClick={this.chooseFile}>
             <input onClick={this.onFileClick.bind(this)} onChange={this.onFileChange.bind(this)} ref={(ref) => { this.$fileInput = ref }} type="file" multiple={false} accept="image/*" style={{ display: 'none' }} />
-            <div className="wk-list-item-title">
+            <div className="xo-list-item-title">
                 {title}
             </div>
-            <div className="wk-list-item-subtitle">
+            <div className="xo-list-item-subtitle">
                 {avatar}
             </div>
         </div>

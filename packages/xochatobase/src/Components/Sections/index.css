@@ -1,31 +1,28 @@
-.wk-sections {
-    
+.xo-sections {
 }
 
-.wk-section {
+.xo-section {
   margin-top: 10px;
 }
 
-.wk-section:first-child {
+.xo-section:first-child {
   margin-top: 0px;
 }
 
-.wk-section-rows {
-
+.xo-section-rows {
 }
 
-.wk-section-title {
+.xo-section-title {
   padding: 5px 15px;
-  color: var( --wk-color-font-tip);
+  color: var(--xo-color-font-tip);
   font-size: 13px;
 }
 
-.wk-section-row {
-
+.xo-section-row {
 }
 
-.wk-section-subtitle {
+.xo-section-subtitle {
   padding: 5px 15px;
-  color: var( --wk-color-font-tip);
+  color: var(--xo-color-font-tip);
   font-size: 13px;
 }

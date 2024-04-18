@@ -64,20 +64,20 @@ export class CardCell extends MessageCell<MessageBaseCellProps, CardCellState> {
             this.baseContext = ctx
         }}>
             <MessageBase hiddeBubble={true} message={message} context={context}>
-                <div className="wk-message-card">
-                    <div className="wk-message-card-content" onClick={() => {
+                <div className="xo-message-card">
+                    <div className="xo-message-card-content" onClick={() => {
                         XOApp.shared.baseContext.showUserInfo(content.uid,context.channel(),content.vercode)
                     }}>
                         <div>
                             <img src={XOApp.shared.avatarUser(content.uid)} style={{ width: "64px", height: "64px", borderRadius: "50%" }} alt="" />
                         </div>
-                        <div className="wk-message-card-content-name">
+                        <div className="xo-message-card-content-name">
                             {content.name}
                         </div>
                     </div>
-                    <div className="wk-message-card-bottom">
-                        <div className="wk-message-card-bottom-flag">个人名片</div>
-                        <div className="wk-message-card-bottom-time">
+                    <div className="xo-message-card-bottom">
+                        <div className="xo-message-card-bottom-flag">个人名片</div>
+                        <div className="xo-message-card-bottom-time">
                             <MessageTrail message={message} timeStyle={{ color: "#999" }} />
                         </div>
                     </div>

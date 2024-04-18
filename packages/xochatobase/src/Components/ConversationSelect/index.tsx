@@ -133,25 +133,25 @@ export default class ConversationSelect extends Component<ConversationSelectProp
         const { conversationWraps, selectChannels, friends,keyword } = this.state
         const { onFinished,title } = this.props
         let sortedConversations = this.sortConversations(conversationWraps);
-        return <div className="wk-conversationselect">
+        return <div className="xo-conversationselect">
             <div>
-                <div className="wk-conversationselect-content-title">{title||"转发"}</div>
-                <div id="conversationSelectSearchBox" className="wk-conversationselect-content-searchBox">
-                    <div className="wk-conversationselect-content-selectedChannel">
+                <div className="xo-conversationselect-content-title">{title||"转发"}</div>
+                <div id="conversationSelectSearchBox" className="xo-conversationselect-content-searchBox">
+                    <div className="xo-conversationselect-content-selectedChannel">
                         {
                             selectChannels.map((channel: Channel) => {
-                                return <div key={`${channel.channelID}-selected`} className="wk-conversationselect-content-selectedAvatar" onClick={() => {
+                                return <div key={`${channel.channelID}-selected`} className="xo-conversationselect-content-selectedAvatar" onClick={() => {
                                     this.select(channel)
                                 }}>
                                     <WKAvatar channel={channel} style={{ width: "48px", height: "48px", borderRadius: "48px" }}></WKAvatar>
                                 </div>
                             })
                         }
-                        <div className="wk-conversationselect-content-searchContent">
-                            <div className="wk-conversationselect-content-searchIcon">
+                        <div className="xo-conversationselect-content-searchContent">
+                            <div className="xo-conversationselect-content-searchIcon">
                                 <IconSearchStroked style={{ color: '#bbbfc4', fontSize: '20px' }}/>
                             </div>
-                            <div className="wk-conversationselect-content-searchInput">
+                            <div className="xo-conversationselect-content-searchInput">
                                 <input placeholder="搜索" type="text" style={{ fontSize: '17px' }} onChange={(v)=>{
                                     this.onSelect(v.target.value)
                                 }}/>
@@ -160,11 +160,11 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                     </div>
 
                 </div>
-                <div className="wk-conversationselect-content-box">
-                    <div className="wk-conversationselect-content-header">
+                <div className="xo-conversationselect-content-box">
+                    <div className="xo-conversationselect-content-header">
                         最近聊天
                     </div>
-                    <div className="wk-conversationselect-content-list">
+                    <div className="xo-conversationselect-content-list">
                         {
                             sortedConversations.filter((v)=>{
                                 if(!keyword || keyword === "") {
@@ -174,7 +174,7 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                             }).map((conversationWrap: ConversationWrap) => {
 
                                 return (
-                                    <div key={`${conversationWrap.channel.channelID}-conversation`} className="wk-conversationselect-content" onClick={() => {
+                                    <div key={`${conversationWrap.channel.channelID}-conversation`} className="xo-conversationselect-content" onClick={() => {
                                         this.select(conversationWrap.channel)
                                     }}>
                                         <div>
@@ -182,11 +182,11 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                                                 this.select(conversationWrap.channel)
                                             }} />
                                         </div>
-                                        <div className="wk-conversationselect-content-box-data">
+                                        <div className="xo-conversationselect-content-box-data">
                                             <div>
                                                 <WKAvatar channel={conversationWrap.channel} style={{ width: "48px", height: "48px", borderRadius: "48px" }} />
                                             </div>
-                                            <div className="wk-conversationselect-content-box-name">
+                                            <div className="xo-conversationselect-content-box-name">
                                                 {
                                                     conversationWrap.channelInfo?.orgData.displayName
                                                 }
@@ -198,10 +198,10 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                         }
 
                     </div>
-                    <div className="wk-conversationselect-content-header">
+                    <div className="xo-conversationselect-content-header">
                         好友
                     </div>
-                    <div className="wk-conversationselect-content-list">
+                    <div className="xo-conversationselect-content-list">
                         {
                             friends.filter((v)=>{
                                 if(!keyword || keyword === "") {
@@ -211,7 +211,7 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                             }).map((channelInfo: ChannelInfo) => {
 
                                 return (
-                                    <div key={channelInfo.channel.channelID} className="wk-conversationselect-content" onClick={() => {
+                                    <div key={channelInfo.channel.channelID} className="xo-conversationselect-content" onClick={() => {
                                         this.select(channelInfo.channel)
                                     }}>
                                         <div >
@@ -219,11 +219,11 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                                                 this.select(channelInfo.channel)
                                             }} />
                                         </div>
-                                        <div className="wk-conversationselect-content-box-data">
+                                        <div className="xo-conversationselect-content-box-data">
                                             <div >
                                                 <WKAvatar channel={channelInfo.channel} style={{ width: "48px", height: "48px", borderRadius: "48px" }} />
                                             </div>
-                                            <div className="wk-conversationselect-content-box-name">
+                                            <div className="xo-conversationselect-content-box-name">
                                                 {
                                                     channelInfo?.orgData.displayName
                                                 }
@@ -237,8 +237,8 @@ export default class ConversationSelect extends Component<ConversationSelectProp
                     </div>
                 </div>
             </div>
-            <div className="wk-conversationselect-footer">
-                <div className="wk-conversationselect-okBtn" onClick={() => {
+            <div className="xo-conversationselect-footer">
+                <div className="xo-conversationselect-okBtn" onClick={() => {
                     if(onFinished) {
                         onFinished(selectChannels)
                     }

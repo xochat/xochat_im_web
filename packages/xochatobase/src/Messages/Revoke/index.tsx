@@ -57,6 +57,6 @@ export class RevokeCell extends MessageCell {
 
     render() {
         const { message } = this.props
-        return <div className="wk-message-system">{RevokeCell.tip(message)}</div>
+        return <div className="xo-message-system">{RevokeCell.tip(message)}</div>
     }
 }

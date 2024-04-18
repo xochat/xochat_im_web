@@ -19,7 +19,7 @@ export default class UserSelect extends Component<UserSelectProps>{
 
     render() {
         const { users, onSelect, disableSelectList,cantMulit } = this.props
-        return <div className="wk-userselect">
+        return <div className="xo-userselect">
             <IndexTable disableSelectList={disableSelectList} onSelect={onSelect} canSelect={!cantMulit} items={users || []}></IndexTable>
         </div>
     }
@@ -38,7 +38,7 @@ export class ContactsSelect extends Component<ContactsSelectProps> {
     finishButtonContext!:FinishButtonContext
     render() {
         const { onSelect, disableSelectList, showHeader,onFinished,onBack,onFinishButtonContext,showFinishButton } = this.props
-        return <div className="wk-contactsselect">
+        return <div className="xo-contactsselect">
             {
                 showHeader ? <WKViewQueueHeader showFinishButton={showFinishButton} title="联系人选择" onFinishButtonContext={(context)=>{
                     this.finishButtonContext = context
@@ -52,7 +52,7 @@ export class ContactsSelect extends Component<ContactsSelectProps> {
                     }
                 }}></WKViewQueueHeader> : undefined
             }
-            <div className="wk-contactsselect-content">
+            <div className="xo-contactsselect-content">
                 <UserSelect disableSelectList={disableSelectList} onSelect={(items)=>{
                     if(showHeader) {
                         if(items.length>0) {

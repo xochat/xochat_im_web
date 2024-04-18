@@ -20,28 +20,28 @@ export default class ChannelQRCode extends Component<ChannelQRCodeProps> {
             return new ChannelQRCodeVM(channel)
         }} render={(vm: ChannelQRCodeVM) => {
 
-            return <div className="wk-channelqrcode">
-                <div className="wk-channelqrcode-box">
-                    <div className="wk-channelqrcode-info">
-                        <div className="wk-channelqrcode-info-avatar">
+            return <div className="xo-channelqrcode">
+                <div className="xo-channelqrcode-box">
+                    <div className="xo-channelqrcode-info">
+                        <div className="xo-channelqrcode-info-avatar">
                             <img src={XOApp.shared.avatarChannel(channel)}></img>
                         </div>
-                        <div className="wk-channelqrcode-info-name">
+                        <div className="xo-channelqrcode-info-name">
                             {channelInfo?.title}
                         </div>
                     </div>
 
-                    <div className="wk-channelqrcode-qrcode-box">
+                    <div className="xo-channelqrcode-qrcode-box">
                         {
-                            channelInfo?.orgData?.invite === 1 &&   vm.qrcodeResp? <div className="wk-channelqrcode-qrcode-mask">
+                            channelInfo?.orgData?.invite === 1 &&   vm.qrcodeResp? <div className="xo-channelqrcode-qrcode-mask">
                                 <p>该群已开启进群验证</p>
                                 <p>只可通过邀请进群</p>
                             </div> : undefined
                         }
 
-                        <div className="wk-channelqrcode-qrcode">
+                        <div className="xo-channelqrcode-qrcode">
                             {
-                                vm.qrcodeResp ? undefined : <div className="wk-channelqrcode-qrcode-loading">
+                                vm.qrcodeResp ? undefined : <div className="xo-channelqrcode-qrcode-loading">
                                     <Spin></Spin>
                                 </div>
                             }
@@ -54,7 +54,7 @@ export default class ChannelQRCode extends Component<ChannelQRCodeProps> {
                             }
                         </div>
                         {
-                            vm.qrcodeResp ? <div className="wk-channelqrcode-expire">
+                            vm.qrcodeResp ? <div className="xo-channelqrcode-expire">
                                 该二维码7天内({vm.qrcodeResp.expire})前有效，重新进入将更新
                             </div> : undefined
                         }

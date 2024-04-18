@@ -125,7 +125,7 @@ export class MergeforwardCell extends MessageCell<any,MergeforwardCellState> {
             } else {
                 XOSDK.shared().channelManager.fetchChannelInfo(channel)
             }
-            return <div key={m.messageID} className="wk-mergeforwards-content-item">{name}： {m.content.conversationDigest}</div>
+            return <div key={m.messageID} className="xo-mergeforwards-content-item">{name}： {m.content.conversationDigest}</div>
         })
     }
 
@@ -143,30 +143,30 @@ export class MergeforwardCell extends MessageCell<any,MergeforwardCellState> {
         const { message,context } = this.props
         const { showList } = this.state
         const content = message.content as MergeforwardContent
-        return <MessageBase hiddeBubble={true} message={message} context={context}><div className="wk-mergeforwards">
-            <div className="wk-mergeforwards-content" onClick={()=>{
+        return <MessageBase hiddeBubble={true} message={message} context={context}><div className="xo-mergeforwards">
+            <div className="xo-mergeforwards-content" onClick={()=>{
                 this.setState({
                     showList: true,
                 })
             }}>
-                <div className="wk-mergeforwards-content-title">
+                <div className="xo-mergeforwards-content-title">
                     {this.getTitle(content)}
                 </div>
-                <div className="wk-mergeforwards-content-items">
+                <div className="xo-mergeforwards-content-items">
                     {
                         this.getMsgListUI(content.msgs)
                     }
                 </div>
-                <div className="wk-mergeforwards-content-line">
+                <div className="xo-mergeforwards-content-line">
 
                 </div>
-                <div className="wk-mergeforwards-content-tip">
+                <div className="xo-mergeforwards-content-tip">
                     <p>聊天记录</p>
                     <p> <MessageTrail message={message} timeStyle={{ color: "#999" }} /></p>
                 </div>
             </div>
         </div>
-        <Modal className="wk-base-modal"  visible={showList} footer={null} onCancel={()=>{
+        <Modal className="xo-base-modal"  visible={showList} footer={null} onCancel={()=>{
             this.setState({
                 showList: false,
             })

@@ -19,16 +19,16 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
     }
     render(){
         const { vm } = this.props
-        return <div className="wk-main-sider">
-            <ul className="wk-main-sider-content">
-                <li className="wk-main-sider-avatar" onClick={()=>{
+        return <div className="xo-main-sider">
+            <ul className="xo-main-sider-content">
+                <li className="xo-main-sider-avatar" onClick={()=>{
                     vm.showMeInfo = true
                 }}>
                     <img alt="" src={XOApp.shared.avatarUser(XOApp.loginInfo.uid || "")}></img>
                 </li>
                 {
                     vm.menusList.map((menus: Menus) => {
-                        return <li className="wk-main-sider-item" title={menus.title} key={menus.id} onClick={() => {
+                        return <li className="xo-main-sider-item" title={menus.title} key={menus.id} onClick={() => {
                             vm.currentMenus = menus
                             if (menus.onPress) {
                                 menus.onPress()
@@ -39,7 +39,7 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
 
                         }}>
                             {
-                                menus.badge && menus.badge > 0 ? <div className="wk-main-sider-item-badge">
+                                menus.badge && menus.badge > 0 ? <div className="xo-main-sider-item-badge">
                                     <Badge count={menus.badge} type='danger'></Badge>
                                 </div> : undefined
                             }
@@ -50,23 +50,23 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                     })
                 }
 
-                <li className="wk-main-sider-setting-box" onClick={() => {
+                <li className="xo-main-sider-setting-box" onClick={() => {
                     vm.settingSelected = !vm.settingSelected
                 }}>
                     {
-                        vm.hasNewVersion ? <div className="wk-main-sider-setting-badge">
+                        vm.hasNewVersion ? <div className="xo-main-sider-setting-badge">
                             <Badge type="danger" dot> </Badge>
                         </div> : undefined
                     }
-                    <div className={classnames("wk-main-sider-setting", vm.settingSelected ? "collapsed" : undefined)}>
-                        <span className="wk-sider-setting-position-re wk-icon-bar"></span>
-                        <span className="wk-icon-bar"></span>
-                        <span className="wk-sider-setting-position-re wk-icon-bar"></span>
+                    <div className={classnames("xo-main-sider-setting", vm.settingSelected ? "collapsed" : undefined)}>
+                        <span className="xo-sider-setting-position-re xo-icon-bar"></span>
+                        <span className="xo-icon-bar"></span>
+                        <span className="xo-sider-setting-position-re xo-icon-bar"></span>
                     </div>
 
                 </li>
             </ul>
-            <ul className={classnames("wk-sider-setting-list", vm.settingSelected ? "open" : undefined)}>
+            <ul className={classnames("xo-sider-setting-list", vm.settingSelected ? "open" : undefined)}>
                 <li onClick={() => {
                     vm.settingSelected = false
                     if (XOApp.config.themeMode === ThemeMode.dark) {
@@ -107,7 +107,7 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
 
             </Modal>
 
-            <Modal width={400} className="wk-main-sider-modal wk-main-sider-meinfo" footer={null} closeIcon={<div></div>}  visible={vm.showMeInfo} mask={false} onCancel={() => {
+            <Modal width={400} className="xo-main-sider-modal xo-main-sider-meinfo" footer={null} closeIcon={<div></div>}  visible={vm.showMeInfo} mask={false} onCancel={() => {
                vm.showMeInfo = false
             }}>
                 <MeInfo onClose={()=>{
@@ -127,9 +127,9 @@ class VersionCheckView extends Component<VersionCheckViewProps>{
 
     render() {
         const { lastVersion } = this.props
-        return <div className="wk-versioncheckview">
-            <div className="wk-versioncheckview-content">
-                <div className="wk-versioncheckview-updateinfo">
+        return <div className="xo-versioncheckview">
+            <div className="xo-versioncheckview-content">
+                <div className="xo-versioncheckview-updateinfo">
                     <ul>
                         <li>当前版本: {XOApp.config.appVersion} &nbsp;&nbsp;目标版本: {lastVersion.appVersion}</li>
                         <li>更新内容：</li>
@@ -142,11 +142,11 @@ class VersionCheckView extends Component<VersionCheckViewProps>{
                         </li>
                     </ul>
                 </div>
-                <div className="wk-versioncheckview-tip">
-                    <div className="wk-versioncheckview-tip-title">
+                <div className="xo-versioncheckview-tip">
+                    <div className="xo-versioncheckview-tip-title">
                         更新方法：
                     </div>
-                    <div className="wk-versioncheckview-tip-content">
+                    <div className="xo-versioncheckview-tip-content">
                         <ul>
                             <li>
                                 1. Windows系统中的某些浏览器: Ctrl + F5刷新。如Chrome谷

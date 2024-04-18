@@ -24,8 +24,8 @@ export  class MeInfo extends Component<MeInfoProps> {
                 }
             }} render={function (context: RouteContext<any>): ReactNode {
 
-                return <div className="wk-meinfo">
-                    <div className="wk-meinfo-sections">
+                return <div className="xo-meinfo">
+                    <div className="xo-meinfo-sections">
                         <Sections sections={vm.sections(context)}></Sections>
                     </div>
                 </div>

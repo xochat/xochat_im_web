@@ -30,6 +30,6 @@ export default class WKAvatar extends Component<WKAvatarProps> {
     }
     render() {
         const {style} = this.props
-        return <img  alt="" style={style} className="wk-avatar" src={this.getImageSrc()}/>
+        return <img  alt="" style={style} className="xo-avatar" src={this.getImageSrc()}/>
     }
 }

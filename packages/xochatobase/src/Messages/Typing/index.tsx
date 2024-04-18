@@ -28,7 +28,7 @@ export class TypingCell extends MessageCell {
         const { message,context } = this.props
         return <MessageBase message={message} context={context} hiddenStatus={true}>
            <div style={{height:'18px'}}>
-           <BeatLoader size={8} margin={4} color="var(--wk-color-theme)" />
+           <BeatLoader size={8} margin={4} color="var(--xo-color-theme)" />
            </div>
         </MessageBase>
     }

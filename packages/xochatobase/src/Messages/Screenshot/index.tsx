@@ -44,6 +44,6 @@ export class ScreenshotCell extends MessageCell {
     render() {
         const { message } = this.props
         let content = message.content as ScreenshotContent
-        return <div className="wk-message-system">{content.tip}</div>
+        return <div className="xo-message-system">{content.tip}</div>
     }
 }

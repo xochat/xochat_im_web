@@ -1,17 +1,17 @@
 
-.wk-userselect {
+.xo-userselect {
     width: 100%;
     height: 100%;
 }
 
-.wk-contactsselect {
+.xo-contactsselect {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.wk-contactsselect-content {
+.xo-contactsselect-content {
     width: 100%;
-    height: calc(100% - var(--wk-height-viewqueueheader));
+    height: calc(100% - var(--xo-height-viewqueueheader));
 
 }

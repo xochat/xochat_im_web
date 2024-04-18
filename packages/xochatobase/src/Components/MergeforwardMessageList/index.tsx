@@ -87,15 +87,15 @@ export default class MergeforwardMessageList extends Component<MergeforwardMessa
 
     render(): ReactNode {
         const { mergeforwardContent } = this.props
-        return <div className="wk-mergeforwardmessagelist">
-            <div className="wk-mergeforwardmessagelist-header">
+        return <div className="xo-mergeforwardmessagelist">
+            <div className="xo-mergeforwardmessagelist-header">
                 <WKViewQueueHeader hideBack={true} title={this.getTitle(mergeforwardContent)}></WKViewQueueHeader>
             </div>
-            <div className="wk-mergeforwardmessagelist-content">
-                <div className="wk-mergeforwardmessagelist-content-timeline">
+            <div className="xo-mergeforwardmessagelist-content">
+                <div className="xo-mergeforwardmessagelist-content-timeline">
                     {this.getTimeline(mergeforwardContent)}
                 </div>
-                <div className="wk-mergeforwardmessagelist-content-msgs">
+                <div className="xo-mergeforwardmessagelist-content-msgs">
                     {
                         mergeforwardContent.msgs.map((m,i) => {
                             const fromChannel = new Channel(m.fromUID, ChannelTypePerson)
@@ -107,23 +107,23 @@ export default class MergeforwardMessageList extends Component<MergeforwardMessa
                             if(i > 0) {
                                 showAvatar = mergeforwardContent.msgs[i-1].fromUID !== m.fromUID
                             }
-                            return <div className="wk-mergeforwardmessagelist-content-msg" key={m.messageID}>
-                                <div className="wk-mergeforwardmessagelist-content-msg-avatar" style={{ "width": "40px", "height": "40px", "borderRadius": "50%" }}>
+                            return <div className="xo-mergeforwardmessagelist-content-msg" key={m.messageID}>
+                                <div className="xo-mergeforwardmessagelist-content-msg-avatar" style={{ "width": "40px", "height": "40px", "borderRadius": "50%" }}>
                                     {
                                         showAvatar?<WKAvatar channel={new Channel(m.fromUID, ChannelTypePerson)} style={{ "width": "40px", "height": "40px", "borderRadius": "50%" }}></WKAvatar>:undefined
                                     }
                                 </div>
-                                <div className="wk-mergeforwardmessagelist-content-msg-info">
-                                    <div className="wk-mergeforwardmessagelist-content-msg-info-first">
-                                        <div className="wk-mergeforwardmessagelist-content-msg-info-first-name">
+                                <div className="xo-mergeforwardmessagelist-content-msg-info">
+                                    <div className="xo-mergeforwardmessagelist-content-msg-info-first">
+                                        <div className="xo-mergeforwardmessagelist-content-msg-info-first-name">
                                             {fromChannelInfo?.title}
                                         </div>
-                                        <div className="wk-mergeforwardmessagelist-content-msg-info-first-time">
+                                        <div className="xo-mergeforwardmessagelist-content-msg-info-first-time">
                                                 {getTimeStringAutoShort2(m.timestamp*1000,true)}
                                         </div>
                                     </div>
-                                    <div className="wk-mergeforwardmessagelist-content-msg-info-second">
-                                           <div className="wk-mergeforwardmessagelist-content-msg-info-second-msgcontent">
+                                    <div className="xo-mergeforwardmessagelist-content-msg-info-second">
+                                           <div className="xo-mergeforwardmessagelist-content-msg-info-second-msgcontent">
                                            {
                                                this.getMsgContent(m)
                                             }

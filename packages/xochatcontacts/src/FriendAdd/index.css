@@ -1,29 +1,28 @@
-
-.wk-friendadd .wk-search-box{
-    border-radius: 0px;
-    background-color: white;
-   margin: 0px 15px;
+.xo-friendadd .xo-search-box {
+  border-radius: 0px;
+  background-color: white;
+  margin: 0px 15px;
 }
 
-.wk-friendadd .wk-search-input {
-    max-width: 100%;
+.xo-friendadd .xo-search-input {
+  max-width: 100%;
 }
 
-.wk-friendadd .wk-search-input input {
-    width: 250px;
+.xo-friendadd .xo-search-input input {
+  width: 250px;
 }
 
-.wk-friendadd-content-qrcode {
-    margin-top: 10px;
-    text-align: center;
+.xo-friendadd-content-qrcode {
+  margin-top: 10px;
+  text-align: center;
 }
 
-body[theme-mode=dark] .wk-friendadd-content-qrcode  {
-    color: white;
+body[theme-mode="dark"] .xo-friendadd-content-qrcode {
+  color: white;
 }
 
-.wk-friendadd-content-qrcode img {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
+.xo-friendadd-content-qrcode img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }

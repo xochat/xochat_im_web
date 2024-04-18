@@ -34,7 +34,7 @@ export default class ChannelBlacklist extends Component<ChannelBlacklistProps> {
     render(): ReactNode {
         const { routeContext } = this.props
         const data = routeContext.routeData()
-        return <div className="wk-channelblacklist">
+        return <div className="xo-channelblacklist">
             <SmallTableEdit addTitle="添加黑名单" items={data.subscriberAll.filter((s) => s.status === SubscriberStatus.blacklist).map((subscriber) => {
                 return {
                     id: subscriber.uid,

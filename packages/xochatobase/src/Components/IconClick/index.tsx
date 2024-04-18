@@ -10,7 +10,7 @@ export interface IconClickProps {
 export default class IconClick extends Component<IconClickProps> {
     render(): ReactNode {
         const { icon,onClick } = this.props
-        return <div className="wk-iconclick" onClick={()=>{
+        return <div className="xo-iconclick" onClick={()=>{
             if(onClick) {
                 onClick()
             }

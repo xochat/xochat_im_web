@@ -1,72 +1,68 @@
-
-
-.wk-qrcodemy {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.xo-qrcodemy {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.wk-qrcodemy-content-qrcodebox {
-
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.xo-qrcodemy-content-qrcodebox {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.wk-qrcodemy-content-qrcodeinfo {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.xo-qrcodemy-content-qrcodeinfo {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-body[theme-mode=dark] .wk-qrcodemy-content-qrcodeinfo {
-    background-color: var(--wk-color-secondary-2);
+body[theme-mode="dark"] .xo-qrcodemy-content-qrcodeinfo {
+  background-color: var(--xo-color-secondary-2);
 }
 
-.wk-qrcodemy-content-userinfo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 15px;
+.xo-qrcodemy-content-userinfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15px;
 }
 
-.wk-qrcodemy-content-userinfo-avatar img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+.xo-qrcodemy-content-userinfo-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
-.wk-qrcodemy-content-qrcode {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-    width: 250px;
-    height: 250px;
+.xo-qrcodemy-content-qrcode {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  width: 250px;
+  height: 250px;
 }
 
-.wk-qrcodemy-content-tip {
-    font-size: 13px;
-    text-align: center;
-    color: #999;
-    margin: 15px 0px;
+.xo-qrcodemy-content-tip {
+  font-size: 13px;
+  text-align: center;
+  color: #999;
+  margin: 15px 0px;
 }
 
-.wk-qrcodemy-content-userinfo-name {
-    font-size: 15px;
-    font-weight: 500;
+.xo-qrcodemy-content-userinfo-name {
+  font-size: 15px;
+  font-weight: 500;
 }
 
-body[theme-mode=dark]  .wk-qrcodemy-content-userinfo-name {
-    color: white;
+body[theme-mode="dark"] .xo-qrcodemy-content-userinfo-name {
+  color: white;
 }

@@ -21,14 +21,14 @@ export class NewFriend extends Component {
         }}
         render={(vm: NewFriendVM) => {
           return (
-            <div className="wk-newfriend">
+            <div className="xo-newfriend">
               <WKViewQueueHeader
                 title="新朋友"
                 onBack={() => {
                   XOApp.routeLeft.pop();
                 }}
                 action={
-                  <div className="wk-viewqueueheader-content-action">
+                  <div className="xo-viewqueueheader-content-action">
                     <Button
                       size="small"
                       onClick={() => {
@@ -46,23 +46,23 @@ export class NewFriend extends Component {
                   </div>
                 }
               ></WKViewQueueHeader>
-              <div className="wk-newfriend-content">
+              <div className="xo-newfriend-content">
                 <ul>
                   {vm.friendApplys.map((f) => {
                     return (
                       <li key={f.to_uid}>
-                        <div className="wk-newfriend-content-avatar">
+                        <div className="xo-newfriend-content-avatar">
                           <img src={XOApp.shared.avatarUser(f.to_uid)}></img>
                         </div>
-                        <div className="wk-newfriend-content-title">
-                          <div className="wk-newfriend-content-title-name">
+                        <div className="xo-newfriend-content-title">
+                          <div className="xo-newfriend-content-title-name">
                             {f.to_name}
                           </div>
-                          <div className="wk-newfriend-content-title-remark">
+                          <div className="xo-newfriend-content-title-remark">
                             {f.remark}
                           </div>
                         </div>
-                        <div className="wk-newfriend-content-action">
+                        <div className="xo-newfriend-content-action">
                           <Button
                             loading={
                               vm.currentFriendApply?.to_uid === f.to_uid &&

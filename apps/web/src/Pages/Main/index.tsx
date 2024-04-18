@@ -72,7 +72,7 @@ export class MainPage extends Component {
                 XOApp.routeLeft.setPopToRoot = () => {
                     context.popToRoot()
                 }
-            }} contentRight={ <div className="wk-chat-empty">
+            }} contentRight={ <div className="xo-chat-empty">
             <img src={require("./assets/start_chat.svg").default} alt=""></img>
         </div>} />
         }}>

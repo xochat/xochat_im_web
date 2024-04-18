@@ -17,7 +17,7 @@ export class InputEdit extends Component<InputEditProps>{
 
     render() {
         const {onChange,defaultValue,placeholder,maxCount,allowWrap} = this.props
-        return <div className="wk-inputedit">
+        return <div className="xo-inputedit">
             <TextArea  defaultValue={defaultValue} onChange={(value)=>{
                 let exceeded = false
                 if( maxCount && value.length>maxCount) {
@@ -32,7 +32,7 @@ export class InputEdit extends Component<InputEditProps>{
                     e.preventDefault();
                 }
             }}></TextArea>
-            <div className="wk-inputedit-placeholder">{placeholder}</div>
+            <div className="xo-inputedit-placeholder">{placeholder}</div>
         </div>
     }
 }

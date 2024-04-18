@@ -1,18 +1,18 @@
 :root {
-    --wk-width-max-message: 540px;
+    --xo-width-max-message: 540px;
 }
 
-.wk-message-base {
+.xo-message-base {
     width: 100%;
     height: 100%;
     display: flex;
 }
 
-.wk-message-base-check-open {
+.xo-message-base-check-open {
 
 }
 
-.wk-message-base-send, .wk-message-base-recv {
+.xo-message-base-send, .xo-message-base-recv {
     height: 100%;
     width: 100%;
     display: flex;
@@ -20,18 +20,18 @@
 }
 
 
-.wk-message-base-send {
+.xo-message-base-send {
     align-items: flex-end;
     margin-right: 5px;
 }
 
-.wk-message-base-recv {
+.xo-message-base-recv {
     margin-left: 15px;
     transform: translate3d(0, 0, 0);
-    transition: transform var(--wk-layer-transition);
+    transition: transform var(--xo-layer-transition);
 }
 
-.wk-message-base-check-open .wk-message-base-recv {
+.xo-message-base-check-open .xo-message-base-recv {
     transform: translate3d(30px, 0, 0);
 }
 
@@ -58,49 +58,49 @@
     border-radius: 40%;
 }
 
-.wk-message-base-box {
+.xo-message-base-box {
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.wk-message-base-send .wk-message-base-box {
+.xo-message-base-send .xo-message-base-box {
     flex-direction: row-reverse;
     justify-content: center;
     margin-left: 0px;
     margin-right: 10px;
 }
 
-.wk-message-base-send .senderName {
+.xo-message-base-send .senderName {
     padding-right: 41px;
 }
 
-.wk-message-base-recv .senderName {
+.xo-message-base-recv .senderName {
     padding-left: 41px;
 }
 
-.wk-message-base-send .senderAvatar {
+.xo-message-base-send .senderAvatar {
     display: none;
     text-align: center;
 }
 
-.wk-message-base-bubble-box {
+.xo-message-base-bubble-box {
     display: flex;
     position: relative;
 }
 
-.wk-message-base-bubble-box.recv {
+.xo-message-base-bubble-box.recv {
     margin-left: 40px;
 }
 
-.wk-message-base-bubble {
+.xo-message-base-bubble {
     color: rgba(9,30,66,.87);
     display: flex;
     /* margin-bottom: 4px; */
     padding: 8px 10px;
     position: relative;
     word-wrap: break-word;
-    max-width: var(--wk-width-max-message);
+    max-width: var(--xo-width-max-message);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -108,57 +108,57 @@
     font-size: 15px;
 }
 
-.wk-message-base-bubble-box.hide .wk-message-base-bubble {
+.xo-message-base-bubble-box.hide .xo-message-base-bubble {
     padding: 0px;
 }
 
-body[theme-mode=dark] .wk-message-base-bubble {
+body[theme-mode=dark] .xo-message-base-bubble {
     box-shadow: none;
 }
 
 @media screen and (max-width: 640px)  {
-    .wk-message-base-bubble {
+    .xo-message-base-bubble {
         max-width: calc(100vw - 80px);
     }
 }
 
-.wk-message-base-bubble-box.send .wk-message-base-bubble {
-    background-color: var(--wk-color-theme) ;
+.xo-message-base-bubble-box.send .xo-message-base-bubble {
+    background-color: var(--xo-color-theme) ;
     border-radius: 0.75rem 0.75rem 0rem 0.75rem;
     color: white;
 }
 
-.wk-message-base-bubble-box.recv .wk-message-base-bubble {
+.xo-message-base-bubble-box.recv .xo-message-base-bubble {
     border-radius: 0.75rem 0.75rem 0.75rem 0rem;
     background-color: white ;
     color: black;
 }
 
-body[theme-mode=dark] .wk-message-base-bubble-box.recv .wk-message-base-bubble  {
+body[theme-mode=dark] .xo-message-base-bubble-box.recv .xo-message-base-bubble  {
     color: white;
 }
 
-body[theme-mode=dark] .wk-message-base-bubble-box.recv .wk-message-base-bubble {
-    background-color: var(--wk-color-secondary);
+body[theme-mode=dark] .xo-message-base-bubble-box.recv .xo-message-base-bubble {
+    background-color: var(--xo-color-secondary);
 }
 
-.wk-message-base-bubble-box.send.middle .wk-message-base-bubble {
+.xo-message-base-bubble-box.send.middle .xo-message-base-bubble {
     border-radius: 0.75rem 0.375rem 0.375rem 0.75rem;
 }
 
-.wk-message-base-bubble-box.send.first .wk-message-base-bubble {
+.xo-message-base-bubble-box.send.first .xo-message-base-bubble {
     border-radius: 0.75rem 0.75rem 0.375rem 0.75rem;
 }
 
-.wk-message-base-bubble-box.recv.middle .wk-message-base-bubble {
+.xo-message-base-bubble-box.recv.middle .xo-message-base-bubble {
     border-radius: 0.375rem 0.75rem 0.75rem 0.375rem;
 }
 
-.wk-message-base-bubble-box.recv.first .wk-message-base-bubble {
+.xo-message-base-bubble-box.recv.first .xo-message-base-bubble {
     border-radius: 0.75rem 0.75rem 0.75rem 0.375rem;
 }
 
-.wk-message-base-bubble-box.hide .wk-message-base-bubble {
+.xo-message-base-bubble-box.hide .xo-message-base-bubble {
     background-color: transparent !important;
     box-shadow: none;
 }
@@ -175,42 +175,42 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .wk-message-base-bubble {
 }
 
 
-.wk-message-base-bubble-box.last .svgAppendix {
+.xo-message-base-bubble-box.last .svgAppendix {
     display: block;
 }
 
-.wk-message-base-bubble-box.single .svgAppendix {
+.xo-message-base-bubble-box.single .svgAppendix {
     display: block;
 }
 
 
-.wk-message-base-bubble-box.send .svgAppendix {
+.xo-message-base-bubble-box.send .svgAppendix {
     right: -0.551rem;
 }
 
-.wk-message-base-bubble-box.recv .svgAppendix {
+.xo-message-base-bubble-box.recv .svgAppendix {
     left: -0.52rem;
 }
 
-.wk-message-base-bubble-box.send .svgAppendix .corner {
-    fill: var(--wk-color-theme);
+.xo-message-base-bubble-box.send .svgAppendix .corner {
+    fill: var(--xo-color-theme);
 }
 
-.wk-message-base-bubble-box.recv .svgAppendix .corner {
+.xo-message-base-bubble-box.recv .svgAppendix .corner {
     fill: white;
 }
 
 
-body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
-    fill: var(--wk-color-secondary);
+body[theme-mode=dark] .xo-message-base-bubble-box.recv .svgAppendix .corner  {
+    fill: var(--xo-color-secondary);
 }
 
-/* .wk-message-base-recv .wk-message-base-bubble {
+/* .xo-message-base-recv .xo-message-base-bubble {
     margin-left: 5px;
     background-color: #bedbf5;
 }
 
-.wk-message-base-send .wk-message-base-bubble {
+.xo-message-base-send .xo-message-base-bubble {
     margin-right: 5px;
     background-color: #fff;
     box-shadow: -1px 1px 1px rgba(0,0,0,.12);
@@ -225,12 +225,12 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     margin-bottom: 1px;
 }
 
-.wk-message-base-send .messageNameBox {
+.xo-message-base-send .messageNameBox {
     flex-direction: row-reverse;
     justify-content: end;
 }
 
-.wk-message-base-recv .messageNameBox {
+.xo-message-base-recv .messageNameBox {
     flex-direction: row;
 }
 
@@ -242,25 +242,25 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     display: none;
 }
 
-.wk-message-base-send:hover .messageTime {
+.xo-message-base-send:hover .messageTime {
     display: block;
 }
 
-.wk-message-base-recv:hover .messageTime {
+.xo-message-base-recv:hover .messageTime {
     display: block;
 }
 
-.wk-message-base-recv .messageTime {
+.xo-message-base-recv .messageTime {
     margin-left: 8px;
 }
 
-.wk-message-base-send .messageTime {
+.xo-message-base-send .messageTime {
     margin-right: 8px;
 }*/
 
 
 
-.wk-message-base-content {
+.xo-message-base-content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -271,46 +271,46 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     display: none;
 }
 
-.wk-message-base-box:hover .popupMenusContaner {
+.xo-message-base-box:hover .popupMenusContaner {
     display: block;
 }
 
 
-.wk-message-base-checkBox {
+.xo-message-base-checkBox {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transform: translate3d(-10px, 0, 0);
-    transition: transform var(--wk-layer-transition);
+    transition: transform var(--xo-layer-transition);
 }
 
-.wk-message-base-check-open {
+.xo-message-base-check-open {
     cursor: pointer;
 }
 
-.wk-message-base-check-open .wk-message-base-checkBox{
+.xo-message-base-check-open .xo-message-base-checkBox{
     transform: translate3d(25px, 0, 0);
    
 }
 
-.wk-message-base-checkBox .wk-check {
+.xo-message-base-checkBox .xo-check {
     position: absolute;
     bottom: 10px;
 }
 
-.wk-message-base-send .checkBox {
+.xo-message-base-send .checkBox {
     left: auto;
     right: -30px;
 }
 
 
-.wk-message-base-send .wk-message-base-box.checked {
+.xo-message-base-send .xo-message-base-box.checked {
     margin-left: 0;
     margin-right: 30px;
 }
 
-.wk-message-base-recv .wk-message-base-box.checked .senderAvatar {
+.xo-message-base-recv .xo-message-base-box.checked .senderAvatar {
     left: -30px;
 }
 
@@ -342,7 +342,7 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     width: 2px;
     height: 100%;
     border-radius: 50px;
-    background-color: var(--wk-color-theme);
+    background-color: var(--xo-color-theme);
 }
 
 .messageMeta {
@@ -356,7 +356,7 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     margin-right: -0.2rem;
 }
 
-.wk-message-base-bubble-box.send .messageMeta {
+.xo-message-base-bubble-box.send .messageMeta {
     top: 0rem;
 }
 
@@ -366,11 +366,11 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     white-space: nowrap;
 }
 
-.wk-message-base-bubble-box.recv .messageTime {
+.xo-message-base-bubble-box.recv .messageTime {
     color: rgb(104, 108, 114,0.75);
 }
 
-.wk-message-base-bubble-box.send .messageTime {
+.xo-message-base-bubble-box.send .messageTime {
     color: rgb(255, 255, 255,0.75);
 }
 
@@ -426,9 +426,9 @@ body[theme-mode=dark] .wk-message-base-bubble-box.recv .svgAppendix .corner  {
     margin-left: 10px;
 }
 
-.wk-message-error-reason {
+.xo-message-error-reason {
     font-size: 13px;
     margin-right: 10px;
     margin-top: 5px;
-    color: var(--wk-color-font-tip);
+    color: var(--xo-color-font-tip);
 }

@@ -12,7 +12,7 @@ export default class Checkbox extends Component<CheckboxProps> {
     render() {
         const { checked,onCheck } = this.props;
         return (
-            <div className="wk-check"  onClick={()=>{
+            <div className="xo-check"  onClick={()=>{
                 if(onCheck) {
                     onCheck();
                 }
