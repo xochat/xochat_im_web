@@ -23,6 +23,7 @@ module.exports = {
         arch: ['x64', 'arm64']
       }
     ],
+    // eslint-disable-next-line no-template-curly-in-string
     artifactName: '${productName}-${os}-${version}-${arch}.${ext}',
     icon: "resources/icons/icon.icns"
   },
@@ -41,6 +42,7 @@ module.exports = {
     icon: "resources/icons/icon.ico",
     verifyUpdateCodeSignature: false,
     target: ["nsis", "zip"],
+    // eslint-disable-next-line no-template-curly-in-string
     artifactName: "${productName}-Setup-${version}.${ext}"
   },
   nsis: {
