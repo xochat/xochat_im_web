@@ -8,7 +8,7 @@ import { LoginModule } from "@xochat/login";
 import { DataSourceModule } from "@xochat/datasource";
 import { ContactsModule } from "@xochat/contacts";
 
-const apiURL = "http://13.201.220.225:18090/v1/";
+const apiURL = "https://18090.sn12.xyz/v1/";
 
 if ((window as any).__TAURI_IPC__) {
   // tauri环境
