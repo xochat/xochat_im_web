@@ -64,8 +64,8 @@ export class WKRemoteConfig {
     requestSuccess: boolean = false
     oss: string = ""
 
-    async startRequestConfig() {
-        await this.requestConfig()
+    startRequestConfig() {
+        this.requestConfig()
 
         if (!this.requestSuccess) {
             setTimeout(() => {
@@ -353,8 +353,8 @@ export default class XOApp extends ProviderListener {
             }
             return XOApp.dataSource.commonDataSource.getImageURL(logo)
         }
-        // const baseURl = XOApp.apiClient.config.apiURL
-        const baseURl = XOApp.remoteConfig.oss
+        const baseURl = XOApp.apiClient.config.apiURL
+        // const baseURl = XOApp.remoteConfig.oss
         if (channel.channelType === ChannelTypePerson) {
             return `${baseURl}users/${channel.channelID}/avatar?v=${avatarTag}`
         } else if (channel.channelType == ChannelTypeGroup) {

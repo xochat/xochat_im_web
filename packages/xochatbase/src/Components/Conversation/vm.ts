@@ -9,7 +9,7 @@ import moment from 'moment'
 import { TimeContent } from "../../Messages/Time";
 import { HistorySplitContent } from "../../Messages/HistorySplit";
 import { MessageListener, MessageStatusListener } from "xochat_js_sdk";
-import { SendackPacket, Setting } from "xochat_js_sdk";
+import { SendAckPacket, Setting } from "xochat_js_sdk";
 import MergeforwardContent from "../../Messages/Mergeforward";
 import { TypingListener, TypingManager } from "../../Service/TypingManager";
 
@@ -286,7 +286,7 @@ export default class ConversationVM extends ProviderListener {
         XOSDK.shared().chatManager.addCMDListener(this.cmdListener)
 
         // 消息状态监听
-        this.messageStatusListener = (ackPacket: SendackPacket): void => {
+        this.messageStatusListener = (ackPacket: SendAckPacket): void => {
             this.updateMessageStatusBySendAck(ackPacket)
         }
         XOSDK.shared().chatManager.addMessageStatusListener(this.messageStatusListener)
@@ -477,7 +477,7 @@ export default class ConversationVM extends ProviderListener {
     }
 
     // 更新消息状态
-    updateMessageStatusBySendAck(ackPacket: SendackPacket) {
+    updateMessageStatusBySendAck(ackPacket: SendAckPacket) {
         const message = this.findMessageWithClientSeq(ackPacket.clientSeq)
         if (message) {
             message.message.messageID = ackPacket.messageID.toString()
