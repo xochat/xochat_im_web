@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "dependencies": {
+    "@tauri-apps/cli": "1.5.14",
     "@xochat/base": "*",
-    "axios": "^0.25.0"
+    "axios": "^1.7.2"
   }
 }

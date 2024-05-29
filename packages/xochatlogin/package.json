@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "src/index.tsx",
   "dependencies": {
-    "@xochat/base": "*",
+    "@tauri-apps/cli": "1.5.14",
     "@types/node-forge": "^1.0.0",
     "@types/qrcode.react": "^1.0.2",
-    "axios": "^0.25.0",
+    "@xochat/base": "*",
+    "axios": "^1.7.2",
     "keypair": "^1.0.4",
     "qrcode.react": "^1.0.1"
   }

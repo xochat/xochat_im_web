@@ -62,6 +62,7 @@ export class WKConfig {
 export class WKRemoteConfig {
     revokeSecond: number = 2 * 60 // 撤回时间
     requestSuccess: boolean = false
+    oss: string = ""
 
     async startRequestConfig() {
         await this.requestConfig()
@@ -77,6 +78,7 @@ export class WKRemoteConfig {
         return XOApp.apiClient.get("common/appconfig").then((result) => {
             this.requestSuccess = true
             this.revokeSecond = result["revoke_second"]
+            this.oss = result["oss"]
         })
     }
 }
@@ -351,7 +353,8 @@ export default class XOApp extends ProviderListener {
             }
             return XOApp.dataSource.commonDataSource.getImageURL(logo)
         }
-        const baseURl = XOApp.apiClient.config.apiURL
+        // const baseURl = XOApp.apiClient.config.apiURL
+        const baseURl = XOApp.remoteConfig.oss
         if (channel.channelType === ChannelTypePerson) {
             return `${baseURl}users/${channel.channelID}/avatar?v=${avatarTag}`
         } else if (channel.channelType == ChannelTypeGroup) {
