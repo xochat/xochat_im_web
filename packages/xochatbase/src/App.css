@@ -7,7 +7,7 @@
     --xo-color-hover: #eee;
     /* 提示类型的字体颜色 */
     --xo-color-font-tip: rgb(170,170,170);
-    --xo-width-layout-content-left: 300px;
+    --xo-width-layout-content-left: 450px;
     --xo-wdith-conversation-list: var(--xo-width-layout-content-left);
     /* --xo-height-chat-search: 65px; */
     --xo-height-chat-search: 64px;

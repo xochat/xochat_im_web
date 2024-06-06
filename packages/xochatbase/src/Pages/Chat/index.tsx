@@ -149,8 +149,8 @@ export default class ChatPage extends Component<any> {
                     <div className="xo-chat-content-left">
                         <div className="xo-chat-search">
                             <div className="xo-chat-title">
-                                {vm.connectTitle}
-                            </div>
+                                {vm.connectTitle} 
+                            </div> 
                             <Popover onClickOutSide={() => {
                                 vm.showAddPopover = false
                             }} className="xo-chat-popover" position="bottomRight" visible={vm.showAddPopover} showArrow={false} trigger="custom" content={<ChatMenusPopover onItem={() => {

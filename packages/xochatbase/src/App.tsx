@@ -25,7 +25,7 @@ export enum ThemeMode {
     dark
 }
 export class WKConfig {
-    appName: string = "XOCHAT"
+    appName: string = "XO"
     appVersion: string = "0.0.0" // app版本
     themeColor: string = "#3370FF" // 主题颜色
     secondColor: string = "rgba(232, 234, 237)"
