@@ -1,7 +1,7 @@
-var path = require('path')
+var path = require("path");
 
-const { override, babelInclude, addWebpackPlugin } = require('customize-cra')
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { override, babelInclude, addWebpackPlugin,addWebpackModuleRule } = require("customize-cra");
+const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const TerserPlugin = require("terser-webpack-plugin");
 
 // module.exports = override(
@@ -28,10 +28,10 @@ const TerserPlugin = require("terser-webpack-plugin");
 // )
 
 module.exports = function (config, env) {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === "production") {
     config.devtool = false;
   }
-  if (env === 'production') {
+  if (env === "production") {
     config.optimization = {
       minimize: true,
       minimizer: [new TerserPlugin()],
@@ -60,11 +60,16 @@ module.exports = function (config, env) {
       //     },
       //   })
       // ),
+      // 添加对 SCSS 文件的支持
+      addWebpackModuleRule({
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      }),
       babelInclude([
         /* transpile (converting to es5) code in src/ and shared component library */
-        path.resolve('src'),
-        path.resolve('../../packages'),
+        path.resolve("src"),
+        path.resolve("../../packages"),
       ])
     )(config, env)
-  )
-}
+  );
+};

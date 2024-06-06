@@ -1,7 +1,7 @@
 
 
  :root {
-    --xo-color-theme: #E46342;
+    --xo-color-theme: #3370FF;
     --xo-color-secondary: rgba(246, 246, 246);
     --xo-color-secondary-2:  rgba(246, 246, 246);
     --xo-color-hover: #eee;
@@ -42,8 +42,8 @@
     --xo-message-item: #0F0F0F;
     --xo-message-color: white;
 
-    --semi-color-primary: #E46342;
-    --semi-color-primary-hover: rgb(228, 99, 66,0.5);
+    --semi-color-primary: #3370FF;
+    --semi-color-primary-hover: rgb(51, 112, 255,0.5);
 
   }
 
@@ -73,7 +73,7 @@ html {
     background: var( --background-color);
     color: rgba(9,30,66,.87) ;
 
-    --semi-color-primary: #E46342;
+    --semi-color-primary: #3370FF;
   }
 
   div {
