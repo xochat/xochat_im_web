@@ -355,11 +355,14 @@ export default class XOApp extends ProviderListener {
         }
         const baseURl = XOApp.apiClient.config.apiURL
         // const baseURl = XOApp.remoteConfig.oss
+        // const baseURl = 'https://bucket.live168.xyz/'
+        var path = ''
         if (channel.channelType === ChannelTypePerson) {
-            return `${baseURl}users/${channel.channelID}/avatar?v=${avatarTag}`
+            path = `${baseURl}users/${channel.channelID}/avatar?v=${avatarTag}`
         } else if (channel.channelType == ChannelTypeGroup) {
-            return `${baseURl}groups/${channel.channelID}/avatar?v=${avatarTag}`
+            path = `${baseURl}groups/${channel.channelID}/avatar?v=${avatarTag}`
         }
+        console.log(path)
         return ""
     }
 

@@ -9,7 +9,8 @@
       "cache": false
     },
     "build": {
-      "outputs": [".next/**"]
+      "outputs": [".next/**"],
+      "cache": false
     },
     "build-ele": {
       "outputs": [".next/**"],
