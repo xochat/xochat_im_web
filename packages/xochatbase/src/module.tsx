@@ -464,7 +464,7 @@ export default class BaseModule implements IModule {
       return (
         <EmojiToolbar
           conversationContext={ctx}
-          icon={require("./assets/toolbars/func_face_normal.svg").default}
+          icon={require("./assets/toolbars/func_face_normal.png")}
         ></EmojiToolbar>
       );
     });
@@ -476,7 +476,7 @@ export default class BaseModule implements IModule {
       }
       return (
         <IconClick
-          icon={require("./assets/toolbars/func_mention_normal.svg").default}
+          icon={require("./assets/toolbars/func_mention_normal.png")}
           onClick={() => {
             ctx.messageInputContext().insertText("@");
           }}
@@ -487,7 +487,7 @@ export default class BaseModule implements IModule {
     XOApp.endpoints.registerChatToolbar("chattoolbar.screenshot", (ctx) => {
       return (
         <IconClick
-          icon={require("./assets/toolbars/func_screenshot.svg").default}
+          icon={require("./assets/toolbars/func_screenshot.png")}
           onClick={() => {
             if ((window as any).__POWERED_ELECTRON__) {
               (window as any).ipc.send('screenshots-start', {})
@@ -501,7 +501,7 @@ export default class BaseModule implements IModule {
     XOApp.endpoints.registerChatToolbar("chattoolbar.image", (ctx) => {
       return (
         <ImageToolbar
-          icon={require("./assets/toolbars/func_file.svg").default}
+          icon={require("./assets/toolbars/func_file.png")}
           conversationContext={ctx}
         ></ImageToolbar>
       );

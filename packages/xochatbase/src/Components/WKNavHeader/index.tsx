@@ -11,6 +11,7 @@ export default class WKNavMainHeader extends Component<WKNavHeaderProps> {
 
     render(): ReactNode {
         const {rightView,title} = this.props
+        return ''
         return <div className="xo-navheader">
             <div className="xo-navheader-content">
                 <div className="xo-navheader-content-left">

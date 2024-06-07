@@ -16,7 +16,7 @@ export default class IconListItem extends Component<IconListItemProps> {
 
     render(): ReactNode {
         const { icon, title, backgroudColor, onClick, badge } = this.props
-        return <div className="xo-iconlistitem" style={{ "backgroundColor": backgroudColor }} onClick={onClick}>
+        return <div className="xo-iconlistitem"  onClick={onClick}>
             <div className="xo-iconlistitem-content">
                 <div className="xo-iconlistitem-content-icon">
                     <img src={icon}></img>

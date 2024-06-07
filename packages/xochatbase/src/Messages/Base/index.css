@@ -55,7 +55,7 @@
 .senderAvatar img {
     width: 34px;
     height: 34px;
-    border-radius: 40%;
+    border-radius: 10px;
 }
 
 .xo-message-base-box {
@@ -123,9 +123,9 @@ body[theme-mode=dark] .xo-message-base-bubble {
 }
 
 .xo-message-base-bubble-box.send .xo-message-base-bubble {
-    background-color: var(--xo-color-theme) ;
+    background-color: var(--xo-color-theme-3) ;
     border-radius: 0.75rem 0.75rem 0rem 0.75rem;
-    color: white;
+    color: #000;
 }
 
 .xo-message-base-bubble-box.recv .xo-message-base-bubble {
@@ -193,7 +193,7 @@ body[theme-mode=dark] .xo-message-base-bubble-box.recv .xo-message-base-bubble {
 }
 
 .xo-message-base-bubble-box.send .svgAppendix .corner {
-    fill: var(--xo-color-theme);
+    fill: var(--xo-color-theme-3);
 }
 
 .xo-message-base-bubble-box.recv .svgAppendix .corner {
@@ -371,7 +371,7 @@ body[theme-mode=dark] .xo-message-base-bubble-box.recv .svgAppendix .corner  {
 }
 
 .xo-message-base-bubble-box.send .messageTime {
-    color: rgb(255, 255, 255,0.75);
+    color: rgba(0, 0, 0, .3);
 }
 
 .textTitle {
@@ -396,7 +396,7 @@ body[theme-mode=dark] .xo-message-base-bubble-box.recv .svgAppendix .corner  {
     content: "";
     position: absolute;
     bottom: -4px;
-    color: rgb(255,255,255,0.7);
+    color: var(--xo-color-theme);
 }
 
 .icon-message-pending::before {

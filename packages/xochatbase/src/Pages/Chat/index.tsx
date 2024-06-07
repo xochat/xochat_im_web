@@ -99,7 +99,7 @@ export class ChatContentPage extends Component<ChatContentPageProps, ChatContent
                                 })
                             }
                             <div className="xo-chat-conversation-header-right-item">
-                                <svg fill={XOApp.config.themeColor} height="28px" role="presentation" viewBox="0 0 36 36" width="28px"><path clipRule="evenodd" d="M18 29C24.0751 29 29 24.0751 29 18C29 11.9249 24.0751 7 18 7C11.9249 7 7 11.9249 7 18C7 24.0751 11.9249 29 18 29ZM19.5 18C19.5 18.8284 18.8284 19.5 18 19.5C17.1716 19.5 16.5 18.8284 16.5 18C16.5 17.1716 17.1716 16.5 18 16.5C18.8284 16.5 19.5 17.1716 19.5 18ZM23 19.5C23.8284 19.5 24.5 18.8284 24.5 18C24.5 17.1716 23.8284 16.5 23 16.5C22.1716 16.5 21.5 17.1716 21.5 18C21.5 18.8284 22.1716 19.5 23 19.5ZM14.5 18C14.5 18.8284 13.8284 19.5 13 19.5C12.1716 19.5 11.5 18.8284 11.5 18C11.5 17.1716 12.1716 16.5 13 16.5C13.8284 16.5 14.5 17.1716 14.5 18Z" fillRule="evenodd"></path></svg>
+                                <svg fill={XOApp.config.themeColor} height="35px" role="presentation" viewBox="0 0 36 36" width="35px"><path clipRule="evenodd" d="M18 29C24.0751 29 29 24.0751 29 18C29 11.9249 24.0751 7 18 7C11.9249 7 7 11.9249 7 18C7 24.0751 11.9249 29 18 29ZM19.5 18C19.5 18.8284 18.8284 19.5 18 19.5C17.1716 19.5 16.5 18.8284 16.5 18C16.5 17.1716 17.1716 16.5 18 16.5C18.8284 16.5 19.5 17.1716 19.5 18ZM23 19.5C23.8284 19.5 24.5 18.8284 24.5 18C24.5 17.1716 23.8284 16.5 23 16.5C22.1716 16.5 21.5 17.1716 21.5 18C21.5 18.8284 22.1716 19.5 23 19.5ZM14.5 18C14.5 18.8284 13.8284 19.5 13 19.5C12.1716 19.5 11.5 18.8284 11.5 18C11.5 17.1716 12.1716 16.5 13 16.5C13.8284 16.5 14.5 17.1716 14.5 18Z" fillRule="evenodd"></path></svg>
                                 <div className="xo-conversation-header-mask">
                                 </div>
                             </div>
@@ -159,7 +159,8 @@ export default class ChatPage extends Component<any> {
                                 <div className="xo-chat-search-add" onClick={() => {
                                     vm.showAddPopover = !vm.showAddPopover
                                 }}>
-                                    <IconPlus size="large"></IconPlus>
+                                    {/* <IconPlus size="large"></IconPlus> */}
+                                    <img src={require('./assets/icon_add.png')} alt="" />
                                 </div>
                                 {/* <Button icon={<IconPlus></IconPlus>} onClick={() => {
                                     vm.showAddPopover = true
