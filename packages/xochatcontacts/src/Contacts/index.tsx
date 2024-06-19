@@ -146,9 +146,7 @@ export default class ContactsList extends Component<any, ContactsState> {
             return (
               <div
                 key={item.uid}
-                className={classnames(
-                  "xo-contacts-section-item",
-                )}
+                className={classnames("xo-contacts-section-item")}
                 onClick={() => {
                   const channel = new Channel(item.uid, ChannelTypePerson);
                   XOApp.endpoints.showConversation(channel);
@@ -166,14 +164,16 @@ export default class ContactsList extends Component<any, ContactsState> {
                   ""
                 )}
 
-                <div className={classnames(
-"xo-contacts-section-item-content",
-XOApp.shared.openChannel?.channelType === ChannelTypePerson &&
-XOApp.shared.openChannel?.channelID === item.uid
-? "xo-contacts-section-item-selected"
-: undefined
-
-                ) } >
+                <div
+                  className={classnames(
+                    "xo-contacts-section-item-content",
+                    XOApp.shared.openChannel?.channelType ===
+                      ChannelTypePerson &&
+                      XOApp.shared.openChannel?.channelID === item.uid
+                      ? "xo-contacts-section-item-selected"
+                      : undefined
+                  )}
+                >
                   <div className="xo-contacts-section-item-avatar">
                     <img src={item.avatar}></img>
                   </div>

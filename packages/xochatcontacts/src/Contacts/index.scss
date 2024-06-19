@@ -46,11 +46,15 @@ body[theme-mode="dark"] .xo-contacts-section-item-index {
   // padding: 15px 15px 15px 0px;
   cursor: pointer;
   flex-direction: column;
-
+  border-bottom: 2px solid var(--xo-bg-color);
+  &:last-child{
+    border-bottom: none;
+  }
   &-content{
     display: flex ;
     align-items: center;
-    padding:19px 0  19px 10px;
+    padding:24px 0  24px 10px;
+    font-size: 20px;
   }
 }
 
