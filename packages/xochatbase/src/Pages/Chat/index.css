@@ -25,10 +25,18 @@
   background:var(--xo-bg-color);
 }
 
+body[theme-mode="dark"] .xo-chat-search {
+  background:#000;
+}
+
+
 .xo-chat-search-add {
   padding: 5px;
   cursor: pointer;
   color: black;
+}
+.xo-chat-search-add img{
+  width: 28px;
 }
 
 body[theme-mode="dark"] .xo-chat-search-add {
@@ -37,8 +45,11 @@ body[theme-mode="dark"] .xo-chat-search-add {
 
 .xo-chat-title {
   width: 250px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
+}
+.xo-chat-title img{
+  width: 129px;
 }
 
 body[theme-mode="dark"] .xo-chat-title {
@@ -192,7 +203,7 @@ body[theme-mode="dark"] .xo-chat-conversation-header {
 
 .xo-chat-conversation-header-channel-info-name {
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
 }
 

@@ -460,34 +460,39 @@ export default class BaseModule implements IModule {
   }
 
   registerChatToolbars() {
+
     XOApp.endpoints.registerChatToolbar("chattoolbar.emoji", (ctx) => {
+      const isDark = XOApp.config.themeMode === ThemeMode.dark;
       return (
         <EmojiToolbar
           conversationContext={ctx}
-          icon={require("./assets/toolbars/func_face_normal.png")}
+          icon={isDark?require("./assets/toolbars/func_face_normal_dark.png"): require("./assets/toolbars/func_face_normal.png")}
         ></EmojiToolbar>
       );
     });
 
-    XOApp.endpoints.registerChatToolbar("chattoolbar.mention", (ctx) => {
-      const channel = ctx.channel();
-      if (channel.channelType === ChannelTypePerson) {
-        return undefined;
-      }
-      return (
-        <IconClick
-          icon={require("./assets/toolbars/func_mention_normal.png")}
-          onClick={() => {
-            ctx.messageInputContext().insertText("@");
-          }}
-        ></IconClick>
-      );
-    });
+    // XOApp.endpoints.registerChatToolbar("chattoolbar.mention", (ctx) => {
+    //   const isDark = XOApp.config.themeMode === ThemeMode.dark;
+    //   const channel = ctx.channel();
+    //   if (channel.channelType === ChannelTypePerson) {
+    //     return undefined;
+    //   }
+    //   return (
+    //     <IconClick
+    //       icon={isDark?require("./assets/toolbars/func_mention_normal_dark.png") : require("./assets/toolbars/func_mention_normal.png")}
+    //       onClick={() => {
+    //         ctx.messageInputContext().insertText("@");
+    //       }}
+    //     ></IconClick>
+    //   );
+    // });
 
     XOApp.endpoints.registerChatToolbar("chattoolbar.screenshot", (ctx) => {
+      const isDark = XOApp.config.themeMode === ThemeMode.dark;
+
       return (
         <IconClick
-          icon={require("./assets/toolbars/func_screenshot.png")}
+          icon={isDark? require("./assets/toolbars/func_screenshot_dark.png"):require("./assets/toolbars/func_screenshot.png")}
           onClick={() => {
             if ((window as any).__POWERED_ELECTRON__) {
               (window as any).ipc.send('screenshots-start', {})
@@ -499,9 +504,11 @@ export default class BaseModule implements IModule {
       );
     });
     XOApp.endpoints.registerChatToolbar("chattoolbar.image", (ctx) => {
+      const isDark = XOApp.config.themeMode === ThemeMode.dark;
+
       return (
         <ImageToolbar
-          icon={require("./assets/toolbars/func_file.png")}
+          icon={isDark? require("./assets/toolbars/func_file_dark.png"):require("./assets/toolbars/func_file.png")}
           conversationContext={ctx}
         ></ImageToolbar>
       );

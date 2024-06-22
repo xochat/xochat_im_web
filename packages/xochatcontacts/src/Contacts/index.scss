@@ -12,6 +12,10 @@
   // padding: 13px 0;
 }
 
+body[theme-mode=dark] .xo-contacts-content-header {
+  background: #000;
+}
+
 .xo-contacts-content {
   width: 100%;
   height: calc(100% - var(--xo-height-navheader));
@@ -53,8 +57,8 @@ body[theme-mode="dark"] .xo-contacts-section-item-index {
   &-content{
     display: flex ;
     align-items: center;
-    padding:24px 0  24px 10px;
-    font-size: 20px;
+    padding:10px 0  10px 10px;
+    font-size: 16px;
   }
 }
 
@@ -73,8 +77,8 @@ body[theme-mode="dark"] .xo-contacts-section-item {
 }
 
 .xo-contacts-section-item-avatar img {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
 }
 

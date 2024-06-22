@@ -154,7 +154,7 @@ class Login extends Component<any, LoginState> {
                       {vm.qrcodeLoading || !vm.qrcode ? undefined : (
                         <QRCode
                           value={vm.qrcode}
-                          size={325}
+                          size={220}
                           fgColor='#000'
                         ></QRCode>
                       )}

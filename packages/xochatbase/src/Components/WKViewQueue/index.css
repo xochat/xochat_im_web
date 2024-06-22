@@ -21,6 +21,12 @@
   border-right: 1px solid #D9D9D9;
 }
 
+body[theme-mode="dark"] .xo-viewqueue-view {
+  background-color: #000;
+  border-right: 1px solid #000;
+
+}
+
 .xo-viewqueue-view-in {
   animation: routeAnimationIn 0.25s;
   -webkit-animation: routeAnimationIn 0.25s; /* Safari 与 Chrome */

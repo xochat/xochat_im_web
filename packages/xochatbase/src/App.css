@@ -33,7 +33,7 @@
   }
 
   body[theme-mode=dark] {
-    --xo-color-secondary: #0F0F0F;
+    --xo-color-secondary: #212839;
     --xo-color-secondary-2: rgb(33,33,33);
     --xo-line: 1px solid rgb(255,255,255,0.1);
     --xo-line-color: rgb(255,255,255,0.1);
@@ -46,6 +46,8 @@
 
     --semi-color-primary: #3370FF;
     --semi-color-primary-hover: rgb(51, 112, 255,0.5);
+    --xo-bg-color:#000;
+    --xo-color-theme-3:#465066;
 
   }
 

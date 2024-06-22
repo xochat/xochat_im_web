@@ -5,7 +5,7 @@
 }
 
 .xo-conversationlist-item {
-  height: 100px;
+  height: 84px;
   width: 100%;
   cursor: pointer;
   // padding: 0px 5px;
@@ -13,6 +13,11 @@
   box-sizing: border-box;
   border-bottom: 2px solid var(--xo-bg-color);
 }
+
+body[theme-mode="dark"] .xo-conversationlist-item {
+  border-bottom: 2px solid #000;
+}
+
 
 
 
@@ -70,7 +75,7 @@
 }
 
 .xo-conversationlist-item-name h3 {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   margin: 0;
   overflow: hidden;

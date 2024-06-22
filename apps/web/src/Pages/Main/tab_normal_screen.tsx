@@ -75,7 +75,7 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                         XOApp.config.themeMode = ThemeMode.dark
                     }
                 }}>
-                    <img src={require('./assets/dark.png')} alt="" />
+                    <img src={XOApp.config.themeMode === ThemeMode.dark?require('./assets/dark_dark.png') :require('./assets/dark.png')} alt="" />
                     {`${XOApp.config.themeMode === ThemeMode.dark ? "关闭" : "打开"}黑暗模式`}</li>
                 <li onClick={() => {
                     vm.settingSelected = false
@@ -86,7 +86,7 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                     }
 
                 }}>
-                    <img src={require('./assets/update.png')} alt="" />
+                    <img src={XOApp.config.themeMode === ThemeMode.dark?require('./assets/update_dark.png') :require('./assets/update.png')} alt="" />
                     检查版本&nbsp;v{XOApp.config.appVersion}&nbsp;
                     {
                         vm.hasNewVersion ? <Badge dot type="danger"></Badge> : undefined
@@ -96,13 +96,13 @@ export class TabNormalScreen extends Component<TabNormalScreenProps> {
                     vm.settingSelected = false
                     XOApp.shared.notificationIsClose = !XOApp.shared.notificationIsClose
                 }}>
-                    <img src={require('./assets/close.png')} alt="" />
+                    <img src={XOApp.config.themeMode === ThemeMode.dark?require('./assets/close_dark.png'): require('./assets/close.png')} alt="" />
                     {XOApp.shared.notificationIsClose ? "打开" : "关闭"}桌面通知</li>
                 <li onClick={() => {
                     vm.settingSelected = false
                     XOApp.shared.logout()
                 }}>
-                    <img src={require('./assets/login.png')} alt="" />
+                    <img src={XOApp.config.themeMode === ThemeMode.dark?require('./assets/login_dark.png'): require('./assets/login.png')} alt="" />
                     退出登录</li>
             </ul>
             <Modal title="检测到新版本信息" visible={vm.showNewVersion} footer={null} onCancel={() => {

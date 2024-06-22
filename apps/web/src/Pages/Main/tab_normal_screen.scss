@@ -126,6 +126,11 @@
   }
 }
 
+body[theme-mode=dark] .xo-sider-setting-list{
+  background-color: #1d1e20;
+  color: #fff;
+}
+
 .xo-sider-setting-list.open {
   transform: scale(1);
 }

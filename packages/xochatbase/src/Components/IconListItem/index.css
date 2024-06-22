@@ -1,17 +1,26 @@
 .xo-iconlistitem {
   background-color: white;
-  height: 150px;
+  height: 119px;
   width: 100%;
   cursor: pointer;
   position: relative;
 }
 
+
+
 .xo-iconlistitem {
-  border-bottom: 50px solid var(--xo-bg-color);
+  border-bottom: 47px solid var(--xo-bg-color);
 }
+
+body[theme-mode=dark] .xo-iconlistitem {
+  background-color: #1d1e20;
+  border-bottom: 47px solid var(--xo-bg-color);
+  
+}
+
 .xo-contacts-content-fnc >div:last-child .xo-iconlistitem {
   border-bottom: none;
-  height: 100px;
+  height: 72px;
 }
 
 .xo-iconlistitem-content {
@@ -22,13 +31,17 @@
   padding: 0px 20px;
 }
 
+.xo-iconlistitem-content-icon{
+  width: 48px;
+  height: 48px;
+}
 .xo-iconlistitem-content-icon img {
-  width: 65px;
-  height: 65px;
+  width: 48px;
+  height: 48px;
 }
 
 .xo-iconlistitem-content-title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   margin-left: 15px;
 }

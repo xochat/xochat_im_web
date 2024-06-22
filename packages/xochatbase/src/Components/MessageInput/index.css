@@ -18,7 +18,7 @@ body[theme-mode="dark"] .xo-messageinput-box {
 } */
 
 .xo-messageinput-inputbox {
-  height: 77px;
+  height: calc(100% - 40px) ;
   width: 100%;
   padding: 0px 15px 15px 15px;
   box-sizing: border-box;
@@ -187,7 +187,7 @@ body[theme-mode="dark"] .xo-messageinput-input {
 }
 
 body[theme-mode="dark"] .xo-messageinput-input__control {
-  background-color: var(--xo-color-secondary-2);
+  background-color: var(--xo-color-secondary);
 }
 
 .xo-messageinput-input__suggestions {

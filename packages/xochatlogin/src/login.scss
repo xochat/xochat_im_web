@@ -39,20 +39,20 @@
 .xo-login-content-logo {
   align-items: center;
   display: flex;
-  height: 120px;
+  height: 36px;
   justify-content: center;
   min-width: 100%;
-  width: 120px;
+  width: 129px;
 }
 
 .xo-login-content-logo img {
-  width: 75px;
-  height: 75px;
+  width: 129px;
+  height: 36px;
 }
 
 .xo-login-content-slogan {
   color: rgba(0, 0, 0, 1);
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 450;
   line-height: 40px;
   margin-bottom: 45px;
@@ -61,7 +61,7 @@
 }
 
 .xo-login-content-form {
-  margin-top: 80px;
+  margin-top: 48px;
   .pass {
     width: 400px;
     height: 60px;
@@ -94,7 +94,7 @@
   padding: 0 16px;
   background: #f6f6f6;
   width: 400px;
-  height: 60px;
+  height: 56px;
   border: none;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -120,7 +120,7 @@
   padding: 9.5px 20px;
   margin-top: 24px;
   width: 400px;
-  height: 60px;
+  height: 56px;
   border-radius: 6px;
   background: #3370ff;
 }
@@ -179,8 +179,8 @@
 }
 
 .xo-login-content-scanlogin-qrcode {
-  width: 325px;
-  height: 325px;
+  width: 220px;
+  height: 220px;
   position: relative;
 
   opacity: 0;
@@ -218,12 +218,12 @@
 
 .xo-login-content-scanlogin-qrcode-title {
   color: rgba(9, 30, 66, 0.87);
-  font-size: 32px;
-  margin-bottom: 11vh;
+  font-size: 24px;
+  margin-bottom: 6vh;
 }
 
 .xo-login-content-scanlogin-qrcode-desc  {
-    margin-top: 11vh;
+    margin-top: 6vh;
     li{
         counter-increment: item;
         text-align: left;
