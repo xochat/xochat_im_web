@@ -20,6 +20,7 @@ export class LoginVM extends ProviderListener {
     uuid?: string
     qrcode?: string
     expireMaxTryCount: number = 5 // 过期最多次数（超过指定次数则永远显示过期，需要用户手动刷新）
+    private  _passType:string='password'
     private _expireTryCount: number = 0 // 过期尝试次数
 
     uid?: string // 当前扫描的用户uid
@@ -48,11 +49,25 @@ export class LoginVM extends ProviderListener {
         return this._autoRefresh
     }
 
+    set passType(v: string) {
+        this._passType = v
+        this.notifyListener()
+
+        if (v) {
+            this.reStartAdvance()
+        }
+    }
+
+    get passType() {
+        return this._passType
+    }
+
     didMount(): void {
         this.advance()
     }
 
     set loginType(v: LoginType) {
+        console.log('执行了')
         this._loginType = v
         if (v === LoginType.qrcode) {
             this.reStartAdvance()

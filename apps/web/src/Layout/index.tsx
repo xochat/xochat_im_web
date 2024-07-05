@@ -90,6 +90,7 @@ export default class AppLayout extends Component {
         return <Provider create={() => {
             return XOApp.shared
         }} render={(vm: XOApp): any => {
+            console.log(window.location.pathname,'window.location.pathname')
             if (!XOApp.shared.isLogined() || window.location.pathname === '/login') {
                 const loginComponent = XOApp.route.get("/login")
                 if (!loginComponent) {

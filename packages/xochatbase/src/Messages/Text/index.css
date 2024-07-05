@@ -56,6 +56,10 @@ body[theme-mode=dark] .xo-message-text-recv {
     color: rgb(0, 0, 0,0.5);
 }
 
+body[theme-mode=dark] .xo-message-text-reply.xo-message-text-reply-recv {
+    color: rgb(255, 255, 255,0.5);
+}
+
 
 .xo-message-text-reply-author {
     display: flex;

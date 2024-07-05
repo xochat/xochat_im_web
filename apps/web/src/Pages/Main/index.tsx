@@ -73,7 +73,7 @@ export class MainPage extends Component {
                     context.popToRoot()
                 }
             }} contentRight={ <div className="xo-chat-empty">
-            <img src={require("./assets/start_chat.svg").default} alt=""></img>
+            <img src={require("./assets/empty.png")} alt=""></img>
         </div>} />
         }}>
 

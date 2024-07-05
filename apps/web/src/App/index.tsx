@@ -31,11 +31,11 @@ function registerMenus() {
         "chat",
         "/",
         "会话",
-        <img alt="会话" src={require("./assets/HomeTab.svg").default}></img>,
+        <img alt="会话" src={require("./assets/message.png")}></img>,
         (
           <img
             alt="会话"
-            src={require("./assets/HomeTabSelected.svg").default}
+            src={require("./assets/message-active.png")}
           ></img>
         )
       );
@@ -71,13 +71,13 @@ function registerMenus() {
         (
           <img
             alt="通讯录"
-            src={require("./assets/ContactsTab.svg").default}
+            src={require("./assets/phone.png")}
           ></img>
         ),
         (
           <img
             alt="通讯录"
-            src={require("./assets/ContactsTabSelected.svg").default}
+            src={require("./assets/phone-active.png")}
           ></img>
         )
       );

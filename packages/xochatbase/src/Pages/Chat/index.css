@@ -22,12 +22,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background:var(--xo-bg-color);
 }
+
+body[theme-mode="dark"] .xo-chat-search {
+  background:#000;
+}
+
 
 .xo-chat-search-add {
   padding: 5px;
   cursor: pointer;
   color: black;
+}
+.xo-chat-search-add img{
+  width: 28px;
 }
 
 body[theme-mode="dark"] .xo-chat-search-add {
@@ -38,6 +47,9 @@ body[theme-mode="dark"] .xo-chat-search-add {
   width: 250px;
   font-size: 24px;
   font-weight: 500;
+}
+.xo-chat-title img{
+  width: 129px;
 }
 
 body[theme-mode="dark"] .xo-chat-title {
@@ -102,12 +114,12 @@ body[theme-mode="dark"] .xo-chat-title {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: var(--xo-color-secondary);
+  /* background-color: var(--xo-color-secondary); */
 }
 
 .xo-chat-empty img {
-  height: 340px;
-  transform: scale(1.14);
+  height: 352px;
+  /* transform: scale(1.14); */
 }
 
 .xo-chat-conversation-header {
@@ -116,7 +128,7 @@ body[theme-mode="dark"] .xo-chat-title {
   background-color: white;
   display: flex;
   align-items: center;
-  box-shadow: 0 1px 1px rgba(114, 114, 114, 0.168627);
+  /* box-shadow: 0 1px 1px rgba(114, 114, 114, 0.168627); */
   z-index: 11;
   padding: 0.5rem 0.8125rem 0.5rem 1.5rem;
   position: relative;
@@ -179,9 +191,9 @@ body[theme-mode="dark"] .xo-chat-conversation-header {
 }
 
 .xo-chat-conversation-header-channel-avatar img {
-  width: 40px;
-  height: 40px;
-  border-radius: 40%;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
 }
 
 .xo-chat-conversation-header-channel-info {
@@ -191,7 +203,7 @@ body[theme-mode="dark"] .xo-chat-conversation-header {
 
 .xo-chat-conversation-header-channel-info-name {
   margin-left: 10px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -297,8 +309,8 @@ body[theme-mode="dark"] .xo-chat-popover {
 }
 
 .xo-chatmenuspopover li img {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   color: white;
 }
 
@@ -322,4 +334,9 @@ body[theme-mode="dark"] .xo-chat-popover {
 
 .xo-conversation-header-mask:hover {
   background-color: rgb(0, 0, 0, 0.1);
+}
+
+.xo-chatmenuspopover-avatar{
+  display: flex;
+  align-items: center;
 }

@@ -3,7 +3,8 @@
   width: 100%;
   height: 100%;
   position: relative;
-
+  box-sizing: border-box;
+  padding-top: 20px;
   box-shadow: 0.3rem -0.2rem 0.8rem 0.05rem rgb(114 114 114 / 5%);
   border-left: none;
 }
@@ -17,7 +18,7 @@ body[theme-mode="dark"] .xo-messageinput-box {
 } */
 
 .xo-messageinput-inputbox {
-  height: 77px;
+  height: calc(100% - 40px) ;
   width: 100%;
   padding: 0px 15px 15px 15px;
   box-sizing: border-box;
@@ -186,7 +187,7 @@ body[theme-mode="dark"] .xo-messageinput-input {
 }
 
 body[theme-mode="dark"] .xo-messageinput-input__control {
-  background-color: var(--xo-color-secondary-2);
+  background-color: var(--xo-color-secondary);
 }
 
 .xo-messageinput-input__suggestions {

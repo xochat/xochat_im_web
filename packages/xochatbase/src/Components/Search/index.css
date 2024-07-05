@@ -18,7 +18,8 @@ body[theme-mode="dark"] .xo-search-box {
 
 .xo-search-input {
   margin-left: 10px;
-  max-width: 100px;
+  /* max-width: 100px; */
+  width: 100%;
 }
 
 .xo-search-input input {

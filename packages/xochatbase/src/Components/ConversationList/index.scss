@@ -5,17 +5,21 @@
 }
 
 .xo-conversationlist-item {
-  height: 80px;
+  height: 84px;
   width: 100%;
   cursor: pointer;
-  padding: 0px 5px;
+  // padding: 0px 5px;
   background-color: white;
   box-sizing: border-box;
+  border-bottom: 2px solid var(--xo-bg-color);
 }
 
 body[theme-mode="dark"] .xo-conversationlist-item {
-  background-color: var(--xo-color-secondary-2);
+  border-bottom: 2px solid #000;
 }
+
+
+
 
 .xo-conversationlist-item-top {
   background-color: var(--xo-color-secondary) !important;
@@ -40,7 +44,7 @@ body[theme-mode="dark"] .xo-conversationlist-item {
   flex-direction: column;
   justify-content: center;
   padding-right: 10px;
-  padding-left: 5px;
+  padding-left: 10px;
 
   flex-grow: 1;
   overflow: hidden;
@@ -71,8 +75,8 @@ body[theme-mode="dark"] .xo-conversationlist-item {
 }
 
 .xo-conversationlist-item-name h3 {
-  font-size: 1rem;
-  line-height: 1.6875rem;
+  font-size: 16px;
+  line-height: 20px;
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -87,7 +91,7 @@ body[theme-mode="dark"] .xo-conversationlist-item-name h3 {
 
 .xo-conversationlist-item-selected .xo-conversationlist-item-name h3,
 .xo-conversationlist-item-selected .xo-conversationlist-item-name {
-  color: white;
+  color: rgba(0, 0, 0, 1);
 }
 
 .xo-conversationlist-item-time {
@@ -102,7 +106,7 @@ body[theme-mode="dark"] .xo-conversationlist-item-name h3 {
 }
 
 .xo-conversationlist-item-selected .xo-conversationlist-item-time {
-  color: white;
+  color: rgba(0, 0, 0, .5);
 }
 
 .xo-conversationlist-item-lastmsg {
@@ -113,15 +117,16 @@ body[theme-mode="dark"] .xo-conversationlist-item-name h3 {
   overflow: hidden;
   font-size: 14px;
   min-height: 22px;
+  margin-top: 12px;
 }
 
 .xo-conversationlist-item-selected .xo-conversationlist-item-lastmsg {
-  color: white;
+  color: rgba(0, 0, 0, .5);
 }
 
 .xo-conversationlist-item-selected {
-  background-color: var(--xo-color-theme);
-  border-radius: 10px;
+  background-color: var(--xo-color-theme-3);
+  // border-radius: 10px;
 }
 
 .xo-mention {
@@ -167,3 +172,15 @@ body[theme-mode="dark"] .xo-conversationlist-item-name h3 {
 .xo-onlinestatusbadge-empty .xo-onlinestatusbadge-content-tip {
   padding: 8px;
 }
+
+
+
+// 暗黑模式
+body[theme-mode="dark"]{
+  .xo-conversationlist-item {
+    background-color: var(--xo-color-secondary-2);
+  }
+  .xo-conversationlist-item-selected .xo-conversationlist-item-time,.xo-conversationlist-item-selected .xo-conversationlist-item-lastmsg{
+    color: #fff;
+  }
+} 

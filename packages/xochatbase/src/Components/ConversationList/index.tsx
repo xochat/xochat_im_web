@@ -6,7 +6,7 @@ import { ConversationWrap, MessageWrap } from "../../Service/Model";
 import { getTimeStringAutoShort2 } from '../../Utils/time'
 import classNames from "classnames";
 
-import "./index.css"
+import "./index.scss"
 import { Badge, Toast } from "@douyinfe/semi-ui";
 import XOApp from "../../App";
 import { EndpointID } from "../../Service/Const";

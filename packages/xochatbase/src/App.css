@@ -1,17 +1,19 @@
 
 
  :root {
-    --xo-color-theme: #E46342;
-    --xo-color-secondary: rgba(246, 246, 246);
-    --xo-color-secondary-2:  rgba(246, 246, 246);
+    --xo-color-theme: #3370FF;
+    --xo-color-theme-3: #bccef9;
+    --xo-color-secondary: rgba(235, 239, 246, 1);
+    --xo-color-secondary-2:  rgba(235, 239, 246, 1);
+    --xo-bg-color:#f6f6f6;
     --xo-color-hover: #eee;
     /* 提示类型的字体颜色 */
     --xo-color-font-tip: rgb(170,170,170);
-    --xo-width-layout-content-left: 300px;
+    --xo-width-layout-content-left: 450px;
     --xo-wdith-conversation-list: var(--xo-width-layout-content-left);
     /* --xo-height-chat-search: 65px; */
-    --xo-height-chat-search: 64px;
-    --xo-height-chat-conversation-header: 64px;
+    --xo-height-chat-search: 95px;
+    --xo-height-chat-conversation-header: 95px;
     --xo-wdith-chat-channelsetting: 340px;
     --xo-layer-transition: 300ms cubic-bezier(0.33,1,0.68,1);
     --xo-slide-transition: 450ms cubic-bezier(0.25, 1, 0.5, 1);
@@ -31,7 +33,7 @@
   }
 
   body[theme-mode=dark] {
-    --xo-color-secondary: #0F0F0F;
+    --xo-color-secondary: #212839;
     --xo-color-secondary-2: rgb(33,33,33);
     --xo-line: 1px solid rgb(255,255,255,0.1);
     --xo-line-color: rgb(255,255,255,0.1);
@@ -42,8 +44,10 @@
     --xo-message-item: #0F0F0F;
     --xo-message-color: white;
 
-    --semi-color-primary: #E46342;
-    --semi-color-primary-hover: rgb(228, 99, 66,0.5);
+    --semi-color-primary: #3370FF;
+    --semi-color-primary-hover: rgb(51, 112, 255,0.5);
+    --xo-bg-color:#000;
+    --xo-color-theme-3:#465066;
 
   }
 
@@ -73,7 +77,7 @@ html {
     background: var( --background-color);
     color: rgba(9,30,66,.87) ;
 
-    --semi-color-primary: #E46342;
+    --semi-color-primary: #3370FF;
   }
 
   div {
