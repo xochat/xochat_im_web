@@ -78,6 +78,8 @@ import APIClient from "./Service/APIClient";
 import { ChannelAvatar } from "./Components/ChannelAvatar";
 import { ScreenshotCell, ScreenshotContent } from "./Messages/Screenshot";
 import ImageToolbar from "./Components/ImageToolbar";
+import FileToolbar from "./Components/FileToolbar";
+import {FileCell, FileContent } from "./Messages/File";
 
 export default class BaseModule implements IModule {
   messageTone?: Howl;
@@ -107,6 +109,8 @@ export default class BaseModule implements IModule {
             return GifCell;
           case MessageContentTypeConst.voice: // 语音
             return VoiceCell;
+          case MessageContentTypeConst.file: // 文件
+            return FileCell;
           case MessageContentTypeConst.mergeForward: // 合并转发
             return MergeforwardCell;
           case MessageContentTypeConst.smallVideo: // 小视频
@@ -158,6 +162,10 @@ export default class BaseModule implements IModule {
       MessageContentTypeConst.location,
       () => new LocationContent()
     ); // 定位
+    XOSDK.shared().register(
+      MessageContentTypeConst.file,
+      () => new FileContent()
+    ); // 文件
     XOSDK.shared().register(
       MessageContentTypeConst.lottieSticker,
       () => new LottieSticker()
@@ -438,8 +446,17 @@ export default class BaseModule implements IModule {
           icon: XOApp.shared.avatarChannel(message.channel),
           lang: "zh-CN",
           tag: "tag",
-          renotify: true,
+          // renotify: true,
         }
+        // badge?: string;
+        // body?: string;
+        // data?: any;
+        // dir?: NotificationDirection;
+        // icon?: string;
+        // lang?: string;
+        // requireInteraction?: boolean;
+        // silent?: boolean | null;
+        // tag?: string;
       );
 
       notify.onclick = () => {
@@ -508,11 +525,24 @@ export default class BaseModule implements IModule {
 
       return (
         <ImageToolbar
-          icon={isDark? require("./assets/toolbars/func_file_dark.png"):require("./assets/toolbars/func_file.png")}
+          icon={isDark? require("./assets/toolbars/func_pic_dark.png"):require("./assets/toolbars/func_pic.png")}
           conversationContext={ctx}
         ></ImageToolbar>
       );
     });
+
+    XOApp.endpoints.registerChatToolbar("chattoolbar.file", (ctx) => {
+      const isDark = XOApp.config.themeMode === ThemeMode.dark;
+
+      return (
+        <FileToolbar
+          icon={isDark? require("./assets/toolbars/func_file_dark.png"):require("./assets/toolbars/func_file.png")}
+          conversationContext={ctx}
+        ></FileToolbar>
+      );
+    });
+
+
   }
 
   registerChatMenus() {

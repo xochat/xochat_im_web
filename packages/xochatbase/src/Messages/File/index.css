@@ -1,0 +1,64 @@
+.xo-message-file {
+  cursor: pointer;
+}
+
+.xo-message-file-content {
+  width: 250px;
+  background-color: white;
+  /* background-color: red; */
+  border-radius: 4px;
+  height: 112px;
+  box-shadow: 0px 0px 2px 0px #00000040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 20px;
+}
+
+body[theme-mode="dark"] .xo-message-file-content {
+  background-color: var(--xo-color-secondary);
+}
+.xo-message-file-content-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.xo-message-file-content-column{
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+}
+.xo-message-file-content-title {
+  color: var(--xo-text-item);
+  font-size: 16px;
+  margin-bottom: 24px;
+  width: 160px;
+  white-space: nowrap;
+  overflow: hidden;  
+  text-overflow: ellipsis; 
+  padding: 5px; 
+}
+
+.xo-message-file-content-file-icon{
+  width: 40px;
+  height: 40px;
+
+}
+.xo-message-file-content-size {
+  color: #939297;
+  font-size: 14px;
+  /* padding: 0px 5px 5px 5px; */
+}
+.xo-message-file-content-download{
+
+  color: #7D7885;
+  font-size: 14px;
+  margin-left: auto;
+}
+.xo-message-file-content-file-icon-download{
+  width: 14px;
+  height: 14px;
+  margin-left: 6px;
+}
