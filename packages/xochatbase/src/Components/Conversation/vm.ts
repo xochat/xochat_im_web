@@ -281,6 +281,12 @@ export default class ConversationVM extends ProviderListener {
                     })
                 }
 
+            }else if (cmdContent.cmd === 'messageMutualDelete'){
+                let message_id = param.message_id;
+
+                this.messages = this.messages.filter(m=>m.messageID != message_id)
+                // console.log('删除消息',this.messages);
+                this.notifyListener();
             }
         }
         XOSDK.shared().chatManager.addCMDListener(this.cmdListener)

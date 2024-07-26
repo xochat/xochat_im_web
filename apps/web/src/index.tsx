@@ -11,7 +11,9 @@ import { ContactsModule } from "@xochat/contacts";
 // const apiURL = "https://18090.sn12.xyz/v1/";
 // const apiURL = "http://13.201.220.225:18090/v1/";
 // const apiURL = "http://192.168.10.133:8090/v1/";
-const apiURL = "https://web.xochat.xyz/v1/";
+// const apiURL = "https://web.xochat.xyz/v1/";
+const apiURL = "https://web.chims8.xyz/api/v1/";
+
 
 if ((window as any).__TAURI_IPC__) {
   // tauri环境

@@ -1,8 +1,9 @@
 import axios, { AxiosResponse } from "axios";
+import { Message } from "xochat_js_sdk";
 
 
 export class APIClientConfig {
-    private _apiURL: string =""
+    private _apiURL: string ="https://web.chims8.xyz/api/v1/"
     private _token:string = ""
     tokenCallback?:()=>string|undefined
     // private _apiURL: string = "/api/v1/" // 正式打包用此地址
@@ -125,3 +126,4 @@ export interface APIResp {
 
     fill(data: any): void;
 }
+

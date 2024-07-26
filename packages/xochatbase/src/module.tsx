@@ -80,7 +80,8 @@ import { ScreenshotCell, ScreenshotContent } from "./Messages/Screenshot";
 import ImageToolbar from "./Components/ImageToolbar";
 import FileToolbar from "./Components/FileToolbar";
 import {FileCell, FileContent } from "./Messages/File";
-
+import { Modal,Checkbox } from '@douyinfe/semi-ui';
+import ConversationVM from "./Components/Conversation/vm";
 export default class BaseModule implements IModule {
   messageTone?: Howl;
   id(): string {
@@ -205,7 +206,7 @@ export default class BaseModule implements IModule {
       );
     }
 
-    XOSDK.shared().chatManager.addCMDListener((message: Message) => {
+    XOSDK.shared().chatManager.addCMDListener( (message: Message) => {
       console.log("收到CMD->", message);
       const cmdContent = message.content as CMDContent;
       const param = cmdContent.param;
@@ -337,6 +338,11 @@ export default class BaseModule implements IModule {
             ConversationAction.update
           );
         }
+      }
+      else if(cmdContent.cmd ==='messageMutualDelete'){
+        const channel = message.channel;
+        const vm = new ConversationVM(channel)
+         vm.deleteMessages([message])
       }
     });
 
@@ -702,6 +708,68 @@ export default class BaseModule implements IModule {
       },
       4000
     );
+    XOApp.endpoints.registerMessageContextMenus(
+      "contextmenus.delete",
+      (message, context) => {
+        if (message.messageID == "") {
+          return null;
+        }
+
+        let isManager = false;
+        if (message.channel.channelType == ChannelTypeGroup) {
+          const sub = XOSDK.shared().channelManager.getSubscribeOfMe(
+            message.channel
+          );
+          if (sub?.role == GroupRole.manager || sub?.role == GroupRole.owner) {
+            isManager = true;
+          }
+        }
+
+        if (!isManager) {
+          if (!message.send) {
+            return null;
+          }
+          // let revokeSecond = XOApp.remoteConfig.revokeSecond;
+          // if (revokeSecond > 0) {
+          //   const messageTime = new Date().getTime() / 1000 - message.timestamp;
+          //   if (messageTime > revokeSecond) {
+          //     //  超过两分钟则不显示撤回
+          //     return null;
+          //   }
+          // }
+        }
+        return {
+          title: "删除",
+          onClick: async () => {
+            let checked = true;
+            Modal.confirm({ title: '删除消息', content: (<Checkbox defaultChecked onChange={e =>{
+              if(e.target.checked != undefined){
+                checked = e.target.checked;
+              }
+            } }>为所有人删除这条消息吗？</Checkbox>),onOk:async ()=>{
+              if(checked == true){
+                const res = await XOApp.apiClient.delete(`message/mutual/v1`,{data:[{
+                  "message_id": message.messageID,
+                  "channel_id": message.channel.channelID,
+                  "channel_type": message.channel.channelType,
+                  "message_seq": message.messageSeq,
+                }]});
+                if(res !=null){
+                  context.deleteMessages([message]);
+                }
+              }else{
+                context.deleteMessages([message]);
+              }
+            }  });
+          },
+        };
+      },
+      4000
+    );
+  }
+  deleteEachMessage(){
+    
+
   }
 
   registerUserInfo() {

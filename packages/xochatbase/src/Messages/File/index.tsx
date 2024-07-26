@@ -8,13 +8,13 @@ import "./index.css"
 import { MessageContentTypeConst } from "../../Service/Const"
 
 export class FileContent extends MediaMessageContent {
-    title!: string // 标题
+    name!: string // 标题
     size:any//文件大小
     url!: string
-    constructor(file?: File,title?: string, size?: any,extension?:string) {
+    constructor(file?: File,name?: string, size?: any,extension?:string) {
         super()
         this.file = file
-        this.title = title || ''
+        this.name = name || ''
         this.size = size || 0
         this.extension = extension || ''
         
@@ -22,7 +22,7 @@ export class FileContent extends MediaMessageContent {
 
     decodeJSON(content: any) {
         console.log('decode',content)
-        this.title = content["title"] || ""
+        this.name = content["name"] || ""
         this.size = content["size"] || ""
         this.extension = content["extension"] || ""
         this.url = content["url"]
@@ -30,7 +30,7 @@ export class FileContent extends MediaMessageContent {
     }
     encodeJSON() {
         console.log('encodeJSON',this.url,this.remoteUrl)
-        return { "title": this.title || "", "size": this.size || "",extension:this.extension, "url": this.remoteUrl || "" }
+        return { "name": this.name || "", "size": this.size || "",extension:this.extension, "url": this.remoteUrl || "" }
     }
     get contentType() {
         return MessageContentTypeConst.file
@@ -68,7 +68,7 @@ export class FileCell extends MessageCell {
                 <div className="xo-message-file-content">
                     
                     <div className="xo-message-file-content-column">
-                    <div className="xo-message-file-content-title">{content.title}</div>
+                    <div className="xo-message-file-content-title">{content.name}</div>
                     <div className="xo-message-file-content-row">
                     <div className="xo-message-file-content-size">{this.getFileSizeFormat(content.size)}</div>
                     <div className="xo-message-file-content-download">下载</div>
