@@ -11,8 +11,8 @@ import { ContactsModule } from "@xochat/contacts";
 // const apiURL = "https://18090.sn12.xyz/v1/";
 // const apiURL = "http://13.201.220.225:18090/v1/";
 // const apiURL = "http://192.168.10.133:8090/v1/";
-// const apiURL = "https://web.xochat.xyz/v1/";
-const apiURL = "https://web.chims8.xyz/api/v1/";
+const apiURL = "https://web.xochat.xyz/v1/";
+// const apiURL = "https://web.chims8.xyz/api/v1/";
 
 
 if ((window as any).__TAURI_IPC__) {
@@ -26,7 +26,8 @@ if ((window as any).__TAURI_IPC__) {
   if (process.env.NODE_ENV === "development") {
     XOApp.apiClient.config.apiURL = apiURL;
   } else {
-    XOApp.apiClient.config.apiURL = "/api/v1/"; // 正式环境地址 (通用打包镜像，用此相对地址),打包出来的镜像可以通过API_URL环境变量来修改API地址
+    // XOApp.apiClient.config.apiURL = "/api/v1/"; // 正式环境地址 (通用打包镜像，用此相对地址),打包出来的镜像可以通过API_URL环境变量来修改API地址
+    XOApp.apiClient.config.apiURL = apiURL
   }
 }
 
