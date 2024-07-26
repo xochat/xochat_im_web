@@ -81,7 +81,9 @@ import ImageToolbar from "./Components/ImageToolbar";
 import FileToolbar from "./Components/FileToolbar";
 import {FileCell, FileContent } from "./Messages/File";
 import { Modal,Checkbox } from '@douyinfe/semi-ui';
+import { IconArrowRight} from '@douyinfe/semi-icons';
 import ConversationVM from "./Components/Conversation/vm";
+import ChannelManage from "./Components/ChannelManage";
 export default class BaseModule implements IModule {
   messageTone?: Howl;
   id(): string {
@@ -1312,7 +1314,6 @@ export default class BaseModule implements IModule {
             },
           })
         );
-
         return new Section({
           rows: rows,
         });
@@ -1558,7 +1559,7 @@ export default class BaseModule implements IModule {
   }
 
   registerChannelManages() {
-    XOApp.shared.channelManageRegister(
+    XOApp.shared.channelSettingRegister(
       "channel.setting.manage.invite",
       (context) => {
         const data = context.routeData() as ChannelSettingRouteData;
@@ -1661,7 +1662,7 @@ export default class BaseModule implements IModule {
       }
     );
 
-    XOApp.shared.channelManageRegister(
+    XOApp.shared.channelSettingRegister(
       "channel.setting.manage.mute",
       (context) => {
         const data = context.routeData() as ChannelSettingRouteData;
@@ -1695,7 +1696,7 @@ export default class BaseModule implements IModule {
       }
     );
 
-    XOApp.shared.channelManageRegister(
+    XOApp.shared.channelSettingRegister(
       "channel.setting.manage.prohibitAddFriend",
       (context) => {
         const data = context.routeData() as ChannelSettingRouteData;
@@ -1751,7 +1752,7 @@ export default class BaseModule implements IModule {
         });
       }
     );
-    XOApp.shared.channelManageRegister(
+    XOApp.shared.channelSettingRegister(
       "channel.setting.manage.managerlist",
       (context) => {
         const data = context.routeData() as ChannelSettingRouteData;
@@ -1772,5 +1773,6 @@ export default class BaseModule implements IModule {
         });
       }
     );
+    
   }
 }
