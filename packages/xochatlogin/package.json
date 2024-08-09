@@ -9,6 +9,7 @@
     "@xochat/base": "*",
     "axios": "^1.7.2",
     "keypair": "^1.0.4",
+    "react-phone-input-2":"2.15.1",
     "qrcode.react": "^1.0.1"
   }
 }

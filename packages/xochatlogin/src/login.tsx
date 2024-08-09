@@ -6,6 +6,8 @@ import QRCode from "qrcode.react";
 import { XOApp, Provider } from "@xochat/base";
 import { LoginStatus, LoginType, LoginVM } from "./login_vm";
 import classNames from "classnames";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 type LoginState = {
   loginStatus: string;
@@ -50,19 +52,28 @@ class Login extends Component<any, LoginState> {
                   }}
                 >
                   <div className="xo-login-content-logo">
-                    <img src={"/logo.png"} alt="logo" />
+                    {/* <img src={require('../../../apps/web/resources/logo.png')} alt="logo" /> */}
+                    <img src={require("./assets/logo.png")} alt="logo" />
                   </div>
                   <div className="xo-login-content-slogan">
                     更愉快的与朋友交流
                   </div>
                   <div className="xo-login-content-form">
-                    <input
+                    {/* <input
                       type="text"
                       placeholder="手机号"
                       onChange={(v) => {
                         vm.username = v.target.value;
                       }}
-                    ></input>
+                    ></input> */}
+
+                <div className="phone">
+                  <PhoneInput
+                  country={'cn'}
+                  onChange={phone => {vm.username = phone;console.log('phone',phone)}}
+                />
+            </div>
+
                     <div className="pass">
                       {/* <span style={{ color: "#000" }}>{vm.username}000</span> */}
                       <input
@@ -103,7 +114,7 @@ class Login extends Component<any, LoginState> {
                           }
                           let fullPhone = vm.username;
                           if (
-                            vm.username.length == 11 &&
+                            vm.username.length == 13 &&
                             vm.username.substring(0, 1) === "1"
                           ) {
                             fullPhone = `0086${vm.username}`;

@@ -46,8 +46,8 @@
 }
 
 .xo-login-content-logo img {
-  width: 129px;
-  height: 36px;
+  // width: 129px;
+  height: 72px;
 }
 
 .xo-login-content-slogan {
@@ -101,6 +101,39 @@
   &:focus {
     border: none;
     outline: none; /* 移除输入框获得焦点时的默认轮廓样式 */
+  }
+}
+.xo-login-content-form .phone {
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 1);
+  display: block;
+  font-family: Helvetica Neue, Segoe UI, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  height: 42px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  background: #f6f6f6;
+  width: 400px;
+  height: 56px;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  &:focus {
+    border: none;
+    outline: none; /* 移除输入框获得焦点时的默认轮廓样式 */
+  }
+  // .container{
+  //   height: 56px;
+  //   border: none;
+  // }
+  .form-control{
+    height: 56px;
+    border: none;
+    background: transparent;
+  }
+  .flag-dropdown {
+    border: none;
   }
 }
 
