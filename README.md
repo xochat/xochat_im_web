@@ -72,3 +72,4 @@ tauri signer generate -w ~/.tauri/xochat.key
 1. 修改 tauri.conf.json 里的 updater.pubkey 的内容（上面通过 tauri signer generate 生成的公钥）
 
 2. 修改 tauri.conf.json 里的 updater.endpoints 的内容为自己服务器的更新地址
+

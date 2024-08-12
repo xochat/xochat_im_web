@@ -252,11 +252,17 @@ function regShortcut() {
     screenshots.startCapture();
   });
 
-  globalShortcut.register("esc", () => {
+  // globalShortcut.register("esc", () => {
+  //   if (screenshots.$win?.isFocused()) {
+  //     screenshots.endCapture();
+  //   }
+  // });
+  globalShortcut.register("ctrl+p", () => {
     if (screenshots.$win?.isFocused()) {
       screenshots.endCapture();
     }
   });
+
 
   // 打开所有窗口控制台
   globalShortcut.register("ctrl+shift+i", () => {
@@ -390,6 +396,7 @@ app.on("ready", () => {
     fs.writeFileSync(filename, image.toPNG());
 
     console.log("screenshots ok", e);
+    console.log("screenshots path", filename);
     onScreenShotEnd({ filePath: filename });
   });
 

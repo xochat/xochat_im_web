@@ -34,13 +34,13 @@ export default class FileToolbar extends Component<FileToolbarProps, FileToolbar
 
         const { conversationContext } = this.props
 
-        this.pasteListen = function (event:any) { // 监听粘贴里的文件
-            let files = event.clipboardData.files;
-            if (files.length > 0) {
-                self.showFile(files[0]);
-            }
-        }
-        document.addEventListener('paste',this.pasteListen )
+        // this.pasteListen = function (event:any) { // 监听粘贴里的文件
+        //     let files = event.clipboardData.files;
+        //     if (files.length > 0) {
+        //         self.showFile(files[0]);
+        //     }
+        // }
+        // document.addEventListener('paste',this.pasteListen )
 
         conversationContext.setDragFileCallback((file)=>{
             self.showFile(file);
@@ -48,7 +48,7 @@ export default class FileToolbar extends Component<FileToolbarProps, FileToolbar
     }
 
     componentWillUnmount() {
-        document.removeEventListener("paste",this.pasteListen)
+        // document.removeEventListener("paste",this.pasteListen)
     }
 
     $fileInput: any
